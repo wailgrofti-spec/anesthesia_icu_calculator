@@ -1,1 +1,1 @@
-{ "buildCommand": "git clone https://github.com/flutter/flutter.git -b stable --depth 1 && export PATH=`$PWD/flutter/bin:`$PATH && flutter build web --release", "outputDirectory": "build/web" }
+{ "buildCommand": "", "outputDirectory": "build/web", "framework": null }
