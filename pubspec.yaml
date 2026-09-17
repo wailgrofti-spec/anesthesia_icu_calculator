@@ -1,0 +1,52 @@
+name: anesthesia_icu_calculator
+description: Anesthésie & Réanimation — Calculateur Clinique
+publish_to: 'none'
+version: 2.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  provider: ^6.1.1
+  shared_preferences: ^2.2.2
+  cupertino_icons: ^1.0.6
+
+  # 🔥 Firebase
+  firebase_core: ^3.3.0
+  cloud_firestore: ^5.4.0
+
+  # 📄 PDF Viewer
+  syncfusion_flutter_pdfviewer: ^27.1.48
+
+  # 🌐 URLs
+  url_launcher: ^6.1.8
+
+  # ✨ Google Fonts
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo_ar.png
+    - assets/animations/
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo_ar.png"
+  web:
+    generate: true
+    image_path: "assets/images/logo_ar.png"
+  windows:
+    generate: true
+    image_path: "assets/images/logo_ar.png"

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "635920060047",
+    "project_id": "anesthesia-icu-app",
+    "storage_bucket": "anesthesia-icu-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635920060047:android:9256d371ed349d49562afa",
+        "android_client_info": {
+          "package_name": "com.medical.anesthesia_icu_calculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1jnw2Ml8hlTELxrvkIkX18-cuYNj7384"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
