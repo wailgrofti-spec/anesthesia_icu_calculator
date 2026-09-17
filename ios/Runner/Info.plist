@@ -6,16 +6,14 @@
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string>Anesthesia Icu Calculator</string>
+	<key>CFBundleDisplayName</key><string>IAR</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>anesthesia_icu_calculator</string>
+	<key>CFBundleName</key><string>IAR</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -68,3 +66,4 @@
 	</array>
 </dict>
 </plist>
+
