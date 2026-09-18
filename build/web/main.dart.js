@@ -1045,7 +1045,7 @@ return new A.mf(a,b,s,A.b([],t._m))},
 aTO(){var s,r=null,q=A.b([],t.s8),p=A.aEq(),o=A.aNS()
 if($.aDw().b.matches)s=32
 else s=0
-p=new A.Nw(new A.a5o(q),new A.CU(new A.AW(s),!1,!1,B.aN,o,p,"/",r,r,r,r,r),A.b([$.dz()],t.LE),v.G.window.matchMedia("(prefers-color-scheme: dark)"),B.bz)
+p=new A.Nw(new A.a5o(q),new A.CU(new A.AW(s),!1,!1,B.aN,o,p,"/",r,r,r,r,r),A.b([$.dz()],t.LE),v.G.window.matchMedia("(prefers-color-scheme: dark)"),B.bA)
 p.a4D()
 return p},
 aTP(a){return new A.a9v($.aP,a)},
@@ -1298,7 +1298,7 @@ case 8:return"900"}return""},
 b2s(a,b){var s
 switch(a){case B.eh:return"left"
 case B.f_:return"right"
-case B.bD:return"center"
+case B.bv:return"center"
 case B.iW:return"justify"
 case B.lF:switch(b.a){case 1:s="end"
 break
@@ -5298,12 +5298,12 @@ i.c=o}}return f},
 aUi(a,b,c,d){var s,r,q=new A.aaE(d,null,b,c)
 if(a instanceof A.aQ){s=$.aP
 r=new A.aQ(s,c.h("aQ<0>"))
-if(s!==B.bz)q=s.Bw(q)
+if(s!==B.bA)q=s.Bw(q)
 a.pz(new A.jj(r,2,null,q,a.$ti.h("@<1>").bP(c).h("jj<1,2>")))
 return r}return a.hq(new A.aaD(c),q,c)},
-aCk(a,b){if($.aP===B.bz)return null
+aCk(a,b){if($.aP===B.bA)return null
 return null},
-aNa(a,b){if($.aP!==B.bz)A.aCk(a,b)
+aNa(a,b){if($.aP!==B.bA)A.aCk(a,b)
 if(b==null)if(t.Lt.b(a)){b=a.grL()
 if(b==null){A.aKm(a,B.jl)
 b=B.jl}}else b=B.jl
@@ -5408,7 +5408,7 @@ s.b=q
 $.KQ=r.b=s
 if(q==null)$.KP=s}},
 fy(a){var s=null,r=$.aP
-if(B.bz===r){A.yK(s,s,B.bz,a)
+if(B.bA===r){A.yK(s,s,B.bA,a)
 return}A.yK(s,s,r,r.H_(a))},
 b5b(a){A.pF(a,"stream",t.K)
 return new A.a0T()},
@@ -5431,10 +5431,10 @@ throw A.i(A.dA("handleError callback must take either an Object (the error), or 
 b07(a,b){A.KR(a,b)},
 b06(){},
 cJ(a,b){var s=$.aP
-if(s===B.bz)return A.aFD(a,b)
+if(s===B.bA)return A.aFD(a,b)
 return A.aFD(a,s.H_(b))},
 aLo(a,b){var s=$.aP
-if(s===B.bz)return A.aLp(a,b)
+if(s===B.bA)return A.aLp(a,b)
 return A.aLp(a,s.aks(b,t.qe))},
 KR(a,b){A.b0e(new A.aCA(a,b))},
 aNr(a,b,c,d){var s,r=$.aP
@@ -5455,7 +5455,7 @@ $.aP=c
 s=r
 try{r=d.$2(e,f)
 return r}finally{$.aP=s}},
-yK(a,b,c,d){if(B.bz!==c){d=c.H_(d)
+yK(a,b,c,d){if(B.bA!==c){d=c.H_(d)
 d=d}A.aNx(d)},
 aoX:function aoX(a){this.a=a},
 aoW:function aoW(a,b,c){this.a=a
@@ -10005,11 +10005,11 @@ OK:function OK(){},
 iI:function iI(a,b){this.a=a
 this.b=b},
 bm:function bm(){},
-bU(a,b,c,d,e,f,g){var s=new A.pN(c,e,B.mj,b,d,B.bw,B.ax,new A.bv(A.b([],t.F),t.C),new A.eM(A.C(t.M,t.S),t.PD))
+bU(a,b,c,d,e,f,g){var s=new A.pN(c,e,B.mj,b,d,B.bx,B.ax,new A.bv(A.b([],t.F),t.C),new A.eM(A.C(t.M,t.S),t.PD))
 s.r=g.ux(s.gG4())
 s.EW(f==null?c:f)
 return s},
-LB(a,b,c){var s=new A.pN(-1/0,1/0,B.mk,null,null,B.bw,B.ax,new A.bv(A.b([],t.F),t.C),new A.eM(A.C(t.M,t.S),t.PD))
+LB(a,b,c){var s=new A.pN(-1/0,1/0,B.mk,null,null,B.bx,B.ax,new A.bv(A.b([],t.F),t.C),new A.eM(A.C(t.M,t.S),t.PD))
 s.r=c.ux(s.gG4())
 s.EW(b)
 return s},
@@ -13704,7 +13704,7 @@ N4:function N4(a,b,c){this.c=a
 this.d=b
 this.a=c},
 aT_(a,b,c){var s=null
-return new A.v_(b,A.N(c,s,B.aq,s,s,B.Hi.cj(A.x(a).ax.a===B.q?B.m:B.aj),s,s),s)},
+return new A.v_(b,A.N(c,s,B.ao,s,s,B.Hi.cj(A.x(a).ax.a===B.q?B.m:B.aj),s,s),s)},
 v_:function v_(a,b,c){this.c=a
 this.d=b
 this.a=c},
@@ -16888,7 +16888,7 @@ a5=a3?B.m:B.F
 a4=a4===B.q?B.m:B.F
 a6=m?B.m:B.F
 a7=m?B.F:B.m
-d2=A.a6T(o,n,B.jz,c5,c5,c5,a3?B.m:B.F,a7,c5,c5,a5,c5,c5,c5,a4,c5,c5,c5,a6,c5,c5,c5,c5,c5,c5,c5,B.eQ,c5,c5,c5,c5,a2,c5,c5,c5,c5,e,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)}a8=m?B.ap:B.am
+d2=A.a6T(o,n,B.jz,c5,c5,c5,a3?B.m:B.F,a7,c5,c5,a5,c5,c5,c5,a4,c5,c5,c5,a6,c5,c5,c5,c5,c5,c5,c5,B.eQ,c5,c5,c5,c5,a2,c5,c5,c5,c5,e,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5,c5)}a8=m?B.aq:B.am
 a9=m?B.ev:B.rt
 b0=m?B.tc:A.a9(153,B.F.m()>>>16&255,B.F.m()>>>8&255,B.F.m()&255)
 b1=new A.M5(m?B.t_:B.t3,c5,a0,a1,c5,c5,d2,r)
@@ -18447,7 +18447,7 @@ aLh(a,b){var s,r,q,p,o,n,m,l,k,j,i,h,g=null
 A:{s=0
 if(B.eh===a)break A
 if(B.f_===a){s=1
-break A}if(B.bD===a){s=0.5
+break A}if(B.bv===a){s=0.5
 break A}r=B.aW===a
 q=r
 p=!q
@@ -19079,19 +19079,19 @@ q.sapZ(r.gatg())
 r.ghc(r)
 q.sXB(r.ghc(r))
 r.gIZ(r)
-q.av=new A.dl(r.gIZ(r),B.bB)
+q.av=new A.dl(r.gIZ(r),B.bC)
 q.r=!0
 r.gt(r)
-q.p=new A.dl(r.gt(r),B.bB)
+q.p=new A.dl(r.gt(r),B.bC)
 q.r=!0
 r.gapn()
-q.N=new A.dl(r.gapn(),B.bB)
+q.N=new A.dl(r.gapn(),B.bC)
 q.r=!0
 r.gamH()
-q.R=new A.dl(r.gamH(),B.bB)
+q.R=new A.dl(r.gamH(),B.bC)
 q.r=!0
 r.gIE(r)
-q.a3=new A.dl(r.gIE(r),B.bB)
+q.a3=new A.dl(r.gIE(r),B.bC)
 q.r=!0
 r.gapk(r)
 q.xr=r.gapk(r)
@@ -19111,7 +19111,7 @@ r.galv()
 q.bE=r.galv()
 q.r=!0
 r.gIE(r)
-q.a3=new A.dl(r.gIE(r),B.bB)
+q.a3=new A.dl(r.gIE(r),B.bC)
 q.r=!0
 r.gby()
 q.G=r.gby()
@@ -21550,15 +21550,15 @@ n=null}}B.c.jl(o)
 s=t.IX
 s=A.a7(new A.ei(o,new A.aC3(),s),s.h("n.E"))
 return s},
-fL(){return new A.e6(A.C(t._S,t.HT),A.C(t.I7,t.M),B.ls,new A.dl("",B.bB),new A.dl("",B.bB),new A.dl("",B.bB),new A.dl("",B.bB),new A.dl("",B.bB),B.mf,B.h8,B.dT,B.pz,B.lr)},
+fL(){return new A.e6(A.C(t._S,t.HT),A.C(t.I7,t.M),B.ls,new A.dl("",B.bC),new A.dl("",B.bC),new A.dl("",B.bC),new A.dl("",B.bC),new A.dl("",B.bC),B.mf,B.h8,B.dT,B.pz,B.lr)},
 aC7(a,b,c,d){var s
 if(a.a.length===0)return c
-if(d!=b&&b!=null){switch(b.a){case 0:s=new A.dl("\u202b",B.bB)
+if(d!=b&&b!=null){switch(b.a){case 0:s=new A.dl("\u202b",B.bC)
 break
-case 1:s=new A.dl("\u202a",B.bB)
+case 1:s=new A.dl("\u202a",B.bC)
 break
-default:s=null}a=s.a_(0,a).a_(0,new A.dl("\u202c",B.bB))}if(c.a.length===0)return a
-return c.a_(0,new A.dl("\n",B.bB)).a_(0,a)},
+default:s=null}a=s.a_(0,a).a_(0,new A.dl("\u202c",B.bC))}if(c.a.length===0)return a
+return c.a_(0,new A.dl("\n",B.bC)).a_(0,a)},
 KT(a){if(a==null)return B.ab
 if(a)return B.bi
 return B.iY},
@@ -36256,14 +36256,14 @@ b.m6(8)
 r=b.c
 q=$.es()
 r.$flags&2&&A.aT(r,13)
-r.setFloat64(0,c,B.bx===q)
+r.setFloat64(0,c,B.by===q)
 s.K(0,b.d)}else if(A.nh(c)){s=-2147483648<=c&&c<=2147483647
 r=b.b
 q=b.c
 if(s){r.eP(0,3)
 s=$.es()
 q.$flags&2&&A.aT(q,8)
-q.setInt32(0,c,B.bx===s)
+q.setInt32(0,c,B.by===s)
 r.yK(0,b.d,0,4)}else{r.eP(0,4)
 B.br.Lb(q,0,c,$.es())}}else if(typeof c=="string"){s=b.b
 s.eP(0,7)
@@ -36298,7 +36298,7 @@ case 1:s=!0
 break
 case 2:s=!1
 break
-case 3:r=b.a.getInt32(b.b,B.bx===$.es())
+case 3:r=b.a.getInt32(b.b,B.by===$.es())
 b.b+=4
 s=r
 break
@@ -36308,7 +36308,7 @@ case 5:q=j.fs(b)
 s=A.hm(B.hg.h7(b.ph(q)),16)
 break
 case 6:b.m6(8)
-r=b.a.getFloat64(b.b,B.bx===$.es())
+r=b.a.getFloat64(b.b,B.by===$.es())
 b.b+=8
 s=r
 break
@@ -36362,17 +36362,17 @@ p=r.$flags|0
 if(b<=65535){s.eP(0,254)
 o=$.es()
 p&2&&A.aT(r,10)
-r.setUint16(0,b,B.bx===o)
+r.setUint16(0,b,B.by===o)
 s.yK(0,q,0,2)}else{s.eP(0,255)
 o=$.es()
 p&2&&A.aT(r,11)
-r.setUint32(0,b,B.bx===o)
+r.setUint32(0,b,B.by===o)
 s.yK(0,q,0,4)}}},
 fs(a){var s,r=a.pg(0)
-A:{if(254===r){r=a.a.getUint16(a.b,B.bx===$.es())
+A:{if(254===r){r=a.a.getUint16(a.b,B.by===$.es())
 a.b+=2
 s=r
-break A}if(255===r){r=a.a.getUint32(a.b,B.bx===$.es())
+break A}if(255===r){r=a.a.getUint32(a.b,B.by===$.es())
 a.b+=4
 s=r
 break A}s=r
@@ -37760,7 +37760,7 @@ d2=j.w
 return d2.d-d2.b},
 ao2(a){var s,r,q,p,o,n,m,l,k,j,i,h=this.a,g=h.a.an6()
 if(a===1/0&&g!==B.eh){for(h=this.e,s=h.length,r=0,q=0;q<s;++q){p=h[q].w
-r=Math.max(r,p.c-p.a)}return}for(s=this.e,p=s.length,o=g===B.bD,n=g===B.f_,m=g===B.iW,q=0;q<s.length;s.length===p||(0,A.D)(s),++q){l=s[q]
+r=Math.max(r,p.c-p.a)}return}for(s=this.e,p=s.length,o=g===B.bv,n=g===B.f_,m=g===B.iW,q=0;q<s.length;s.length===p||(0,A.D)(s),++q){l=s[q]
 k=h.z
 j=l.w
 i=k-(j.c-j.a)
@@ -40947,7 +40947,7 @@ return p}catch(s){if(t.ns.b(A.aU(s))){if((this.c&1)!==0)throw A.i(A.dA("The erro
 throw A.i(A.dA("The error handler of Future.catchError must return a value of the future's type","onError"))}else throw s}}}
 A.aQ.prototype={
 hq(a,b,c){var s,r,q=$.aP
-if(q===B.bz){if(b!=null&&!t.Hg.b(b)&&!t.C_.b(b))throw A.i(A.kk(b,"onError",u.f_))}else if(b!=null)b=A.aNp(b,q)
+if(q===B.bA){if(b!=null&&!t.Hg.b(b)&&!t.C_.b(b))throw A.i(A.kk(b,"onError",u.f_))}else if(b!=null)b=A.aNp(b,q)
 s=new A.aQ(q,c.h("aQ<0>"))
 r=b==null?1:3
 this.pz(new A.jj(s,r,a,b,this.$ti.h("@<1>").bP(c).h("jj<1,2>")))
@@ -40957,7 +40957,7 @@ SQ(a,b,c){var s=new A.aQ($.aP,c.h("aQ<0>"))
 this.pz(new A.jj(s,19,a,b,this.$ti.h("@<1>").bP(c).h("jj<1,2>")))
 return s},
 qg(a,b){var s=this.$ti,r=$.aP,q=new A.aQ(r,s)
-if(r!==B.bz)a=A.aNp(a,r)
+if(r!==B.bA)a=A.aNp(a,r)
 this.pz(new A.jj(q,2,b,a,s.h("jj<1,1>")))
 return q},
 my(a){return this.qg(a,null)},
@@ -41314,12 +41314,12 @@ A.a0T.prototype={}
 A.aBR.prototype={}
 A.ayN.prototype={
 vI(a){var s,r,q
-try{if(B.bz===$.aP){a.$0()
+try{if(B.bA===$.aP){a.$0()
 return}A.aNr(null,null,this,a)}catch(q){s=A.aU(q)
 r=A.bq(q)
 A.KR(s,r)}},
 at0(a,b){var s,r,q
-try{if(B.bz===$.aP){a.$1(b)
+try{if(B.bA===$.aP){a.$1(b)
 return}A.aNs(null,null,this,a,b)}catch(q){s=A.aU(q)
 r=A.bq(q)
 A.KR(s,r)}},
@@ -41328,14 +41328,14 @@ UB(a,b,c){return new A.ayR(this,a,c,b)},
 akr(a,b,c,d){return new A.ayO(this,a,c,d,b)},
 H_(a){return new A.ayP(this,a)},
 aks(a,b){return new A.ayQ(this,a,b)},
-asW(a){if($.aP===B.bz)return a.$0()
+asW(a){if($.aP===B.bA)return a.$0()
 return A.aNr(null,null,this,a)},
 ho(a){return this.asW(a,t.z)},
-at_(a,b){if($.aP===B.bz)return a.$1(b)
+at_(a,b){if($.aP===B.bA)return a.$1(b)
 return A.aNs(null,null,this,a,b)},
 BF(a,b){var s=t.z
 return this.at_(a,b,s,s)},
-asY(a,b,c){if($.aP===B.bz)return a.$2(b,c)
+asY(a,b,c){if($.aP===B.bA)return a.$2(b,c)
 return A.b0b(null,null,this,a,b,c)},
 Zk(a,b,c){var s=t.z
 return this.asY(a,b,c,s,s,s)},
@@ -44613,7 +44613,7 @@ if(o>=254)throw A.i(A.ew("Invalid arguments for 'resize' method sent to dev.flut
 r=p+o
 n=B.bj.hJ(0,B.au.d4(j,p,r))
 if(j[r]!==3)throw A.i(A.ew("Invalid arguments for 'resize' method sent to dev.flutter/channel-buffers (second argument must be an integer in the range 0 to 2147483647)"))
-this.Z8(0,n,a.getUint32(r+1,B.bx===$.es()))
+this.Z8(0,n,a.getUint32(r+1,B.by===$.es()))
 break
 case"overflow":if(j[r]!==12)throw A.i(A.ew(k))
 p=r+1
@@ -45486,7 +45486,7 @@ H(){return"PediatricAgeBand."+this.b}}
 A.oo.prototype={}
 A.CR.prototype={}
 A.aDf.prototype={
-$1(a){var s=new A.i1(B.BO,A.ih(B.wg,!0,t.ME),$.aE())
+$1(a){var s=new A.i1(B.BO,A.ih(B.wh,!0,t.ME),$.aE())
 s.wN()
 return s},
 $S:254}
@@ -45751,7 +45751,7 @@ s.r=null
 s.tT()
 s.aE()},
 ast(){var s=this
-s.f=A.ih(B.wg,!0,t.ME)
+s.f=A.ih(B.wh,!0,t.ME)
 s.r=null
 s.t8()
 s.aE()},
@@ -46028,7 +46028,7 @@ case 5:q.nE()
 case 3:return A.Z(null,r)}})
 return A.a_($async$tf,r)},
 A(a){var s,r,q,p,o,n=this,m=null,l=A.x(a).ax.a===B.q,k=l?B.bN:B.K,j=l?B.aI:B.m,i=A.a8(m,B.adv,B.k,m,m,new A.W(m,m,m,A.a3(13),A.b([new A.c7(-4,B.aE,B.a6,B.eS,10)],t.E),B.af4,B.r),m,m,m,B.a9g,m,m,m),h=t.p,g=n.gadU()
-i=A.ag(A.b([i,B.c2,A.aw(A.ak(A.b([A.N("Notes d'Anesth\xe9sie",m,m,m,m,A.U(m,m,l?B.m:B.I,m,m,m,m,m,m,m,m,17,m,m,B.az,m,m,!0,m,m,m,m,m,m,m,m),m,m),B.b5X],h),B.E,B.i,B.j),1),new A.xQ("+ Nouvelle",g,m)],h),B.n,B.i,B.j,0)
+i=A.ag(A.b([i,B.c2,A.aw(A.ak(A.b([A.N("Notes d'Anesth\xe9sie",m,m,m,m,A.U(m,m,l?B.m:B.I,m,m,m,m,m,m,m,m,17,m,m,B.az,m,m,!0,m,m,m,m,m,m,m,m),m,m),B.b5Y],h),B.E,B.i,B.j),1),new A.xQ("+ Nouvelle",g,m)],h),B.n,B.i,B.j,0)
 s=l?B.H:B.K
 r=A.a3(10)
 q=A.b5(l?B.Z:B.ac,B.v,1)
@@ -46067,7 +46067,7 @@ A.av5.prototype={
 $1(a){var s,r=null,q=A.a3(16),p=this.b.d
 p=A.N('La fiche de "'+(p.length!==0?p:"Note sans nom")+'" sera supprim\xe9e d\xe9finitivement.',r,r,r,r,r,r,r)
 s=this.a
-return A.aDR(A.b([A.x0(B.b6c,new A.av3(s),r),A.x0(B.b65,new A.av4(s),r)],t.p),p,new A.cr(q,B.x),B.b6u)},
+return A.aDR(A.b([A.x0(B.b6d,new A.av3(s),r),A.x0(B.b66,new A.av4(s),r)],t.p),p,new A.cr(q,B.x),B.b6v)},
 $S:111}
 A.av3.prototype={
 $0(){var s=this.a.c
@@ -46103,19 +46103,19 @@ A(a){var s,r=this,q=null,p=r.f,o=p?B.aI:B.m,n=A.a3(14),m=A.a3(14),l=r.d,k=A.a3(1
 h=A.a8(q,A.e0(A.N(d?e[0].toUpperCase():"?",q,q,q,q,B.b17,q,q),q,q),B.k,q,q,new A.W(q,q,q,g,q,new A.f2(B.d4,B.dt,B.bn,h,q,q),B.r),q,44,q,q,q,q,44)
 g=d?e:"Note sans nom"
 e=t.p
-g=A.b([A.N(g,1,B.aq,q,q,A.U(q,q,p?B.m:B.I,q,q,q,q,q,q,q,q,14,q,q,B.D,q,q,!0,q,q,q,q,q,q,q,q),q,q),B.iT],e)
+g=A.b([A.N(g,1,B.ao,q,q,A.U(q,q,p?B.m:B.I,q,q,q,q,q,q,q,q,14,q,q,B.D,q,q,!0,q,q,q,q,q,q,q,q),q,q),B.iT],e)
 p=f.z
-if(p.length!==0)g.push(A.N(p,1,B.aq,q,q,B.b27,q,q))
+if(p.length!==0)g.push(A.N(p,1,B.ao,q,q,B.b27,q,q))
 g.push(B.cJ)
 s=f.c
 p=A.b([B.adm,B.iR,A.N(B.f.hj(B.p.k(A.ah7(s)),2,"0")+"/"+B.f.hj(B.p.k(A.ah8(s)),2,"0")+"/"+A.wa(s)+"  "+B.f.hj(B.p.k(A.Qb(s)),2,"0")+":"+B.f.hj(B.p.k(A.Qc(s)),2,"0"),q,q,q,q,B.lI,q,q)],e)
 f=f.x
-if(f.length!==0)B.c.K(p,A.b([B.b6r,B.adQ,B.pQ,A.N(f,q,q,q,q,B.lI,q,q)],e))
+if(f.length!==0)B.c.K(p,A.b([B.b6s,B.adQ,B.pQ,A.N(f,q,q,q,q,B.lI,q,q)],e))
 g.push(A.ag(p,B.n,B.i,B.j,0))
 return new A.am(B.hV,A.h6(!1,B.a7,!0,n,A.kK(!1,m,!0,A.a8(q,A.ak(A.b([i,new A.am(B.a8o,A.ag(A.b([h,B.c2,A.aw(A.ak(g,B.E,B.i,B.j),1),A.ak(A.b([new A.J4(B.acG,B.I,l,q),B.cm,new A.J4(B.acF,B.hN,r.e,q)],e),B.n,B.i,B.ae)],e),B.n,B.i,B.j,0),q)],e),B.n,B.i,B.j),B.k,q,q,new A.W(q,q,j,k,q,q,B.r),q,q,q,q,q,q,q),q,!0,q,q,q,q,q,q,l,q,q,q,q),B.k,o,0,q,q,q,q,q,B.cH),q)}}
 A.Wq.prototype={
 A(a){var s=null
-return A.e0(new A.am(B.a93,A.ak(A.b([A.a8(s,B.adH,B.k,s,s,new A.W(s,s,s,s,s,new A.f2(B.d4,B.dt,B.bn,A.b([A.a9(B.d.ah(25.5),B.a6.m()>>>16&255,B.a6.m()>>>8&255,B.a6.m()&255),A.a9(20,B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255)],t.g),s,s),B.aM),s,s,s,B.u8,s,s,s),B.iS,B.b6a,B.ai,B.b67,B.GC,new A.xQ("+ Nouvelle fiche",this.c,s)],t.p),B.n,B.i,B.ae),s),s,s)}}
+return A.e0(new A.am(B.a94,A.ak(A.b([A.a8(s,B.adH,B.k,s,s,new A.W(s,s,s,s,s,new A.f2(B.d4,B.dt,B.bn,A.b([A.a9(B.d.ah(25.5),B.a6.m()>>>16&255,B.a6.m()>>>8&255,B.a6.m()&255),A.a9(20,B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255)],t.g),s,s),B.aM),s,s,s,B.u8,s,s,s),B.iS,B.b6b,B.ai,B.b68,B.GC,new A.xQ("+ Nouvelle fiche",this.c,s)],t.p),B.n,B.i,B.ae),s),s,s)}}
 A.pd.prototype={
 a5(){return new A.GX(null,null)}}
 A.GX.prototype={
@@ -46426,7 +46426,7 @@ s=m.d
 s===$&&A.a()
 s=s.d
 s=s.length!==0?s:"Nouvelle fiche"
-s=A.N(s,1,B.aq,l,l,A.U(l,l,k?B.m:B.I,l,l,l,l,l,l,l,l,15,l,l,B.az,l,l,!0,l,l,l,l,l,l,l,l),l,l)
+s=A.N(s,1,B.ao,l,l,A.U(l,l,k?B.m:B.I,l,l,l,l,l,l,l,l,15,l,l,B.az,l,l,!0,l,l,l,l,l,l,l,l),l,l)
 r=t.p
 s=A.ak(A.b([s,A.N("Fiche d'anesth\xe9sie",l,l,l,l,A.U(l,l,k?B.Qa:B.d0,l,l,l,l,l,l,l,l,11,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l)],r),B.E,B.i,B.j)
 q=A.iS(B.a6,l,B.adG,l,l,m.ga8i(),l,l,"Exporter",l)
@@ -46533,7 +46533,7 @@ $0(){return this.a.f=!1},
 $S:0}
 A.atd.prototype={
 $1(a){var s=A.a3(16),r=this.a
-return A.aDR(A.b([A.x0(B.b64,new A.atb(r),null),A.x0(B.b6_,new A.atc(r),null)],t.p),B.b6C,new A.cr(s,B.x),B.b6g)},
+return A.aDR(A.b([A.x0(B.b65,new A.atb(r),null),A.x0(B.b60,new A.atc(r),null)],t.p),B.b6C,new A.cr(s,B.x),B.b6h)},
 $S:111}
 A.atb.prototype={
 $0(){var s=this.a.c
@@ -46565,8 +46565,8 @@ A.at9.prototype={
 $1(a){var s,r=null,q=A.a3(16),p=A.a3(8),o=this.b.a
 o=o.charCodeAt(0)==0?o:o
 s=t.p
-p=A.ak(A.b([B.b6n,B.aJ,A.a8(r,A.N(B.f.ar(o,0,B.p.c9(o.length,0,300))+"\u2026",r,r,r,r,B.b5y,r,r),B.k,r,r,new A.W(B.K,r,r,p,r,r,B.r),r,r,r,B.k6,r,r,r),B.ai,B.b6e],s),B.E,B.i,B.ae)
-return A.aDR(A.b([A.x0(B.b6j,new A.at8(this.a),r)],s),p,new A.cr(q,B.x),B.aY_)},
+p=A.ak(A.b([B.b6o,B.aJ,A.a8(r,A.N(B.f.ar(o,0,B.p.c9(o.length,0,300))+"\u2026",r,r,r,r,B.b5y,r,r),B.k,r,r,new A.W(B.K,r,r,p,r,r,B.r),r,r,r,B.k6,r,r,r),B.ai,B.b6f],s),B.E,B.i,B.ae)
+return A.aDR(A.b([A.x0(B.b6k,new A.at8(this.a),r)],s),p,new A.cr(q,B.x),B.aY_)},
 $S:111}
 A.at8.prototype={
 $0(){var s=this.a.c
@@ -46741,7 +46741,7 @@ A(a){var s=this,r=null,q=s.f,p=q?B.aI:B.m,o=A.a3(14),n=A.b5(q?B.Z:B.ac,B.v,1),m=
 return A.a8(r,A.ak(A.b([A.a8(r,A.ag(A.b([k,B.a8,A.N(s.c,r,r,r,r,A.U(r,r,q?B.m:B.I,r,r,r,r,r,r,r,r,13,r,r,B.D,r,r,!0,r,r,r,r,r,r,r,r),r,r)],j),B.n,B.i,B.j,0),B.k,r,r,new A.W(l,r,r,B.qO,r,r,B.r),r,r,r,B.a8r,r,r,r),new A.am(B.eB,s.e,r)],j),B.E,B.i,B.j),B.k,r,r,new A.W(p,r,n,o,m,r,B.r),r,r,r,r,r,r,r)}}
 A.WB.prototype={
 A(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.x,i=j==null
-if(i)s=l.f?B.ap:A.a9(B.d.ah(178.5),B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255)
+if(i)s=l.f?B.aq:A.a9(B.d.ah(178.5),B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255)
 else s=j
 s=A.N(l.d,k,k,k,k,A.U(k,k,s,k,k,k,k,k,k,k,k,11,k,k,B.W,k,k,!0,k,k,k,k,k,k,k,k),k,k)
 r=l.f
@@ -46756,7 +46756,7 @@ i=n>1?10:0
 return new A.am(B.hV,A.ak(A.b([s,B.lD,A.a8(k,A.l8(l.c,k,A.m7(k,B.cO,k,new A.L(4,i,4,i),k,k,k,k,!0,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,!0,!0,!1,k,j,k,k,k,k,k,k,k,k,k,k,k,k),k,k,l.w,n,k,k,m,B.aW,B.dq,k),B.k,k,k,new A.W(q,k,o,p,k,k,B.r),k,k,k,k,k,k,k)],t.p),B.E,B.i,B.j),k)}}
 A.a0i.prototype={
 A(a){var s=this,r=null,q=s.d,p=s.c,o=t.p
-return new A.am(B.hV,A.ak(A.b([A.N("Sexe",r,r,r,r,A.U(r,r,q?B.ap:A.a9(B.d.ah(178.5),B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255),r,r,r,r,r,r,r,r,11,r,r,B.W,r,r,!0,r,r,r,r,r,r,r,r),r,r),B.lD,A.ag(A.b([new A.IW("M",p==="M",q,new A.azy(s),r),B.a8,new A.IW("F",p==="F",q,new A.azz(s),r)],o),B.n,B.i,B.j,0)],o),B.E,B.i,B.j),r)}}
+return new A.am(B.hV,A.ak(A.b([A.N("Sexe",r,r,r,r,A.U(r,r,q?B.aq:A.a9(B.d.ah(178.5),B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255),r,r,r,r,r,r,r,r,11,r,r,B.W,r,r,!0,r,r,r,r,r,r,r,r),r,r),B.lD,A.ag(A.b([new A.IW("M",p==="M",q,new A.azy(s),r),B.a8,new A.IW("F",p==="F",q,new A.azz(s),r)],o),B.n,B.i,B.j,0)],o),B.E,B.i,B.j),r)}}
 A.azy.prototype={
 $0(){return this.a.e.$1("M")},
 $S:0}
@@ -46783,13 +46783,13 @@ q=m.r
 p=A.b5(A.a9(B.d.ah(76.5),q.m()>>>16&255,q.m()>>>8&255,q.m()&255),B.v,1)
 o=A.N(m.c,l,l,l,l,A.U(l,l,q,l,l,l,l,l,l,l,l,10,l,l,B.D,l,l,!0,l,l,l,l,l,l,l,l),l,l)
 n=A.U(l,l,k?B.m:B.aj,l,l,l,l,l,l,l,l,16,l,l,B.D,l,l,!0,l,l,l,l,l,l,l,l)
-return A.a8(l,A.ak(A.b([o,B.cm,A.l8(m.e,l,A.m7(l,B.cO,l,B.b0,l,l,l,l,!0,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,A.U(l,l,A.a9(102,q.m()>>>16&255,q.m()>>>8&255,q.m()&255),l,l,l,l,l,l,l,l,16,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),"\u2014",l,l,l,l,l,!0,l,l,l,!0,!0,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l),l,l,B.cK,1,l,l,n,B.bD,B.dq,l),A.N(m.d,l,l,l,l,A.U(l,l,A.a9(B.d.ah(178.5),q.m()>>>16&255,q.m()>>>8&255,q.m()&255),l,l,l,l,l,l,l,l,9,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l)],t.p),B.n,B.i,B.j),B.k,l,l,new A.W(s,l,p,r,l,l,B.r),l,l,l,B.k6,l,l,l)}}
+return A.a8(l,A.ak(A.b([o,B.cm,A.l8(m.e,l,A.m7(l,B.cO,l,B.b0,l,l,l,l,!0,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,l,A.U(l,l,A.a9(102,q.m()>>>16&255,q.m()>>>8&255,q.m()&255),l,l,l,l,l,l,l,l,16,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),"\u2014",l,l,l,l,l,!0,l,l,l,!0,!0,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l),l,l,B.cK,1,l,l,n,B.bv,B.dq,l),A.N(m.d,l,l,l,l,A.U(l,l,A.a9(B.d.ah(178.5),q.m()>>>16&255,q.m()>>>8&255,q.m()&255),l,l,l,l,l,l,l,l,9,l,l,l,l,l,!0,l,l,l,l,l,l,l,l),l,l)],t.p),B.n,B.i,B.j),B.k,l,l,new A.W(s,l,p,r,l,l,B.r),l,l,l,B.k6,l,l,l)}}
 A.a1d.prototype={
 A(a){var s=null,r=A.a9(18,B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255),q=A.a3(6)
 return A.a8(s,A.ag(A.b([new A.lo("Heure",2,s),new A.lo("TA",2,s),new A.lo("FC",1,s),new A.lo("SpO2",2,s),new A.lo("Temp",2,s),new A.lo("FR",1,s),new A.lo("Notes",3,s),B.GB],t.p),B.n,B.i,B.j,0),B.k,s,s,new A.W(r,s,s,q,s,s,B.r),s,s,s,B.nt,s,s,s)}}
 A.lo.prototype={
 A(a){var s=null
-return A.aw(A.N(this.c,s,s,s,s,B.b4v,B.bD,s),this.d)}}
+return A.aw(A.N(this.c,s,s,s,s,B.b4v,B.bv,s),this.d)}}
 A.u_.prototype={
 a5(){return new A.a2q()}}
 A.a2q.prototype={
@@ -46816,7 +46816,7 @@ r===$&&A.a()
 q=r[0]
 p=this.a
 o=p.e
-return A.a8(n,A.ag(A.b([new A.hk(q,2,o,n),new A.hk(r[1],2,o,n),new A.hk(r[2],1,o,n),new A.hk(r[3],2,o,n),new A.hk(r[4],2,o,n),new A.hk(r[5],1,o,n),new A.hk(r[6],3,o,n),A.iS(n,B.qS,B.vo,n,n,p.f,B.b0,n,n,n)],t.p),B.n,B.i,B.j,0),B.k,n,n,new A.W(s,n,n,m,n,n,B.r),n,n,B.nm,B.a95,n,n,n)}}
+return A.a8(n,A.ag(A.b([new A.hk(q,2,o,n),new A.hk(r[1],2,o,n),new A.hk(r[2],1,o,n),new A.hk(r[3],2,o,n),new A.hk(r[4],2,o,n),new A.hk(r[5],1,o,n),new A.hk(r[6],3,o,n),A.iS(n,B.qS,B.vo,n,n,p.f,B.b0,n,n,n)],t.p),B.n,B.i,B.j,0),B.k,n,n,new A.W(s,n,n,m,n,n,B.r),n,n,B.nm,B.a96,n,n,n)}}
 A.aBB.prototype={
 $1(a){var s=new A.f9(new A.d0(a,B.hd,B.bJ),$.aE())
 s.Y(0,new A.aBA(this.a,this.b))
@@ -46834,8 +46834,8 @@ s.f=r[5].a.a
 s.r=r[6].a.a},
 $S:0}
 A.hk.prototype={
-A(a){var s=null,r=A.U(s,s,this.e?B.ap:B.aj,s,s,s,s,s,s,s,s,11,s,s,s,s,s,!0,s,s,s,s,s,s,s,s)
-return A.aw(A.l8(this.c,s,A.m7(s,B.cO,s,B.a8Y,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,A.U(s,s,B.mB,s,s,s,s,s,s,s,s,11,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),"\u2014",s,s,s,s,s,!0,s,s,s,!0,!0,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s),s,s,s,1,s,s,r,B.bD,B.dq,s),this.d)}}
+A(a){var s=null,r=A.U(s,s,this.e?B.aq:B.aj,s,s,s,s,s,s,s,s,11,s,s,s,s,s,!0,s,s,s,s,s,s,s,s)
+return A.aw(A.l8(this.c,s,A.m7(s,B.cO,s,B.a8Y,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,A.U(s,s,B.mB,s,s,s,s,s,s,s,s,11,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),"\u2014",s,s,s,s,s,!0,s,s,s,!0,!0,!1,s,s,s,s,s,s,s,s,s,s,s,s,s,s),s,s,s,1,s,s,r,B.bv,B.dq,s),this.d)}}
 A.Wc.prototype={
 A(a){var s=this,r=null,q=t.p,p=A.b([],q),o=s.r
 if(o.length!==0)p.push(new A.am(B.nn,A.ag(A.b([new A.pt("M\xe9dicament",4,r),new A.pt("Dose",2,r),new A.pt("Voie",2,r),new A.pt("Heure",2,r),new A.pt("Commentaire",4,r),B.GB],q),B.n,B.i,B.j,0),r))
@@ -46913,7 +46913,7 @@ n=A.b5(n,B.v,1.5)
 m=j?B.vp:k
 o=A.dZ(m,k,B.a_,new A.W(p,k,n,o,k,k,B.r),B.cC,20,k,k,20)
 if(j)j=l.f
-else j=l.e?B.ap:B.aj
+else j=l.e?B.aq:B.aj
 return A.cO(k,A.a8(k,A.ag(A.b([o,B.aU,A.N(l.c,k,k,k,k,A.U(k,k,j,k,k,k,k,k,k,k,k,13,k,k,B.M,k,k,!0,k,k,k,k,k,k,k,k),k,k)],t.p),B.n,B.i,B.j,0),B.k,k,k,new A.W(s,k,q,r,k,k,B.r),k,k,B.a7T,B.k7,k,k,k),B.T,!1,k,k,k,k,k,k,k,k,k,k,k,k,k,k,new A.asF(l),k,k,k,k,k,k)}}
 A.asF.prototype={
 $0(){var s=this.a
@@ -46989,11 +46989,11 @@ g=A.x(g).ax.a===B.q?B.aI:B.b_
 g=A.a8(j,B.adL,B.k,j,j,new A.W(g,j,j,A.a3(14),j,j,B.r),j,44,j,j,j,j,44)
 p=k.c
 p.toString
-o=A.N("Drugs / M\xe9dicaments",1,B.aq,j,j,A.U(j,j,A.x(p).ax.a===B.q?B.K:B.H,j,j,j,j,j,j,j,j,17,j,j,B.D,j,j,!0,j,-0.3,j,j,j,j,j,j),j,j)
+o=A.N("Drugs / M\xe9dicaments",1,B.ao,j,j,A.U(j,j,A.x(p).ax.a===B.q?B.K:B.H,j,j,j,j,j,j,j,j,17,j,j,B.D,j,j,!0,j,-0.3,j,j,j,j,j,j),j,j)
 p=k.c
 p.toString
 n=t.p
-o=A.aw(A.ak(A.b([o,B.cJ,A.N("Explorez et consultez les m\xe9dicaments disponibles.",1,B.aq,j,j,A.U(j,j,A.x(p).ax.a===B.q?B.G:B.ao,j,j,j,j,j,j,j,j,11,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j)],n),B.E,B.i,B.j),1)
+o=A.aw(A.ak(A.b([o,B.cJ,A.N("Explorez et consultez les m\xe9dicaments disponibles.",1,B.ao,j,j,A.U(j,j,A.x(p).ax.a===B.q?B.G:B.ap,j,j,j,j,j,j,j,j,11,j,j,j,j,j,!0,j,j,j,j,j,j,j,j),j,j)],n),B.E,B.i,B.j),1)
 m=k.c
 m.toString
 m=A.ag(A.b([g,B.aU,o,B.aU,A.dc(new A.Ga(k.r,A.x(m).ax.a===B.q,new A.as2(k),new A.as3(k),j),j,160)],n),B.n,B.i,B.j,0)
@@ -47028,7 +47028,7 @@ k=m.e
 k=k.length!==0?'Aucun r\xe9sultat pour "'+k+'"':"Aucun m\xe9dicament dans cette cat\xe9gorie"
 p=m.c
 p.toString
-o=A.e0(A.ak(A.b([q,B.aJ,A.N(k,l,l,l,l,A.U(l,l,A.x(p).ax.a===B.q?B.G:B.ao,l,l,l,l,l,l,l,l,13,l,l,B.M,l,l,!0,l,l,l,l,l,l,l,l),l,l)],t.p),B.n,B.cG,B.j),l,l)}else{n=m.a9x(r)
+o=A.e0(A.ak(A.b([q,B.aJ,A.N(k,l,l,l,l,A.U(l,l,A.x(p).ax.a===B.q?B.G:B.ap,l,l,l,l,l,l,l,l,13,l,l,B.M,l,l,!0,l,l,l,l,l,l,l,l),l,l)],t.p),B.n,B.cG,B.j),l,l)}else{n=m.a9x(r)
 k=A.r(n).h("eO<1,2>")
 k=A.P7(new A.eO(n,k),new A.arM(m,a.a,c,b),k.h("n.E"),t.o0)
 k=A.a7(k,A.r(k).h("n.E"))
@@ -47159,7 +47159,7 @@ $S:0}
 A.YV.prototype={
 A(a){var s=null,r=this.d,q=r?B.rs:B.b_,p=A.a3(10),o=A.b5(r?B.Pc:B.cV,B.v,1),n=this.c,m=A.a5(n).h("a6<1,hr>")
 r=A.a7(new A.a6(n,new A.awz(),m),m.h("az.E"))
-return A.a8(s,A.ag(A.b([B.adU,B.a8,A.aw(A.FI(r,B.hk,3,4),1),B.aV,B.b6p],t.p),B.n,B.i,B.j,0),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,B.u_,B.tW,s,s,s)}}
+return A.a8(s,A.ag(A.b([B.adU,B.a8,A.aw(A.FI(r,B.hk,3,4),1),B.aV,B.b6q],t.p),B.n,B.i,B.j,0),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,B.u_,B.tW,s,s,s)}}
 A.awz.prototype={
 $1(a){var s=null,r=A.a9(31,B.C.m()>>>16&255,B.C.m()>>>8&255,B.C.m()&255),q=A.a3(8),p=A.b5(A.a9(B.d.ah(76.5),B.C.m()>>>16&255,B.C.m()>>>8&255,B.C.m()&255),B.v,1),o=B.aLj.i(0,a)
 return A.a8(s,A.N(o==null?a:o,s,s,s,s,B.b4k,s,s),B.k,s,s,new A.W(r,s,p,q,s,s,B.r),s,s,s,B.ud,s,s,s)},
@@ -47173,7 +47173,7 @@ A(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.e
 if(j)s=B.C
 else s=l.f?B.H:B.m
 if(j)r=B.m
-else r=l.f?B.G:B.ao
+else r=l.f?B.G:B.ap
 if(j)q=B.C
 else q=l.f?B.Z:B.ac
 p=A.a3(30)
@@ -47225,9 +47225,9 @@ A(a){var s=null,r=this.c,q=r?B.ey:B.d7,p=A.a3(10),o=A.b5(r?B.mJ:B.bW,B.v,1),n=A.
 return A.a8(s,A.ag(A.b([n,B.a8,A.aw(A.N("Entrez le poids du patient pour des calculs pr\xe9cis",s,s,s,s,A.U(s,s,r?B.ew:B.bO,s,s,s,s,s,s,s,s,12,s,s,B.M,s,s,!0,s,s,s,s,s,s,s,s),s,s),1)],t.p),B.n,B.i,B.j,0),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,B.u_,B.tX,s,s,s)}}
 A.GF.prototype={
 A(a){var s=null,r=A.a8(s,s,B.k,s,s,new A.W(B.C,s,s,A.a3(2),s,s,B.r),s,14,B.fv,s,s,s,2.5)
-return A.ag(A.b([r,A.N(this.c.toUpperCase(),s,s,s,s,A.U(s,s,this.d?B.G:B.ao,s,s,s,s,s,s,s,s,10.5,s,s,B.D,s,s,!0,s,0.8,s,s,s,s,s,s),s,s)],t.p),B.n,B.i,B.j,0)}}
+return A.ag(A.b([r,A.N(this.c.toUpperCase(),s,s,s,s,A.U(s,s,this.d?B.G:B.ap,s,s,s,s,s,s,s,s,10.5,s,s,B.D,s,s,!0,s,0.8,s,s,s,s,s,s),s,s)],t.p),B.n,B.i,B.j,0)}}
 A.Ui.prototype={
-A(a){var s=this,r=null,q=s.e,p=q?B.H:B.m,o=q?B.Z:B.ac,n=q?B.aI:B.b_,m=q?B.K:B.H,l=q?B.G:B.ao,k=A.a3(11),j=A.a3(11),i=A.a9(B.d.ah(127.5),B.b_.m()>>>16&255,B.b_.m()>>>8&255,B.b_.m()&255),h=A.a3(11),g=A.b5(o,B.v,1.2),f=A.a3(9),e=s.c,d=B.Br.i(0,e)
+A(a){var s=this,r=null,q=s.e,p=q?B.H:B.m,o=q?B.Z:B.ac,n=q?B.aI:B.b_,m=q?B.K:B.H,l=q?B.G:B.ap,k=A.a3(11),j=A.a3(11),i=A.a9(B.d.ah(127.5),B.b_.m()>>>16&255,B.b_.m()>>>8&255,B.b_.m()&255),h=A.a3(11),g=A.b5(o,B.v,1.2),f=A.a3(9),e=s.c,d=B.Br.i(0,e)
 f=A.a8(r,A.bd(d==null?B.ot:d,B.C,r,r,18),B.k,r,r,new A.W(n,r,r,f,r,r,B.r),r,38,r,r,r,r,38)
 e=A.aw(A.N(e,r,r,r,r,A.U(r,r,m,r,r,r,r,r,r,r,r,14,r,r,B.W,r,r,!0,r,r,r,r,r,r,r,r),r,r),1)
 d=A.N(""+s.d,r,r,r,r,A.U(r,r,l,r,r,r,r,r,r,r,r,12,r,r,B.W,r,r,!0,r,r,r,r,r,r,r,r),r,r)
@@ -47263,7 +47263,7 @@ p=o}else{o=r?B.aI:B.b_
 p=o}if(a8.gjt())n=B.S
 else n=a8.gnD()?B.aF:B.C
 m=r?B.K:B.H
-l=r?B.G:B.ao
+l=r?B.G:B.ap
 k=r?B.ew:B.bO
 j=a8.a6U()
 i=a8.d!=null
@@ -47288,7 +47288,7 @@ a3=A.b([A.ag(a3,B.n,B.i,B.j,0),B.cJ,A.N(b.e,a9,a9,a9,a9,A.U(a9,a9,l,a9,a9,a9,a9,
 if(a2){b=a.c
 if(a8.gjt())a4=B.S
 else a4=a8.gnD()?B.aF:k
-a3.push(A.N(b,2,B.aq,a9,a9,A.U(a9,a9,a4,a9,a9,a9,a9,a9,a9,a9,a9,11,a9,a9,B.M,a9,a9,!0,a9,a9,a9,a9,a9,a9,a9,a9),a9,a9))}else a3.push(A.N(b.fy,1,B.aq,a9,a9,A.U(a9,a9,k,a9,a9,a9,a9,a9,a9,a9,a9,11,a9,a9,B.L,a9,a9,!0,a9,a9,a9,a9,a9,a9,a9,a9),a9,a9))
+a3.push(A.N(b,2,B.ao,a9,a9,A.U(a9,a9,a4,a9,a9,a9,a9,a9,a9,a9,a9,11,a9,a9,B.M,a9,a9,!0,a9,a9,a9,a9,a9,a9,a9,a9),a9,a9))}else a3.push(A.N(b.fy,1,B.ao,a9,a9,A.U(a9,a9,k,a9,a9,a9,a9,a9,a9,a9,a9,11,a9,a9,B.L,a9,a9,!0,a9,a9,a9,a9,a9,a9,a9,a9),a9,a9))
 b=A.aw(A.ak(a3,B.E,B.i,B.j),1)
 a3=A.b([],a0)
 if(j!=null){if(a8.gjt())a4=B.d8
@@ -47302,7 +47302,7 @@ a6=A.b5(a6,B.v,0.8)
 if(a8.gjt())a7=B.S
 else if(i)a7=B.C
 else a7=r?B.ew:B.bO
-B.c.K(a3,A.b([A.a8(a9,A.N(j,a9,a9,a9,a9,A.U(a9,a9,a7,a9,a9,a9,a9,a9,a9,a9,a9,11,a9,a9,B.D,a9,a9,!0,a9,a9,a9,a9,a9,a9,a9,a9),a9,a9),B.k,a9,a9,new A.W(a4,a9,a6,a5,a9,a9,B.r),a9,a9,a9,B.a9a,a9,a9,a9),B.cm],a0))}a3.push(A.bd(B.fG,r?B.Z:B.ac,a9,a9,18))
+B.c.K(a3,A.b([A.a8(a9,A.N(j,a9,a9,a9,a9,A.U(a9,a9,a7,a9,a9,a9,a9,a9,a9,a9,a9,11,a9,a9,B.D,a9,a9,!0,a9,a9,a9,a9,a9,a9,a9,a9),a9,a9),B.k,a9,a9,new A.W(a4,a9,a6,a5,a9,a9,B.r),a9,a9,a9,B.a9b,a9,a9,a9),B.cm],a0))}a3.push(A.bd(B.fG,r?B.Z:B.ac,a9,a9,18))
 c=A.b([A.ag(A.b([c,B.GA,b,B.a8,A.ak(a3,B.e9,B.cG,B.j)],a0),B.n,B.i,B.j,0)],a0)
 if(a8.gjt()){r=A.a9(B.d.ah(25.5),B.S.m()>>>16&255,B.S.m()>>>8&255,B.S.m()&255)
 b=A.a3(7)
@@ -47428,8 +47428,8 @@ b1=a5.a.d
 s=b1?B.aI:B.d9
 m=A.a3(9)
 g=A.b5(b1?B.Z:B.ac,B.v,1)
-d=A.bd(B.cX,b1?B.G:B.ao,a6,a6,13)
-e.push(A.a8(a6,A.ag(A.b([d,B.a8,A.aw(A.N(u.hg,a6,a6,a6,a6,A.U(a6,a6,b1?B.G:B.ao,a6,a6,a6,a6,a6,a6,a6,a6,11,a6,a6,a6,a6,1.4,!0,a6,a6,a6,a6,a6,a6,a6,a6),a6,a6),1)],c),B.n,B.i,B.j,0),B.k,a6,a6,new A.W(s,a6,g,m,a6,a6,B.r),a6,a6,a6,B.tX,a6,a6,a6))
+d=A.bd(B.cX,b1?B.G:B.ap,a6,a6,13)
+e.push(A.a8(a6,A.ag(A.b([d,B.a8,A.aw(A.N(u.hg,a6,a6,a6,a6,A.U(a6,a6,b1?B.G:B.ap,a6,a6,a6,a6,a6,a6,a6,a6,11,a6,a6,a6,a6,1.4,!0,a6,a6,a6,a6,a6,a6,a6,a6),a6,a6),1)],c),B.n,B.i,B.j,0),B.k,a6,a6,new A.W(s,a6,g,m,a6,a6,B.r),a6,a6,a6,B.tX,a6,a6,a6))
 return A.jZ(a6,f,A.oD(!0,A.ak(A.b([j,A.aw(A.ja(A.ak(e,B.E,B.i,B.j),a6,B.T,B.tZ,a6,B.ar),1)],c),B.n,B.i,B.j),!0),a6,!1,a6)}}
 A.arh.prototype={
 $0(){var s=this.a
@@ -47500,7 +47500,7 @@ A.H9.prototype={
 A(a){var s=null,r=this.d,q=r?B.H:B.m,p=A.a3(11),o=A.b5(r?B.Z:B.ac,B.v,1)
 return A.a8(s,A.ak(this.c,B.E,B.i,B.j),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,s,B.np,s,s,s)}}
 A.xF.prototype={
-A(a){var s=null,r=this.e,q=A.N(this.c,s,s,s,s,A.U(s,s,r?B.G:B.ao,s,s,s,s,s,s,s,s,12.5,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)
+A(a){var s=null,r=this.e,q=A.N(this.c,s,s,s,s,A.U(s,s,r?B.G:B.ap,s,s,s,s,s,s,s,s,12.5,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)
 return new A.am(B.a8c,A.ag(A.b([q,new A.lW(1,B.i3,A.N(this.d,s,s,s,s,A.U(s,s,r?B.K:B.H,s,s,s,s,s,s,s,s,12.5,s,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),B.f_,s),s)],t.p),B.n,B.iy,B.j,0),s)}}
 A.xI.prototype={
 A(a){var s,r,q,p,o,n,m,l,k,j=this,i=null,h=j.r
@@ -47508,8 +47508,8 @@ if(h){s=j.w
 r=s?B.ey:B.d7}else{s=j.w
 r=s?B.aI:B.b_}if(h)q=s?B.ew:B.bO
 else q=B.C
-p=s?B.G:B.ao
-o=s?B.G:B.ao
+p=s?B.G:B.ap
+o=s?B.G:B.ap
 if(h)n=s?B.mJ:B.bW
 else n=B.O
 m=A.a3(11)
@@ -47520,24 +47520,24 @@ if(h)k.push(A.bd(B.cX,s?B.ew:B.bO,i,i,14))
 return A.a8(i,A.ag(k,B.n,B.i,B.j,0),B.k,i,i,new A.W(r,i,l,m,i,i,B.r),i,i,i,B.k8,i,i,i)}}
 A.Yc.prototype={
 A(a){var s,r,q,p=this,o=null,n=p.y,m=n?B.H:B.m,l=n?B.Z:B.ac,k=A.a3(11),j=A.b5(l,B.v,1),i=A.a3(11),h=A.bd(B.fK,B.C,o,o,16),g=A.aw(A.N("D\xe9bit de Perfusion (ml/h)",o,o,o,o,A.U(o,o,n?B.K:B.H,o,o,o,o,o,o,o,o,13,o,o,B.W,o,o,!0,o,o,o,o,o,o,o,o),o,o),1),f=p.x,e=f?B.acQ:B.oo,d=t.p
-e=A.b([A.kK(!1,i,!0,new A.am(B.k8,A.ag(A.b([h,B.pS,g,A.bd(e,n?B.G:B.ao,o,o,18)],d),B.n,B.i,B.j,0),o),o,!0,o,o,o,o,o,o,p.z,o,o,o,o)],d)
+e=A.b([A.kK(!1,i,!0,new A.am(B.k8,A.ag(A.b([h,B.pS,g,A.bd(e,n?B.G:B.ap,o,o,18)],d),B.n,B.i,B.j,0),o),o,!0,o,o,o,o,o,o,p.z,o,o,o,o)],d)
 if(f){i=A.Ax(n?B.Z:B.ac,o,1,o)
 h=p.c*1000
 h=h<1?B.d.O(h,2):B.d.O(h,0)
-h=A.N("Standard : "+h+" \xb5g/ml",o,o,o,o,A.U(o,o,n?B.G:B.ao,o,o,o,o,o,o,o,o,11.5,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o)
+h=A.N("Standard : "+h+" \xb5g/ml",o,o,o,o,A.U(o,o,n?B.G:B.ap,o,o,o,o,o,o,o,o,11.5,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o)
 g=A.ag(A.b([A.aw(new A.Hy("D\xe9bit Min",p.d,n,o),1),B.a8,A.aw(new A.Hy("D\xe9bit Max",p.e,n,o),1)],d),B.n,B.i,B.j,0)
 f=n?B.Pm:B.QK
 s=A.a3(10)
 r=A.b5(n?B.QC:B.Rz,B.v,1)
 q=A.ag(A.b([B.ae2,B.aV,A.N("Dilution & Pr\xe9paration",o,o,o,o,A.U(o,o,n?B.K:B.H,o,o,o,o,o,o,o,o,12,o,o,B.D,o,o,!0,o,o,o,o,o,o,o,o),o,o)],d),B.n,B.i,B.j,0)
-f=A.a8(o,A.ak(A.b([q,B.ai,A.N(p.f,o,o,o,o,A.U(o,o,n?B.G:B.ao,o,o,o,o,o,o,o,o,11.5,o,o,o,o,1.4,!0,o,o,o,o,o,o,o,o),o,o),B.ai,A.ag(A.b([new A.Gb("NaCl 0.9%",!0,n,o),B.aV,new A.Gb("G5%",!0,n,o)],d),B.n,B.i,B.j,0)],d),B.E,B.i,B.j),B.k,o,o,new A.W(f,o,r,s,o,o,B.r),o,o,o,B.eB,o,o,o)
-B.c.K(e,A.b([i,new A.am(B.np,A.ak(A.b([h,B.av,g,B.cv,f,B.GE,A.N("Bas\xe9 sur la pr\xe9paration standard \u2014 v\xe9rifier la concentration r\xe9elle",o,o,o,o,A.U(o,o,n?B.G:B.ao,o,o,o,o,o,o,o,o,10,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o)],d),B.E,B.i,B.j),o)],d))}return A.a8(o,A.ak(e,B.n,B.i,B.j),B.k,o,o,new A.W(m,o,j,k,o,o,B.r),o,o,o,o,o,o,o)}}
+f=A.a8(o,A.ak(A.b([q,B.ai,A.N(p.f,o,o,o,o,A.U(o,o,n?B.G:B.ap,o,o,o,o,o,o,o,o,11.5,o,o,o,o,1.4,!0,o,o,o,o,o,o,o,o),o,o),B.ai,A.ag(A.b([new A.Gb("NaCl 0.9%",!0,n,o),B.aV,new A.Gb("G5%",!0,n,o)],d),B.n,B.i,B.j,0)],d),B.E,B.i,B.j),B.k,o,o,new A.W(f,o,r,s,o,o,B.r),o,o,o,B.eB,o,o,o)
+B.c.K(e,A.b([i,new A.am(B.np,A.ak(A.b([h,B.av,g,B.cv,f,B.GE,A.N("Bas\xe9 sur la pr\xe9paration standard \u2014 v\xe9rifier la concentration r\xe9elle",o,o,o,o,A.U(o,o,n?B.G:B.ap,o,o,o,o,o,o,o,o,10,o,o,o,o,o,!0,o,o,o,o,o,o,o,o),o,o)],d),B.E,B.i,B.j),o)],d))}return A.a8(o,A.ak(e,B.n,B.i,B.j),B.k,o,o,new A.W(m,o,j,k,o,o,B.r),o,o,o,o,o,o,o)}}
 A.Gb.prototype={
 A(a){var s=null,r=this.e?B.jB:B.dE,q=A.a3(6),p=A.b5(this.e?A.a9(B.d.ah(76.5),B.cA.m()>>>16&255,B.cA.m()>>>8&255,B.cA.m()&255):B.cA,B.v,1)
-return A.a8(s,A.ag(A.b([A.bd(B.df,B.aF,s,s,10),B.ha,A.N(this.c,s,s,s,s,A.U(s,s,B.aF,s,s,s,s,s,s,s,s,10,s,s,B.D,s,s,!0,s,s,s,s,s,s,s,s),s,s)],t.p),B.n,B.i,B.ae,0),B.k,s,s,new A.W(r,s,p,q,s,s,B.r),s,s,s,B.a98,s,s,s)}}
+return A.a8(s,A.ag(A.b([A.bd(B.df,B.aF,s,s,10),B.ha,A.N(this.c,s,s,s,s,A.U(s,s,B.aF,s,s,s,s,s,s,s,s,10,s,s,B.D,s,s,!0,s,s,s,s,s,s,s,s),s,s)],t.p),B.n,B.i,B.ae,0),B.k,s,s,new A.W(r,s,p,q,s,s,B.r),s,s,s,B.a99,s,s,s)}}
 A.Hy.prototype={
 A(a){var s=null,r=this.e,q=r?B.aI:B.b_,p=A.a3(10),o=A.b5(r?B.Z:B.rP,B.v,1)
-return A.a8(s,A.ak(A.b([A.N(this.c,s,s,s,s,A.U(s,s,r?B.G:B.ao,s,s,s,s,s,s,s,s,10.5,s,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.cm,A.N(B.d.O(this.d,1)+" ml/h",s,s,s,s,B.b5h,s,s)],t.p),B.n,B.i,B.j),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,s,B.a7X,s,s,s)}}
+return A.a8(s,A.ak(A.b([A.N(this.c,s,s,s,s,A.U(s,s,r?B.G:B.ap,s,s,s,s,s,s,s,s,10.5,s,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.cm,A.N(B.d.O(this.d,1)+" ml/h",s,s,s,s,B.b5h,s,s)],t.p),B.n,B.i,B.j),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,s,B.a7X,s,s,s)}}
 A.AO.prototype={
 a5(){return new A.Wg(new A.f9(B.dr,$.aE()))}}
 A.Wg.prototype={
@@ -47587,7 +47587,7 @@ A.asf.prototype={
 $0(){return this.a.d=1},
 $S:0}
 A.Ws.prototype={
-A(a){var s,r=this,q=null,p=r.c,o=p===0?A.dc(new A.G9(r.e,r.r,new A.asv(r),q),q,160):q,n=t.p,m=A.b([A.a8(q,B.adX,B.k,q,q,new A.W(B.fl,q,q,A.a3(14),q,q,B.r),q,44,q,q,q,q,44),B.aU,A.aw(A.ak(A.b([B.b6y,B.cJ,B.b63],n),B.E,B.i,B.ae),1)],n)
+A(a){var s,r=this,q=null,p=r.c,o=p===0?A.dc(new A.G9(r.e,r.r,new A.asv(r),q),q,160):q,n=t.p,m=A.b([A.a8(q,B.adX,B.k,q,q,new A.W(B.fl,q,q,A.a3(14),q,q,B.r),q,44,q,q,q,q,44),B.aU,A.aw(A.ak(A.b([B.b5X,B.cJ,B.b64],n),B.E,B.i,B.ae),1)],n)
 if(o!=null)B.c.K(m,A.b([B.aU,o],n))
 m=A.ag(m,B.n,B.i,B.j,0)
 s=A.b([new A.a0R(p,r.d,r.w,q)],n)
@@ -47630,7 +47630,7 @@ A.a0R.prototype={
 A(a){var s=this,r=null,q=A.a3(28),p=A.b5(B.cU,B.v,1),o=s.c,n=A.a8(r,r,B.k,B.hE,r,r,r,1.5,B.a8W,r,r,r,20),m=s.d,l=m>0
 m=l?m:r
 l=l?new A.azR(s):r
-return A.a8(r,A.ag(A.b([new A.HU(1,"S\xe9lection",o===0,r,new A.azS(s),r),n,new A.HU(2,"R\xe9sultats",o===1,m,l,r)],t.p),B.n,B.i,B.ae,0),B.k,r,r,new A.W(B.K,r,p,q,r,r,B.r),r,r,r,B.a96,r,r,r)}}
+return A.a8(r,A.ag(A.b([new A.HU(1,"S\xe9lection",o===0,r,new A.azS(s),r),n,new A.HU(2,"R\xe9sultats",o===1,m,l,r)],t.p),B.n,B.i,B.ae,0),B.k,r,r,new A.W(B.K,r,p,q,r,r,B.r),r,r,r,B.a97,r,r,r)}}
 A.azS.prototype={
 $0(){return this.a.e.$1(0)},
 $S:0}
@@ -47649,7 +47649,7 @@ s=A.b([i,B.hb,A.N(p.d,o,o,o,o,A.U(o,o,s,o,o,o,o,o,o,o,o,13.5,o,o,B.W,o,o,!0,o,o,
 i=p.f
 if(i!=null){l=l?A.a9(B.d.ah(76.5),B.m.m()>>>16&255,B.m.m()>>>8&255,B.m.m()&255):B.bf
 q=A.a3(12)
-B.c.K(s,A.b([B.aV,A.a8(o,A.N(A.o(i),o,o,o,o,B.b3g,o,o),B.k,o,o,new A.W(l,o,o,q,o,o,B.r),o,o,o,B.a99,o,o,o)],r))}return A.cO(o,A.dZ(A.ag(s,B.n,B.i,B.ae,0),o,B.bA,new A.W(k,o,o,j,o,o,B.r),B.dI,o,o,B.u1,o),B.T,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,o,n,o,o,o,o,o,o)}}
+B.c.K(s,A.b([B.aV,A.a8(o,A.N(A.o(i),o,o,o,o,B.b3g,o,o),B.k,o,o,new A.W(l,o,o,q,o,o,B.r),o,o,o,B.a9a,o,o,o)],r))}return A.cO(o,A.dZ(A.ag(s,B.n,B.i,B.ae,0),o,B.bB,new A.W(k,o,o,j,o,o,B.r),B.dI,o,o,B.u1,o),B.T,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,o,n,o,o,o,o,o,o)}}
 A.aDj.prototype={
 $1(a){return new A.xK(this.a,this.b,null)},
 $S:370}
@@ -47713,7 +47713,7 @@ $2(a,b){return B.f.b9(a.b.toLowerCase(),b.b.toLowerCase())},
 $S:382}
 A.a_J.prototype={
 A(a){var s,r,q,p,o=this,n=null,m=o.d,l=m.length
-if(l===0)return A.o9(A.b([B.ae4,B.aJ,A.N("Aucune pathologie ne correspond \xe0 \xab "+o.c+" \xbb",n,n,n,n,B.b4x,B.bD,n)],t.p),n,new A.L(28,60,28,o.f),B.ar)
+if(l===0)return A.o9(A.b([B.ae4,B.aJ,A.N("Aucune pathologie ne correspond \xe0 \xab "+o.c+" \xbb",n,n,n,n,B.b4x,B.bv,n)],t.p),n,new A.L(28,60,28,o.f),B.ar)
 s=A.C(t.ei,t.Rd)
 for(r=0;q=m.length,r<q;m.length===l||(0,A.D)(m),++r){p=m[r]
 J.fg(s.bJ(0,p.d,new A.ayJ()),p)}m=q>1?"s":""
@@ -47776,13 +47776,13 @@ j=t.p
 m=A.aw(A.ak(A.b([k,B.cJ,A.N(q,h,h,h,h,A.U(h,h,s?e:B.bM,h,h,h,h,h,h,h,h,12,h,h,m,h,h,!0,h,h,h,h,h,h,h,h),h,h)],j),B.E,B.i,B.ae),1)
 s=i.d
 q=s?0.5:0
-q=A.h6(!1,B.a7,!0,o,A.kK(!1,n,!0,A.a8(h,A.ag(A.b([l,B.c2,m,B.a8,A.aHN(A.bd(B.oo,s?e:B.bM,h,h,20),B.bA,B.dI,q)],j),B.n,B.i,B.j,0),B.k,h,B.KC,h,h,h,h,B.u4,h,h,h),h,!0,h,h,h,h,h,h,new A.aq3(i),h,h,h,h),B.k,B.O,0,h,h,h,h,h,B.cH)
+q=A.h6(!1,B.a7,!0,o,A.kK(!1,n,!0,A.a8(h,A.ag(A.b([l,B.c2,m,B.a8,A.aHN(A.bd(B.oo,s?e:B.bM,h,h,20),B.bB,B.dI,q)],j),B.n,B.i,B.j,0),B.k,h,B.KC,h,h,h,h,B.u4,h,h,h),h,!0,h,h,h,h,h,h,new A.aq3(i),h,h,h,h),B.k,B.O,0,h,h,h,h,h,B.cH)
 s=i.d?B.n6:B.jW
 o=A.b([A.Ax(B.cU,20,1,20),B.cm],j)
 n=i.a.d
 B.c.K(o,new A.a6(n,new A.aq4(i,e),A.a5(n).h("a6<1,d>")))
 o.push(B.av)
-return A.dZ(A.ak(A.b([q,A.aHJ(s,B.hT,A.ak(o,B.n,B.i,B.j),B.aO)],j),B.n,B.i,B.j),h,B.bA,new A.W(B.m,h,r,g,p,h,B.r),B.dI,h,B.nl,h,h)}}
+return A.dZ(A.ak(A.b([q,A.aHJ(s,B.hT,A.ak(o,B.n,B.i,B.j),B.aO)],j),B.n,B.i,B.j),h,B.bB,new A.W(B.m,h,r,g,p,h,B.r),B.dI,h,B.nl,h,h)}}
 A.aq5.prototype={
 $1(a){return a.fx},
 $S:68}
@@ -47908,7 +47908,7 @@ return A.aw(A.ag(q,B.n,B.i,B.j,0),1)},
 $S:395}
 A.UH.prototype={
 A(a){var s=null,r=A.a3(10),q=A.b5(B.cV,B.v,1)
-return A.kK(!1,r,!0,new A.am(B.a8d,A.ag(A.b([A.a8(s,A.bd(this.d,B.I,s,s,18),B.k,s,s,new A.W(B.rB,s,q,s,s,s,B.aM),s,36,s,s,s,s,36),B.a8,A.aw(A.N(this.c,3,B.aq,s,s,B.b3A,s,s),1),B.vq],t.p),B.n,B.i,B.j,0),s),s,!0,s,s,s,s,s,s,new A.aqe(),s,s,s,s)}}
+return A.kK(!1,r,!0,new A.am(B.a8d,A.ag(A.b([A.a8(s,A.bd(this.d,B.I,s,s,18),B.k,s,s,new A.W(B.rB,s,q,s,s,s,B.aM),s,36,s,s,s,s,36),B.a8,A.aw(A.N(this.c,3,B.ao,s,s,B.b3A,s,s),1),B.vq],t.p),B.n,B.i,B.j,0),s),s,!0,s,s,s,s,s,s,new A.aqe(),s,s,s,s)}}
 A.aqe.prototype={
 $0(){},
 $S:0}
@@ -47928,11 +47928,11 @@ n=A.b([new A.am(B.a8w,A.ag(A.b([A.a8(i,B.adt,B.k,i,i,new A.W(B.fl,i,i,A.a3(11),i
 if(r.gbH(r)){m=A.a3(10)
 l=A.b5(B.dD,B.v,1)
 n.push(new A.am(B.a8q,A.a8(i,A.ag(A.b([B.ae9,B.a8,A.aw(A.N("Conflit d\xe9tect\xe9 pour "+new A.fZ(r,new A.aws(),A.r(r).h("fZ<1,y>")).bs(0,", ")+" : privil\xe9gi\xe9 par une pathologie mais contre-indiqu\xe9 par une autre. La contre-indication est prioritaire.",i,i,i,i,B.b1O,i,i),1)],o),B.E,B.i,B.j,0),B.k,i,i,new A.W(B.d8,i,l,m,i,i,B.r),i,i,i,B.k6,i,i,i),i))}m=A.b([],o)
-if(q.gbH(q)){l=A.ag(A.b([B.ae_,B.ha,B.b61],o),B.n,B.i,B.j,0)
+if(q.gbH(q)){l=A.ag(A.b([B.ae_,B.ha,B.b62],o),B.n,B.i,B.j,0)
 k=A.r(q).h("fZ<1,d>")
 k=A.a7(new A.fZ(q,new A.awt(j),k),k.h("n.E"))
 m.push(A.aw(A.ak(A.b([l,B.ai,A.FI(k,B.hk,0,0)],o),B.E,B.i,B.j),1))}if(q.gbH(q)&&s.a!==0)m.push(B.c2)
-if(s.a!==0){l=A.ag(A.b([B.adz,B.ha,B.b6s],o),B.n,B.i,B.j,0)
+if(s.a!==0){l=A.ag(A.b([B.adz,B.ha,B.b6t],o),B.n,B.i,B.j,0)
 k=A.r(s).h("fZ<1,d>")
 s=A.a7(new A.fZ(s,new A.awu(j),k),k.h("n.E"))
 m.push(A.aw(A.ak(A.b([l,B.ai,A.FI(s,B.hk,0,0)],o),B.E,B.i,B.j),1))}n.push(new A.am(B.a8t,A.ag(m,B.E,B.i,B.j,0),i))
@@ -48010,7 +48010,7 @@ m.toString
 m=A.x(m).ax.a===B.q?B.bN:B.K
 s=o.d
 r=t.Gx
-r=A.a7(new A.a6(B.wm,new A.avo(),r),r.h("az.E"))
+r=A.a7(new A.a6(B.w9,new A.avo(),r),r.h("az.E"))
 q=o.d
 p=o.c
 p.toString
@@ -48026,14 +48026,14 @@ A.avn.prototype={
 $0(){return this.a.d=this.b},
 $S:0}
 A.WL.prototype={
-A(a){var s,r,q,p,o,n,m,l=null,k=this.d,j=k?B.Qt:B.P5,i=k?B.Ry:B.Rn,h=k?B.ao:B.G,g=A.bQ(a,l,t.w).w.r.d
+A(a){var s,r,q,p,o,n,m,l=null,k=this.d,j=k?B.Qt:B.P5,i=k?B.Ry:B.Rn,h=k?B.ap:B.G,g=A.bQ(a,l,t.w).w.r.d
 k=g>0?g:12
 s=A.a3(32)
 r=A.b5(i,B.v,0.5)
 q=A.b([new A.c7(0,B.aE,B.Rg,B.pc,24)],t.E)
 p=A.a3(32)
 o=J.BJ(6,t.l7)
-for(n=this.c,m=0;m<6;++m)o[m]=new A.Yn(B.wm[m],m===n,h,new A.asV(this,m),l)
+for(n=this.c,m=0;m<6;++m)o[m]=new A.Yn(B.w9[m],m===n,h,new A.asV(this,m),l)
 return A.a8(l,A.a6G(p,new A.am(B.nu,A.ag(o,B.n,B.oZ,B.j,0),l)),B.k,l,l,new A.W(j,l,r,s,q,l,B.r),l,l,new A.L(16,0,16,k),l,l,l,l)}}
 A.asV.prototype={
 $0(){return this.a.e.$1(this.b)},
@@ -48042,9 +48042,9 @@ A.Yn.prototype={
 A(a){var s=this,r=null,q=s.d,p=s.c,o=q?p.c:p.b,n=q?B.C:s.f
 n=A.a54(A.bd(o,n,new A.cZ(q,t.lY),r,24),B.cC,A.aCH(),A.b0w())
 o=q?B.W:B.M
-p=A.N(p.a,r,r,r,r,A.U(r,r,q?B.C:s.f,r,r,r,r,r,r,r,r,10,r,r,o,r,r,!0,r,r,r,r,r,r,r,r),r,r)
+p=A.N(p.a,1,B.ao,r,r,A.U(r,r,q?B.C:s.f,r,r,r,r,r,r,r,r,9.5,r,r,o,r,r,!0,r,r,r,r,r,r,r,r),B.bv,r)
 q=q?1:0
-return A.cO(B.aT,A.dZ(A.ak(A.b([n,B.cm,p,B.cm,A.z8(A.a8(r,r,B.k,r,r,B.qY,r,4,r,r,r,r,4),B.a_,B.a7,q)],t.p),B.n,B.i,B.ae),B.O,B.cc,r,B.a7,r,r,B.a9d,r),B.T,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,s.r,r,r,r,r,r,r)}}
+return A.cO(B.aT,A.dZ(A.ak(A.b([n,B.cm,p,B.cm,A.z8(A.a8(r,r,B.k,r,r,B.qY,r,4,r,r,r,r,4),B.a_,B.a7,q)],t.p),B.n,B.i,B.ae),B.O,B.cc,r,B.a7,r,r,B.a92,r),B.T,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,s.r,r,r,r,r,r,r)}}
 A.CG.prototype={
 a5(){var s=null
 return new A.HK(new A.f9(B.dr,$.aE()),A.vc(!0,s,!0,!0,s,s,!1),s,s)}}
@@ -48054,11 +48054,11 @@ p.aK()
 s=A.bU(o,B.a7D,0,o,1,o,p)
 p.x!==$&&A.aB()
 p.x=s
-r=A.c8(B.bA,s,o)
+r=A.c8(B.bB,s,o)
 p.y!==$&&A.aB()
 p.y=r
 r=t.Ni
-q=A.c8(B.bA,s,o)
+q=A.c8(B.bB,s,o)
 p.z!==$&&A.aB()
 p.z=new A.aA(q,new A.aM(B.aNB,B.t,r),r.h("aA<aI.T>"))
 s.bq(0)},
@@ -48122,10 +48122,10 @@ i=t.p
 m=A.a8(g,A.ak(A.b([new A.Jo(B.uO,"Nom",q,g),B.Sh,new A.Jo(k,"Sexe",j,g)],i),B.n,B.i,B.j),B.k,g,g,new A.W(B.m,g,l,m,g,g,B.r),g,g,g,B.a8L,g,g,1/0)
 l=A.a3(14)
 o=A.b([new A.c7(0,B.aE,A.a9(102,B.C.m()>>>16&255,B.C.m()>>>8&255,B.C.m()&255),B.BC,14)],o)
-i=new A.am(B.a8U,A.ak(A.b([n,B.b_0,B.b6h,B.ai,B.b6o,B.pT,m,B.pT,A.dc(A.qb(A.aIO(B.b6b,h.ga9v(),A.a9b(g,g,B.O,g,g,g,0,g,g,g,g,g,B.tS,B.O,new A.cr(A.a3(14),B.x),g,g,g,g,g)),new A.W(g,g,g,l,o,B.af8,B.r),B.ea),g,1/0)],i),B.n,B.cG,B.j),g)
+i=new A.am(B.a8U,A.ak(A.b([n,B.b_0,B.b6i,B.ai,B.b6p,B.pT,m,B.pT,A.dc(A.qb(A.aIO(B.b6c,h.ga9v(),A.a9b(g,g,B.O,g,g,g,0,g,g,g,g,g,B.tS,B.O,new A.cr(A.a3(14),B.x),g,g,g,g,g)),new A.W(g,g,g,l,o,B.af8,B.r),B.ea),g,1/0)],i),B.n,B.cG,B.j),g)
 o=i}else o=h.a5M()
 return A.jZ(g,B.K,A.oD(!0,new A.cq(s,!1,A.l4(A.cO(g,o,B.T,!1,g,g,g,g,g,g,g,g,g,g,g,g,g,g,new A.aw9(a),g,g,g,g,g,g),r,g,!0),g),!0),g,!1,!0)},
-a5M(){var s,r,q,p,o,n,m,l,k=this,j=null,i=t.p,h=A.ak(A.b([B.K1,B.av,B.b6t,B.b6v],i),B.n,B.i,B.j),g=A.a3(10)
+a5M(){var s,r,q,p,o,n,m,l,k=this,j=null,i=t.p,h=A.ak(A.b([B.K1,B.av,B.b6u,B.b6w],i),B.n,B.i,B.j),g=A.a3(10)
 g=A.ag(A.b([B.aZW,h,A.a8(j,B.ae8,B.k,j,j,new A.W(B.m,j,A.b5(B.ac,B.v,1),g,j,j,B.r),j,36,j,j,j,j,36)],i),B.n,B.iy,B.j,0)
 h=k.d
 s=A.l8(h,j,A.m7(j,new A.eB(4,A.a3(14),B.qP),j,B.a8y,j,j,j,j,!0,new A.eB(4,A.a3(14),B.qP),j,j,j,j,j,B.m,!0,j,j,j,j,new A.eB(4,A.a3(14),B.Kn),j,j,j,j,j,j,j,j,B.b2_,"Dc X",j,j,j,j,j,j,j,j,j,!0,!0,!1,j,B.aO8,j,B.KF,j,j,j,j,j,j,j,j,j,j),k.e,j,j,1,j,new A.aw2(k),B.b2a,B.aW,B.b_Y,j)
@@ -48140,7 +48140,7 @@ l=t.E
 q=q?A.b([new A.c7(0,B.aE,A.a9(89,B.C.m()>>>16&255,B.C.m()>>>8&255,B.C.m()&255),B.BC,14)],l):A.b([],l)
 h=B.f.dU(h.a.a).length>=2?k.gagH():j
 l=A.a9b(j,j,B.O,A.a9(B.d.ah(127.5),B.C.m()>>>16&255,B.C.m()>>>8&255,B.C.m()&255),j,j,0,j,j,j,j,j,B.tS,B.O,new A.cr(A.a3(14),B.x),j,j,j,j,j)
-return A.ja(A.ak(A.b([g,B.GD,B.b60,B.ai,B.b68,B.pT,B.JS,B.ai,s,B.GC,B.JR,B.av,r,B.GD,A.dc(A.z8(A.qb(A.aIO(k.r?B.aZY:B.b6f,h,l),new A.W(n,j,j,m,q,o,B.r),B.ea),B.a_,B.a7,p),j,1/0),B.cv,B.aXW],i),B.n,B.i,B.j),j,B.T,B.a8T,j,B.ar)}}
+return A.ja(A.ak(A.b([g,B.GD,B.b61,B.ai,B.b69,B.pT,B.JS,B.ai,s,B.GC,B.JR,B.av,r,B.GD,A.dc(A.z8(A.qb(A.aIO(k.r?B.aZY:B.b6g,h,l),new A.W(n,j,j,m,q,o,B.r),B.ea),B.a_,B.a7,p),j,1/0),B.cv,B.aXW],i),B.n,B.i,B.j),j,B.T,B.a8T,j,B.ar)}}
 A.aw7.prototype={
 $0(){return this.a.r=!0},
 $S:0}
@@ -48211,7 +48211,7 @@ aq(){var s,r=this,q=null
 r.aK()
 s=A.bU(q,B.ec,0,q,1,q,r)
 r.ax=s
-r.ay=A.c8(B.bA,s,q)
+r.ay=A.c8(B.bB,s,q)
 r.ax.bq(0)
 r.xA()},
 xA(){var s=0,r=A.a0(t.H),q,p=this,o
@@ -48377,7 +48377,7 @@ q.toString
 m=A.N("Pr\xeat \xe0 commencer",e,e,e,e,A.U(e,e,A.x(q).ax.a===B.q?B.K:B.H,e,e,e,e,e,e,e,e,16,e,e,B.D,e,e,!0,e,e,e,e,e,e,e,e),e,e)
 q=f.c
 q.toString
-B.c.K(p,A.b([new A.am(B.a85,A.e0(A.ak(A.b([d,B.b__,m,B.cw,A.N("Saisissez les donn\xe9es patient\npour activer les calculs",e,e,e,e,A.U(e,e,A.x(q).ax.a===B.q?B.G:B.ao,e,e,e,e,e,e,e,e,13,e,e,e,e,1.5,!0,e,e,e,e,e,e,e,e),B.bD,e),B.iS,A.a8(e,B.aXX,B.k,e,e,new A.W(e,e,A.b5(B.cV,B.v,1.5),A.a3(30),e,e,B.r),e,e,e,B.u6,e,e,e)],o),B.n,B.i,B.j),e,e),e),B.dp],o))}if(A.mr(f.r.a.a)!=null||f.y!=null||f.z!=null||b.gvb()){d=f.c
+B.c.K(p,A.b([new A.am(B.a85,A.e0(A.ak(A.b([d,B.b__,m,B.cw,A.N("Saisissez les donn\xe9es patient\npour activer les calculs",e,e,e,e,A.U(e,e,A.x(q).ax.a===B.q?B.G:B.ap,e,e,e,e,e,e,e,e,13,e,e,e,e,1.5,!0,e,e,e,e,e,e,e,e),B.bv,e),B.iS,A.a8(e,B.aXX,B.k,e,e,new A.W(e,e,A.b5(B.cV,B.v,1.5),A.a3(30),e,e,B.r),e,e,e,B.u6,e,e,e)],o),B.n,B.i,B.j),e,e),e),B.dp],o))}if(A.mr(f.r.a.a)!=null||f.y!=null||f.z!=null||b.gvb()){d=f.c
 d.toString
 B.c.K(p,A.b([new A.yr("Notes cliniques",A.x(d).ax.a===B.q,e),B.av,f.a5J(b)],o))}d=A.b([r,new A.Eo(B.a8D,A.aKZ(A.aFr(p,!0,!0,!0)),e)],o)
 return A.jZ(e,a,A.cO(e,new A.cq(s,!1,new A.MS(d,B.ar,!1,e,e,B.jc,e,!1,e,0,e,e,B.iU,B.T,e,e,B.a9,B.aT,e),e),B.T,!1,e,e,e,e,e,e,e,e,e,e,e,e,e,e,new A.awV(a0),e,e,e,e,e,e),e,!1,e)},
@@ -48388,7 +48388,7 @@ s.toString
 s=A.x(s).ax.a===B.q?B.H:B.m
 r=l.c
 r.toString
-q=A.N("Bonjour,",k,k,k,k,A.U(k,k,A.x(r).ax.a===B.q?B.G:B.ao,k,k,k,k,k,k,k,k,11,k,k,B.M,k,k,!0,k,0.2,k,k,k,k,k,k),k,k)
+q=A.N("Bonjour,",k,k,k,k,A.U(k,k,A.x(r).ax.a===B.q?B.G:B.ap,k,k,k,k,k,k,k,k,11,k,k,B.M,k,k,!0,k,0.2,k,k,k,k,k,k),k,k)
 r=l.c
 r.toString
 p=t.p
@@ -48441,7 +48441,7 @@ j.toString
 r=A.bd(B.ade,A.x(j).ax.a===B.q?B.G:B.C,k,k,14)
 j=l.c
 j.toString
-r=A.ag(A.b([r,B.ha,A.N("Unit\xe9",k,k,k,k,A.U(k,k,A.x(j).ax.a===B.q?B.G:B.ao,k,k,k,k,k,k,k,k,11,k,k,B.W,k,k,!0,k,0.5,k,k,k,k,k,k),k,k)],o),B.n,B.i,B.j,0)
+r=A.ag(A.b([r,B.ha,A.N("Unit\xe9",k,k,k,k,A.U(k,k,A.x(j).ax.a===B.q?B.G:B.ap,k,k,k,k,k,k,k,k,11,k,k,B.W,k,k,!0,k,0.5,k,k,k,k,k,k),k,k)],o),B.n,B.i,B.j,0)
 n=l.x
 m=l.c
 m.toString
@@ -48451,14 +48451,14 @@ k.toString
 k=A.x(k)
 s=m.c
 s.toString
-r=A.N("(Xh)",l,l,l,l,A.U(l,l,A.x(s).ax.a===B.q?B.G:B.ao,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,0.4,l,l,l,l,l,l),l,l)
+r=A.N("(Xh)",l,l,l,l,A.U(l,l,A.x(s).ax.a===B.q?B.G:B.ap,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,0.4,l,l,l,l,l,l),l,l)
 q=m.c
 q.toString
 p=t.p
 q=A.aw(A.ak(A.b([r,B.ai,new A.XA(m.r,A.x(q).ax.a===B.q,new A.awF(m),l)],p),B.E,B.i,B.j),1)
 s=m.c
 s.toString
-r=A.N("Score ASA",l,l,l,l,A.U(l,l,A.x(s).ax.a===B.q?B.G:B.ao,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,0.4,l,l,l,l,l,l),l,l)
+r=A.N("Score ASA",l,l,l,l,A.U(l,l,A.x(s).ax.a===B.q?B.G:B.ap,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,0.4,l,l,l,l,l,l),l,l)
 o=t.Y6
 s=A.a7(new A.a6(B.al_,new A.awG(m),o),o.h("az.E"))
 s=A.b([r,B.ai,A.ag(s,B.n,B.i,B.j,0)],p)
@@ -48467,7 +48467,7 @@ if(r!=null)B.c.K(s,A.b([B.cw,A.N(A.aRW(r),l,l,l,l,B.Ha,l,l)],p))
 s=A.aw(A.ak(s,B.E,B.i,B.j),2)
 r=m.c
 r.toString
-o=A.N("Score Mallampati",l,l,l,l,A.U(l,l,A.x(r).ax.a===B.q?B.G:B.ao,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,0.4,l,l,l,l,l,l),l,l)
+o=A.N("Score Mallampati",l,l,l,l,A.U(l,l,A.x(r).ax.a===B.q?B.G:B.ap,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,0.4,l,l,l,l,l,l),l,l)
 n=t.yf
 r=A.a7(new A.a6(B.arS,new A.awH(m),n),n.h("az.E"))
 r=A.b([o,B.ai,A.ag(r,B.n,B.i,B.j,0)],p)
@@ -48600,7 +48600,7 @@ $S:0}
 A.awT.prototype={
 $1(a){var s=null,r=A.a8(s,s,B.k,s,s,new A.W(B.cV,s,s,A.a3(2),s,s,B.r),s,4,s,s,s,s,36),q=this.a.c
 q.toString
-return new A.am(B.u8,A.ak(A.b([r,B.iS,B.b6m,B.aJ,A.N("Saisissez le poids, la taille, l'\xe2ge et le sexe. Les param\xe8tres calcul\xe9s (IMC, IBW, LBW, BSA) s'activent imm\xe9diatement. Compl\xe9tez ensuite le je\xfbne, le score ASA et Mallampati pour obtenir les notes cliniques.",s,s,s,s,A.U(s,s,A.x(q).ax.a===B.q?B.G:B.ao,s,s,s,s,s,s,s,s,14,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s),s,s),B.iS],t.p),B.n,B.i,B.ae),s)},
+return new A.am(B.u8,A.ak(A.b([r,B.iS,B.b6n,B.aJ,A.N("Saisissez le poids, la taille, l'\xe2ge et le sexe. Les param\xe8tres calcul\xe9s (IMC, IBW, LBW, BSA) s'activent imm\xe9diatement. Compl\xe9tez ensuite le je\xfbne, le score ASA et Mallampati pour obtenir les notes cliniques.",s,s,s,s,A.U(s,s,A.x(q).ax.a===B.q?B.G:B.ap,s,s,s,s,s,s,s,s,14,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s),s,s),B.iS],t.p),B.n,B.i,B.ae),s)},
 $S:207}
 A.awN.prototype={
 $1(a){return this.a.tN(0)},
@@ -48662,7 +48662,7 @@ return A.ag(A.b([r,A.N(this.c,s,s,s,s,A.U(s,s,this.d?B.K:B.H,s,s,s,s,s,s,s,s,15,
 A.Un.prototype={
 A(a){var s,r,q,p,o,n=this,m=null,l=n.c,k=l?B.H:B.m,j=A.a3(18),i=A.b5(l?B.Z:B.cV,B.v,1),h=l?A.b([],t.E):B.aFP,g=l?B.aI:B.b_
 g=A.a8(m,A.bd(n.d,B.C,m,m,18),B.k,m,m,new A.W(g,m,m,m,m,m,B.aM),m,36,m,m,m,m,36)
-s=A.N(n.e.toUpperCase(),m,m,m,m,B.b3m,B.bD,m)
+s=A.N(n.e.toUpperCase(),m,m,m,m,B.b3m,B.bv,m)
 r=n.w
 if(r==null)l=l?B.K:B.H
 else l=r
@@ -48682,15 +48682,15 @@ s=new A.W(p,p,p,p,A.b([new A.c7(0,B.aE,A.a9(B.d.ah(76.5),B.C.m()>>>16&255,B.C.m(
 r=s?B.aI:B.d9
 r=new A.W(r,p,A.b5(s?B.Z:B.mY,B.v,1),p,p,p,B.aM)
 s=r}if(o)o=B.m
-else o=q.e?B.G:B.ao
+else o=q.e?B.G:B.ap
 return A.cO(p,A.dZ(A.e0(A.N(q.c,p,p,p,p,A.U(p,p,o,p,p,p,p,p,p,p,p,13,p,p,B.D,p,p,!0,p,p,p,p,p,p,p,p),p,p),p,p),p,B.cc,s,B.a7,42,p,p,p),B.T,!1,p,p,p,p,p,p,p,p,p,p,p,p,p,p,new A.aza(q),p,p,p,p,p,p)}}
 A.aza.prototype={
 $0(){A.nT()
 this.a.f.$0()},
 $S:0}
 A.XA.prototype={
-A(a){var s=null,r=this.d,q=r?B.aI:B.d9,p=A.a3(14),o=A.b5(r?B.Z:B.O,B.v,1),n=A.b([$.aOx()],t.VS),m=A.U(s,s,r?B.K:B.H,s,s,s,s,s,s,s,s,15,s,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),l=A.U(s,s,r?B.G:B.ao,s,s,s,s,s,s,s,s,14,s,s,B.L,s,s,!0,s,s,s,s,s,s,s,s),k=A.bd(B.og,r?B.G:B.ao,s,s,16)
-return A.dZ(A.l8(this.c,s,A.m7(s,B.cO,s,B.a94,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,l,"8",s,s,s,s,s,s,s,s,s,!0,!0,!1,s,new A.am(B.a9b,k,s),s,B.KE,s,s,s,s,s,s,s,A.U(s,s,r?B.G:B.ao,s,s,s,s,s,s,s,s,13,s,s,B.M,s,s,!0,s,s,s,s,s,s,s,s),"h",s),s,n,B.iX,1,s,this.e,m,B.aW,B.dq,s),s,B.a_,new A.W(q,s,o,p,s,s,B.r),B.a7,s,s,s,s)}}
+A(a){var s=null,r=this.d,q=r?B.aI:B.d9,p=A.a3(14),o=A.b5(r?B.Z:B.O,B.v,1),n=A.b([$.aOx()],t.VS),m=A.U(s,s,r?B.K:B.H,s,s,s,s,s,s,s,s,15,s,s,B.W,s,s,!0,s,s,s,s,s,s,s,s),l=A.U(s,s,r?B.G:B.ap,s,s,s,s,s,s,s,s,14,s,s,B.L,s,s,!0,s,s,s,s,s,s,s,s),k=A.bd(B.og,r?B.G:B.ap,s,s,16)
+return A.dZ(A.l8(this.c,s,A.m7(s,B.cO,s,B.a95,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,l,"8",s,s,s,s,s,s,s,s,s,!0,!0,!1,s,new A.am(B.a9c,k,s),s,B.KE,s,s,s,s,s,s,s,A.U(s,s,r?B.G:B.ap,s,s,s,s,s,s,s,s,13,s,s,B.M,s,s,!0,s,s,s,s,s,s,s,s),"h",s),s,n,B.iX,1,s,this.e,m,B.aW,B.dq,s),s,B.a_,new A.W(q,s,o,p,s,s,B.r),B.a7,s,s,s,s)}}
 A.ea.prototype={}
 A.UO.prototype={
 A(a){var s=null,r=this.c,q=r.b,p=A.a9(20,q.m()>>>16&255,q.m()>>>8&255,q.m()&255),o=A.a3(12)
@@ -48720,7 +48720,7 @@ else m=p.z?B.G:B.C
 b=A.a8(e,A.bd(o,m,e,e,17),B.k,e,e,new A.W(b,e,e,e,e,e,B.aM),e,34,e,e,e,e,34)
 m=p.c
 if(n)p=B.C
-else p=p.z?B.G:B.ao
+else p=p.z?B.G:B.ap
 p=A.N(m,e,e,e,e,A.U(e,e,p,e,e,e,e,e,e,e,e,10.5,e,e,B.W,e,e,!0,e,0.4,e,e,e,e,e,e),e,e)
 m=f.a
 o=m.f
@@ -48732,11 +48732,11 @@ j=k.y
 i=A.U(e,e,k.z?B.K:B.H,e,e,e,e,e,e,e,e,20,e,e,B.az,e,e,!0,e,e,e,e,e,e,e,e)
 h=f.a
 g=h.e
-o=A.l8(o,e,A.m7(e,B.cO,e,B.b0,e,e,e,e,!0,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,A.U(e,e,h.z?B.G:B.hE,e,e,e,e,e,e,e,e,20,e,e,B.W,e,e,!0,e,e,e,e,e,e,e,e),g,e,e,e,e,e,!0,e,e,e,!0,!0,!1,e,e,e,e,e,e,e,e,e,e,e,e,e,e),e,l,m,1,e,j,i,B.bD,B.dq,n)
+o=A.l8(o,e,A.m7(e,B.cO,e,B.b0,e,e,e,e,!0,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,A.U(e,e,h.z?B.G:B.hE,e,e,e,e,e,e,e,e,20,e,e,B.W,e,e,!0,e,e,e,e,e,e,e,e),g,e,e,e,e,e,!0,e,e,e,!0,!0,!1,e,e,e,e,e,e,e,e,e,e,e,e,e,e),e,l,m,1,e,j,i,B.bv,B.dq,n)
 n=f.a
 m=n.d
 if(f.d)n=B.C
-else n=n.z?B.G:B.ao
+else n=n.z?B.G:B.ap
 return A.nN(!1,e,A.dZ(A.ak(A.b([b,B.ai,p,B.cw,o,A.N(m,e,e,e,e,A.U(e,e,n,e,e,e,e,e,e,e,e,10,e,e,B.M,e,e,!0,e,e,e,e,e,e,e,e),e,e)],t.p),B.n,B.i,B.ae),e,B.a_,new A.W(c,e,q,r,d,e,B.r),B.a7,e,e,B.a8e,e),e,e,e,e,!0,e,new A.avJ(f),e,e,e,e)}}
 A.avJ.prototype={
 $1(a){var s=this.a
@@ -48752,7 +48752,7 @@ return A.a8(s,A.ag(r,B.n,B.i,B.ae,0),B.k,s,s,new A.W(q,s,o,p,s,s,B.r),s,s,s,B.a9
 A.aon.prototype={
 $1(a){var s,r=null,q=this.a,p=a===q.c,o=p?B.C:B.O,n=A.a3(8),m=A.aDQ(a),l=p?B.D:B.M
 if(p)s=B.m
-else s=q.d?B.G:B.ao
+else s=q.d?B.G:B.ap
 return A.cO(r,A.dZ(A.N(m,r,r,r,r,A.U(r,r,s,r,r,r,r,r,r,r,r,11.5,r,r,l,r,r,!0,r,r,r,r,r,r,r,r),r,r),r,B.a_,new A.W(o,r,r,n,r,r,B.r),B.cC,r,r,B.a8i,r),B.T,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,new A.aom(q,a),r,r,r,r,r,r)},
 $S:420}
 A.aom.prototype={
@@ -48761,7 +48761,7 @@ this.a.e.$1(this.b)},
 $S:0}
 A.a0j.prototype={
 A(a){var s=this,r=null,q=s.d,p=s.c,o=t.p
-return A.ak(A.b([new A.am(B.u9,A.N("Sexe",r,r,r,r,A.U(r,r,q?B.G:B.ao,r,r,r,r,r,r,r,r,11,r,r,B.W,r,r,!0,r,0.5,r,r,r,r,r,r),r,r),r),A.ag(A.b([A.aw(A.aMl(B.aqw,B.R3,B.i8,q,p===B.h9,"H",new A.azw(s),B.h9),1),B.a8,A.aw(A.aMl(B.ayc,B.Pz,B.adi,q,p===B.lt,"F",new A.azx(s),B.lt),1)],o),B.n,B.i,B.j,0)],o),B.E,B.i,B.j)}}
+return A.ak(A.b([new A.am(B.u9,A.N("Sexe",r,r,r,r,A.U(r,r,q?B.G:B.ap,r,r,r,r,r,r,r,r,11,r,r,B.W,r,r,!0,r,0.5,r,r,r,r,r,r),r,r),r),A.ag(A.b([A.aw(A.aMl(B.aqw,B.R3,B.i8,q,p===B.h9,"H",new A.azw(s),B.h9),1),B.a8,A.aw(A.aMl(B.ayc,B.Pz,B.adi,q,p===B.lt,"F",new A.azx(s),B.lt),1)],o),B.n,B.i,B.j,0)],o),B.E,B.i,B.j)}}
 A.azw.prototype={
 $0(){return this.a.e.$1(B.h9)},
 $S:0}
@@ -48793,7 +48793,7 @@ A.nT()},
 afb(){var s=this.d
 s===$&&A.a()
 return s.cU(0)},
-A(a){var s,r,q=this,p=null,o=q.a,n=o.w,m=o.x,l=m?B.aI:B.d9,k=m?B.Z:B.mY,j=m?B.G:B.ao,i=m?B.G:B.ao
+A(a){var s,r,q=this,p=null,o=q.a,n=o.w,m=o.x,l=m?B.aI:B.d9,k=m?B.Z:B.mY,j=m?B.G:B.ap,i=m?B.G:B.ap
 m=q.e
 m===$&&A.a()
 if(n){o=o.f
@@ -48939,9 +48939,9 @@ if(b.b>760){s=this.a
 r=s.d
 q=r?B.dB.f7(0.14):B.hJ
 q=A.a8(k,B.vr,B.k,k,k,new A.W(q,k,k,A.a3(14),k,k,B.r),k,44,k,k,k,k,44)
-p=A.N(j,1,B.aq,k,k,A.U(k,k,r?B.K:B.mE,k,k,k,k,k,k,k,k,17,k,k,B.D,k,k,!0,k,-0.3,k,k,k,k,k,k),k,k)
+p=A.N(j,1,B.ao,k,k,A.U(k,k,r?B.K:B.mE,k,k,k,k,k,k,k,k,17,k,k,B.D,k,k,!0,k,-0.3,k,k,k,k,k,k),k,k)
 o=t.p
-p=A.aw(A.ak(A.b([p,B.cJ,A.N(i,1,B.aq,k,k,A.U(k,k,r?B.G:B.dC,k,k,k,k,k,k,k,k,11,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k)],o),B.E,B.i,B.ae),1)
+p=A.aw(A.ak(A.b([p,B.cJ,A.N(i,1,B.ao,k,k,A.U(k,k,r?B.G:B.dC,k,k,k,k,k,k,k,k,11,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k)],o),B.E,B.i,B.ae),1)
 n=r?B.bN.f7(0.4):B.K
 m=A.a3(18)
 l=s.c
@@ -48949,9 +48949,9 @@ return new A.am(B.a8E,A.ag(A.b([q,B.aU,p,B.iQ,A.a8(k,A.ag(A.b([A.awa(l===0,B.dB,
 r=s.d
 q=r?B.dB.f7(0.14):B.hJ
 q=A.a8(k,B.vr,B.k,k,k,new A.W(q,k,k,A.a3(14),k,k,B.r),k,44,k,k,k,k,44)
-p=A.N(j,1,B.aq,k,k,A.U(k,k,r?B.K:B.mE,k,k,k,k,k,k,k,k,17,k,k,B.D,k,k,!0,k,-0.3,k,k,k,k,k,k),k,k)
+p=A.N(j,1,B.ao,k,k,A.U(k,k,r?B.K:B.mE,k,k,k,k,k,k,k,k,17,k,k,B.D,k,k,!0,k,-0.3,k,k,k,k,k,k),k,k)
 o=t.p
-p=A.ag(A.b([q,B.aU,A.aw(A.ak(A.b([p,B.cJ,A.N(i,1,B.aq,k,k,A.U(k,k,r?B.G:B.dC,k,k,k,k,k,k,k,k,11,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k)],o),B.E,B.i,B.ae),1),B.aU,A.dc(A.aLL(s.f,r,s.r,s.w),k,160)],o),B.n,B.i,B.j,0)
+p=A.ag(A.b([q,B.aU,A.aw(A.ak(A.b([p,B.cJ,A.N(i,1,B.ao,k,k,A.U(k,k,r?B.G:B.dC,k,k,k,k,k,k,k,k,11,k,k,k,k,k,!0,k,k,k,k,k,k,k,k),k,k)],o),B.E,B.i,B.ae),1),B.aU,A.dc(A.aLL(s.f,r,s.r,s.w),k,160)],o),B.n,B.i,B.j,0)
 q=r?B.bN.f7(0.4):B.K
 n=A.a3(18)
 m=s.c
@@ -49019,9 +49019,9 @@ p=k?B.D:B.M
 if(k)o=m.f
 else o=B.G
 n=t.p
-p=A.ag(A.b([q,B.hb,new A.lW(1,B.i3,A.N(m.c,l,B.aq,l,l,A.U(l,l,o,l,l,l,l,l,l,l,l,13,l,l,p,l,l,!0,l,l,l,l,l,l,l,l),l,l),l)],n),B.n,B.cG,B.j,0)
+p=A.ag(A.b([q,B.hb,new A.lW(1,B.i3,A.N(m.c,l,B.ao,l,l,A.U(l,l,o,l,l,l,l,l,l,l,l,13,l,l,p,l,l,!0,l,l,l,l,l,l,l,l),l,l),l)],n),B.n,B.cG,B.j,0)
 k=k?40:0
-return A.aw(A.cO(B.aT,A.ik(A.dZ(A.ak(A.b([p,B.cw,A.dZ(l,l,B.bA,new A.W(m.f,l,l,A.a3(20),l,l,B.r),B.cf,3,l,l,k)],n),B.n,B.i,B.ae),l,B.bA,new A.W(s,l,l,r,l,l,B.r),B.cf,l,l,B.a7Z,l),B.lE,l,l,l,l),B.T,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,m.x,l,l,l,l,l,l),1)}}
+return A.aw(A.cO(B.aT,A.ik(A.dZ(A.ak(A.b([p,B.cw,A.dZ(l,l,B.bB,new A.W(m.f,l,l,A.a3(20),l,l,B.r),B.cf,3,l,l,k)],n),B.n,B.i,B.ae),l,B.bB,new A.W(s,l,l,r,l,l,B.r),B.cf,l,l,B.a7Z,l),B.lE,l,l,l,l),B.T,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,m.x,l,l,l,l,l,l),1)}}
 A.Hm.prototype={
 A(a){var s=this,r=A.bQ(a,null,t.w).w,q=s.c.length
 if(q===0)return new A.Ue(s.d,s.e,null)
@@ -49037,7 +49037,7 @@ $S:0}
 A.Ue.prototype={
 A(a){var s=null,r=this.c,q=r?B.K:B.H
 r=r?B.Z:B.t4
-return A.e0(new A.am(B.a90,A.ak(A.b([A.a8(s,A.bd(B.or,B.G,s,s,30),B.k,s,s,new A.W(r,s,s,s,s,s,B.aM),s,64,s,s,s,s,64),B.cv,A.N("Aucun protocole trouv\xe9",s,s,s,s,A.U(s,s,q,s,s,s,s,s,s,s,s,14,s,s,B.D,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.cm,A.N("Aucun r\xe9sultat pour \xab "+this.d+" \xbb",s,s,s,s,A.U(s,s,B.G,s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.bD,s)],t.p),B.n,B.i,B.ae),s),s,s)}}
+return A.e0(new A.am(B.a90,A.ak(A.b([A.a8(s,A.bd(B.or,B.G,s,s,30),B.k,s,s,new A.W(r,s,s,s,s,s,B.aM),s,64,s,s,s,s,64),B.cv,A.N("Aucun protocole trouv\xe9",s,s,s,s,A.U(s,s,q,s,s,s,s,s,s,s,s,14,s,s,B.D,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.cm,A.N("Aucun r\xe9sultat pour \xab "+this.d+" \xbb",s,s,s,s,A.U(s,s,B.G,s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.bv,s)],t.p),B.n,B.i,B.ae),s),s,s)}}
 A.tx.prototype={
 a5(){return new A.UF(null,null)}}
 A.UF.prototype={
@@ -49053,11 +49053,11 @@ p.e=new A.aA(s,new A.aM(1,0.97,r),r.h("aA<aI.T>"))
 r=A.bU(o,B.a7w,0,o,1,o,p)
 p.f!==$&&A.aB()
 p.f=r
-s=A.c8(B.bA,r,o)
+s=A.c8(B.bB,r,o)
 p.r!==$&&A.aB()
 p.r=s
 s=t.Ni
-r=A.c8(B.bA,r,o)
+r=A.c8(B.bB,r,o)
 p.w!==$&&A.aB()
 p.w=new A.aA(r,new A.aM(B.aNN,B.t,s),s.h("aA<aI.T>"))
 q=p.a.f
@@ -49088,7 +49088,7 @@ l=A.b5(b,B.v,1)
 m=A.a8(i,A.bd(A.aN9(g.d),d,i,i,21),B.k,i,i,new A.W(n,i,l,m,i,i,B.r),i,44,i,i,i,i,44)
 l=A.N(g.b,i,i,i,i,A.U(i,i,a0,i,i,i,i,i,i,i,i,14.5,i,i,B.az,i,i,!0,i,i,i,i,i,i,i,i),i,i)
 n=t.p
-l=A.aw(A.ak(A.b([l,B.cJ,A.N(g.c,1,B.aq,i,i,A.U(i,i,f?B.G:d.f7(0.75),i,i,i,i,i,i,i,i,11.5,i,i,B.M,i,i,!0,i,i,i,i,i,i,i,i),i,i)],n),B.E,B.i,B.ae),1)
+l=A.aw(A.ak(A.b([l,B.cJ,A.N(g.c,1,B.ao,i,i,A.U(i,i,f?B.G:d.f7(0.75),i,i,i,i,i,i,i,i,11.5,i,i,B.M,i,i,!0,i,i,i,i,i,i,i,i),i,i)],n),B.E,B.i,B.ae),1)
 k=f?d.f7(0.12):c
 return new A.cq(e,!1,A.l4(A.eZ(r,new A.aq7(j),A.cO(i,A.a8(i,A.ag(A.b([m,B.c2,l,B.a8,A.a8(i,A.bd(B.acx,d,i,i,12),B.k,i,i,new A.W(k,i,i,i,i,i,B.aM),i,28,i,i,i,i,28)],n),B.n,B.i,B.j,0),B.k,i,i,new A.W(a,i,p,q,o,i,B.r),i,i,B.hV,B.nr,i,i,i),B.T,!1,i,i,i,i,i,i,i,i,i,i,i,i,i,i,h,new A.aq8(j),new A.aq9(j),new A.aqa(j),i,i,i)),s,i,!0),i)}}
 A.aqb.prototype={
@@ -49124,7 +49124,7 @@ e=this.d
 s=e?B.bN:B.K
 r=e?B.H:B.m
 q=e?B.K:B.H
-p=e?B.G:B.ao
+p=e?B.G:B.ap
 o=e?B.Z:B.ac
 n=A.bQ(a,g,t.w).w
 m=A.iS(g,g,A.bd(B.uT,q,g,g,17),g,g,this.e,g,g,g,g)
@@ -49180,7 +49180,7 @@ if(r!=null)r.J(0,s.gdh())
 s.aH$=null
 s.au()}}
 A.wo.prototype={
-A(a){var s,r=null,q=A.x(a).ax.a===B.q?B.H:B.m,p=A.x(a).ax.a===B.q?B.bN:B.K,o=A.x(a).ax.a===B.q?B.Z:B.ac,n=A.x(a).ax.a===B.q?B.K:B.H,m=A.x(a).ax.a===B.q?B.G:B.ak,l=A.iS(r,r,A.bd(B.oh,m,r,r,20),r,r,new A.aiI(a),r,r,r,r),k=this.c,j=t.p,i=A.ak(A.b([A.N(k.a,1,B.aq,r,r,A.U(r,r,n,r,r,r,r,r,r,r,r,14,r,r,B.D,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.N(k.b,r,r,r,r,A.U(r,r,m,r,r,r,r,r,r,r,r,10,r,r,B.M,r,r,!0,r,r,r,r,r,r,r,r),r,r)],j),B.E,B.i,B.j)
+A(a){var s,r=null,q=A.x(a).ax.a===B.q?B.H:B.m,p=A.x(a).ax.a===B.q?B.bN:B.K,o=A.x(a).ax.a===B.q?B.Z:B.ac,n=A.x(a).ax.a===B.q?B.K:B.H,m=A.x(a).ax.a===B.q?B.G:B.ak,l=A.iS(r,r,A.bd(B.oh,m,r,r,20),r,r,new A.aiI(a),r,r,r,r),k=this.c,j=t.p,i=A.ak(A.b([A.N(k.a,1,B.ao,r,r,A.U(r,r,n,r,r,r,r,r,r,r,r,14,r,r,B.D,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.N(k.b,r,r,r,r,A.U(r,r,m,r,r,r,r,r,r,r,r,10,r,r,B.M,r,r,!0,r,r,r,r,r,r,r,r),r,r)],j),B.E,B.i,B.j)
 i=A.a56(A.b([new A.am(B.tQ,A.iS(r,r,A.bd(B.eG,m,r,r,20),r,r,new A.aiJ(a),r,r,r,r),r)],j),r,r,!0,!0,q,new A.CZ(A.a8(r,r,B.k,o,r,r,r,0.5,r,r,r,r,r),B.Gz,r),1,r,r,0,!1,r,!1,r,r,l,44,!0,r,r,r,B.O,r,i,r,r,r,1,r,!0)
 l=A.b([new A.VI(k,r),B.aJ,new A.a2t(k,r),B.aJ,new A.Wm(k,r),B.aJ,new A.TC(k,r),B.aJ],j)
 if(k.db.length!==0||k.dx.length!==0||k.dy.length!==0||k.fr.length!==0||k.fx.length!==0||k.fy.length!==0||k.go.length!==0||k.id.length!==0||k.k1.length!==0)B.c.K(l,A.b([new A.Wu(k,r),B.aJ],j))
@@ -49345,7 +49345,7 @@ q=s&&r==null?A.aWw(i,h,l.d):k
 p=A.a8(k,k,B.k,e,k,k,k,0.5,k,k,k,k,k)
 o=A.bd(B.acW,c,k,k,22)
 n=t.p
-m=A.ag(A.b([A.a8(k,B.adK,B.k,k,k,new A.W(A.a9(B.d.ah(25.5),B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255),k,k,A.a3(9),k,k,B.r),k,32,k,k,k,k,32),B.aU,A.ak(A.b([A.N("Param\xe8tres respiratoires",k,k,k,k,A.U(k,k,d,k,k,k,k,k,k,k,k,14,k,k,B.D,k,k,!0,k,k,k,k,k,k,k,k),k,k),A.N("Calculs & r\xe9glages ventilatoires",k,k,k,k,A.U(k,k,c,k,k,k,k,k,k,k,k,10,k,k,B.M,k,k,!0,k,k,k,k,k,k,k,k),k,k)],n),B.E,B.i,B.j)],n),B.n,B.i,B.j,0)
+m=A.ag(A.b([A.a8(k,B.adK,B.k,k,k,new A.W(A.a9(B.d.ah(25.5),B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255),k,k,A.a3(9),k,k,B.r),k,32,k,k,k,k,32),B.aU,A.ak(A.b([A.N("VentiR\xe9glages",k,k,k,k,A.U(k,k,d,k,k,k,k,k,k,k,k,14,k,k,B.D,k,k,!0,k,k,k,k,k,k,k,k),k,k),A.N("Calculs & r\xe9glages ventilatoires",k,k,k,k,A.U(k,k,c,k,k,k,k,k,k,k,k,10,k,k,B.M,k,k,!0,k,k,k,k,k,k,k,k),k,k)],n),B.E,B.i,B.j)],n),B.n,B.i,B.j,0)
 m=A.a56(A.b([new A.U3(B.v0,new A.ayF(),k),B.aV],n),k,k,!0,!0,f,new A.CZ(p,B.Gz,k),1,k,k,0,!1,k,!1,k,k,new A.am(B.a8m,o,k),k,!0,k,k,k,B.O,k,m,k,k,k,1,k,!0)
 return A.jZ(m,g,q==null?new A.Wp(r,k):new A.UV(q,l.d,new A.ayG(l),l.e,new A.ayH(l),k),k,!1,k)}}
 A.ayF.prototype={
@@ -49390,9 +49390,9 @@ p=t.p
 l=A.a8(h,A.ag(A.b([j,B.c2,A.aw(A.ak(A.b([i,B.cJ,A.N(q,h,h,h,h,A.U(h,h,r,h,h,h,h,h,h,h,h,11.5,h,h,B.M,h,1.4,!0,h,h,h,h,h,h,h,h),h,h)],p),B.E,B.i,B.j),1)],p),B.E,B.i,B.j,0),B.k,h,h,new A.W(m,h,k,l,h,h,B.r),h,h,B.a8u,B.k9,h,h,1/0)
 k=A.aLa(B.adR,B.b5W,new A.asu(a),A.amJ(h,h,A.a9(20,B.I.m()>>>16&255,B.I.m()>>>8&255,B.I.m()&255),h,h,h,h,h,h,h,h,h,B.nq,h,new A.cr(A.a3(10),B.x),h,h,h,h,h))
 q=o?"Calcul impossible avec ces donn\xe9es":"Aucun param\xe8tre respiratoire disponible"
-q=A.N(q,h,h,h,h,A.U(h,h,s,h,h,h,h,h,h,h,h,15.5,h,h,B.D,h,h,!0,h,h,h,h,h,h,h,h),B.bD,h)
+q=A.N(q,h,h,h,h,A.U(h,h,s,h,h,h,h,h,h,h,h,15.5,h,h,B.D,h,h,!0,h,h,h,h,h,h,h,h),B.bv,h)
 m=o?"Corrigez la taille, le poids ou l'\xe2ge du patient\ndans son profil avant de continuer.":"Saisissez les informations du patient\npour calculer les param\xe8tres ventilatoires."
-return A.ak(A.b([l,B.av,new A.am(B.tY,new A.dN(B.dt,h,h,k,h),h),A.aw(A.e0(new A.am(B.a9_,A.ak(A.b([B.aL0,B.iS,q,B.cw,A.N(m,h,h,h,h,A.U(h,h,r,h,h,h,h,h,h,h,h,12.5,h,h,B.M,h,1.5,!0,h,h,h,h,h,h,h,h),B.bD,h)],p),B.n,B.i,B.ae),h),h,h),1)],p),B.E,B.i,B.j)}}
+return A.ak(A.b([l,B.av,new A.am(B.tY,new A.dN(B.dt,h,h,k,h),h),A.aw(A.e0(new A.am(B.a9_,A.ak(A.b([B.aL0,B.iS,q,B.cw,A.N(m,h,h,h,h,A.U(h,h,r,h,h,h,h,h,h,h,h,12.5,h,h,B.M,h,1.5,!0,h,h,h,h,h,h,h,h),B.bv,h)],p),B.n,B.i,B.ae),h),h,h),1)],p),B.E,B.i,B.j)}}
 A.asu.prototype={
 $0(){return A.em(this.a,!1).jW(A.Pa(new A.ast(),null,t.z))},
 $S:0}
@@ -49515,7 +49515,7 @@ o[r]=new A.am(new A.L(0,0,q,0),s[r],p)}return A.ja(A.ag(o,B.n,B.i,B.j,0),p,B.T,p
 $S:474}
 A.n6.prototype={
 A(a){var s=this,r=null,q=A.x(a).ax.a===B.q?B.K:B.H,p=A.x(a).ax.a===B.q?B.G:B.ak,o=t.p
-return A.dc(A.ak(A.b([A.ag(A.b([A.bd(s.c,s.d,r,r,13),B.pR,A.aw(A.N(s.e,1,B.aq,r,r,A.U(r,r,p,r,r,r,r,r,r,r,r,10,r,r,B.W,r,r,!0,r,r,r,r,r,r,r,r),r,r),1)],o),B.n,B.i,B.j,0),B.cm,A.N(s.f,r,r,r,r,A.U(r,r,q,r,r,r,r,r,r,r,r,13.5,r,r,B.az,r,r,!0,r,r,r,r,r,r,r,r),r,r)],o),B.E,B.i,B.j),r,118)}}
+return A.dc(A.ak(A.b([A.ag(A.b([A.bd(s.c,s.d,r,r,13),B.pR,A.aw(A.N(s.e,1,B.ao,r,r,A.U(r,r,p,r,r,r,r,r,r,r,r,10,r,r,B.W,r,r,!0,r,r,r,r,r,r,r,r),r,r),1)],o),B.n,B.i,B.j,0),B.cm,A.N(s.f,r,r,r,r,A.U(r,r,q,r,r,r,r,r,r,r,r,13.5,r,r,B.az,r,r,!0,r,r,r,r,r,r,r,r),r,r)],o),B.E,B.i,B.j),r,118)}}
 A.Ye.prototype={
 A(a){var s=A.x(a).ax.a===B.q?B.Z:B.ac,r=t.Kk
 r=A.a7(new A.a6(B.aEh,new A.avV(this,s,a),r),r.h("az.E"))
@@ -49582,9 +49582,9 @@ p=f.c
 o=A.a9(B.d.ah(25.5),p.m()>>>16&255,p.m()>>>8&255,p.m()&255)
 n=A.a3(7)
 m=t.p
-n=A.b([A.a8(l,A.bd(f.b,p,l,l,14),B.k,l,l,new A.W(o,l,l,n,l,l,B.r),l,26,l,l,l,l,26),B.hb,A.aw(A.N(f.d,1,B.aq,l,l,A.U(l,l,g,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,l,l,l,l,l,l,l),l,l),1)],m)
+n=A.b([A.a8(l,A.bd(f.b,p,l,l,14),B.k,l,l,new A.W(o,l,l,n,l,l,B.r),l,26,l,l,l,l,26),B.hb,A.aw(A.N(f.d,1,B.ao,l,l,A.U(l,l,g,l,l,l,l,l,l,l,l,11,l,l,B.W,l,l,!0,l,l,l,l,l,l,l,l),l,l),1)],m)
 if(s)n.push(A.bd(B.fG,g,l,l,16))
-return A.cO(l,A.a8(l,A.ak(A.b([A.ag(n,B.n,B.i,B.j,0),B.av,A.N(f.e,1,B.aq,l,l,A.U(l,l,h,l,l,l,l,l,l,l,l,18,l,l,B.az,l,l,!0,l,l,l,l,l,l,l,l),l,l),B.iT,A.N(f.f,1,B.aq,l,l,A.U(l,l,g,l,l,l,l,l,l,l,l,10,l,l,B.M,l,l,!0,l,l,l,l,l,l,l,l),l,l)],m),B.E,B.cG,B.j),B.k,l,l,new A.W(j,l,q,d,k,l,B.r),l,l,l,B.a8k,l,l,l),B.T,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,e,l,l,l,l,l,l)}}
+return A.cO(l,A.a8(l,A.ak(A.b([A.ag(n,B.n,B.i,B.j,0),B.av,A.N(f.e,1,B.ao,l,l,A.U(l,l,h,l,l,l,l,l,l,l,l,18,l,l,B.az,l,l,!0,l,l,l,l,l,l,l,l),l,l),B.iT,A.N(f.f,1,B.ao,l,l,A.U(l,l,g,l,l,l,l,l,l,l,l,10,l,l,B.M,l,l,!0,l,l,l,l,l,l,l,l),l,l)],m),B.E,B.cG,B.j),B.k,l,l,new A.W(j,l,q,d,k,l,B.r),l,l,l,B.a8k,l,l,l),B.T,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,e,l,l,l,l,l,l)}}
 A.aww.prototype={
 $0(){var s=this
 return A.em(s.b,!1).jW(A.Pa(new A.awv(s.a,s.c,s.d),null,t.z))},
@@ -49649,11 +49649,11 @@ s.vE(0,!0)
 s=A.bU(n,B.tO,0,n,1,n,o)
 o.r!==$&&A.aB()
 o.r=s
-q=A.c8(B.bA,s,n)
+q=A.c8(B.bB,s,n)
 o.at!==$&&A.aB()
 o.at=q
 q=t.Ni
-r=A.c8(B.bA,s,n)
+r=A.c8(B.bB,s,n)
 o.ax!==$&&A.aB()
 o.ax=new A.aA(r,new A.aM(B.aNL,B.t,q),q.h("aA<aI.T>"))
 s=A.c8(B.aeI,s,n)
@@ -49772,11 +49772,11 @@ n=i.at
 n===$&&A.a()
 m=i.ax
 m===$&&A.a()
-l=A.wp(j,j,j,B.c5,j,j,!0,j,B.b0q,B.bD,j,j,B.bo,B.b1)
+l=A.wp(j,j,j,B.c5,j,j,!0,j,B.b0q,B.bv,j,j,B.bo,B.b1)
 i=i.ay
 i===$&&A.a()
 k=t.p
-return A.rl(A.jZ(j,B.bN,A.hM(B.cy,A.b([h,q,p,A.e0(A.ak(A.b([o,B.b_1,new A.cq(n,!1,A.l4(A.ak(A.b([l,B.aJ,new A.cq(i,!1,B.b6q,j)],k),B.n,B.i,B.j),m,j,!0),j)],k),B.n,B.i,B.ae),j,j)],k),B.a9,B.b_h,j),j,!1,j),s)},
+return A.rl(A.jZ(j,B.bN,A.hM(B.cy,A.b([h,q,p,A.e0(A.ak(A.b([o,B.b_1,new A.cq(n,!1,A.l4(A.ak(A.b([l,B.aJ,new A.cq(i,!1,B.b6r,j)],k),B.n,B.i,B.j),m,j,!0),j)],k),B.n,B.i,B.ae),j,j)],k),B.a9,B.b_h,j),j,!1,j),s)},
 $S:229}
 A.azP.prototype={
 $2(a,b){var s,r,q=this.a.e
@@ -50334,7 +50334,7 @@ gaW(a){var s=this.Q
 s===$&&A.a()
 return s},
 mP(a,b){var s=this
-s.z=B.bw
+s.z=B.bx
 if(b!=null)s.st(0,b)
 return s.MO(s.b)},
 bq(a){return this.mP(0,null)},
@@ -50366,7 +50366,7 @@ o=l.a
 if(o===0){r=j.x
 r===$&&A.a()
 if(r!==a){j.x=A.B(a,j.a,j.b)
-j.aE()}j.Q=j.z===B.bw?B.aL:B.ax
+j.aE()}j.Q=j.z===B.bx?B.aL:B.ax
 j.t5()
 return A.aFC()}k=j.x
 k===$&&A.a()
@@ -50381,10 +50381,10 @@ s=o===p?0:(A.B(s,p,o)-p)/(o-p)*r
 return q.yg(new A.ayB(p,o,b,null,q.ga7u(),r,s,B.cL))},
 Z4(a){return this.vE(0,!1)},
 a7v(a){this.z=a
-this.Q=a===B.bw?B.du:B.cQ
+this.Q=a===B.bx?B.du:B.cQ
 this.t5()},
 uX(a){var s,r,q,p,o,n,m=this,l=$.aQm(),k=a<0
-m.z=k?B.j4:B.bw
+m.z=k?B.j4:B.bx
 s=k?m.a-0.01:m.b+0.01
 r=m.d
 A:{q=B.mj===r
@@ -50402,14 +50402,14 @@ m.eB(0)
 return m.yg(n)},
 aui(){return this.uX(1)},
 u9(a){this.eB(0)
-this.z=B.bw
+this.z=B.bx
 return this.yg(a)},
 yg(a){var s,r=this
 r.w=a
 r.y=B.a2
 r.x=A.B(a.eA(0,0),r.a,r.b)
 s=r.r.pm(0)
-r.Q=r.z===B.bw?B.du:B.cQ
+r.Q=r.z===B.bx?B.du:B.cQ
 r.t5()
 return s},
 po(a,b){this.y=this.w=null
@@ -50429,7 +50429,7 @@ aih(a){var s,r=this
 r.y=a
 s=a.a/1e6
 r.x=A.B(r.w.eA(0,s),r.a,r.b)
-if(r.w.lz(s)){r.Q=r.z===B.bw?B.aL:B.ax
+if(r.w.lz(s)){r.Q=r.z===B.bx?B.aL:B.ax
 r.po(0,!1)}r.aE()
 r.t5()},
 BM(){var s,r=this.r,q=r==null,p=!q&&r.a!=null?"":"; paused"
@@ -50457,7 +50457,7 @@ q=p.b
 if(n){s.$1(B.j4)
 n=A.aa(r,q,m)
 n.toString
-return n}else{s.$1(B.bw)
+return n}else{s.$1(B.bx)
 n=A.aa(q,r,m)
 n.toString
 return n}},
@@ -50873,8 +50873,8 @@ p===$&&A.a()
 s=p.r
 if(s!=null&&s.a!=null)return
 r=this.w
-if(r){p.z=B.bw
-q=p.jp(1,B.hf,B.a7m)}else{p.z=B.bw
+if(r){p.z=B.bx
+q=p.jp(1,B.hf,B.a7m)}else{p.z=B.bx
 q=p.jp(0,B.RF,B.cC)}q.c3(new A.aqC(this,r),t.H)},
 aes(a){this.V(new A.aqH(this,a))},
 A(b0){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3,a4,a5=this,a6=null,a7=a5.a,a8=a7.w==null,a9=!a8
@@ -51181,9 +51181,9 @@ a5(){return new A.Gk()}}
 A.Gk.prototype={
 ae9(a){this.V(new A.aqL(this))},
 aeb(a){this.V(new A.aqM(this))},
-A(a){var s=this,r=null,q=s.a.f,p=A.N(q,r,B.aq,r,r,B.Hi.cj(s.d?A.uX(a).gjd():B.jY.cO(a)),r,r)
+A(a){var s=this,r=null,q=s.a.f,p=A.N(q,r,B.ao,r,r,B.Hi.cj(s.d?A.uX(a).gjd():B.jY.cO(a)),r,r)
 q=s.d?A.uX(a).geo():r
-return A.dc(A.ik(A.aIl(B.d4,B.jf,p,q,B.RX,0,s.a.c,B.a9c,0.7),B.ba,r,s.gae8(),s.gaea(),r),r,1/0)}}
+return A.dc(A.ik(A.aIl(B.d4,B.jf,p,q,B.RX,0,s.a.c,B.a9d,0.7),B.ba,r,s.gae8(),s.gaea(),r),r,1/0)}}
 A.aqL.prototype={
 $0(){this.a.d=!0},
 $S:0}
@@ -51224,7 +51224,7 @@ r=q.a
 r.d.a=s
 r.w.Y(0,q.gF5())
 q.a.toString
-s=A.c8(B.bA,s,null)
+s=A.c8(B.bB,s,null)
 q.w!==$&&A.aB()
 q.w=s
 r=t.Y
@@ -51271,7 +51271,7 @@ s=p.d
 r=p.r
 r===$&&A.a()
 q=p.e
-return A.aHM(new A.MM(new A.aZ(o.geo(),2,B.v,-1),r,new A.k(0,q),null),B.bA,B.a7A,s.a,s.b)}}
+return A.aHM(new A.MM(new A.aZ(o.geo(),2,B.v,-1),r,new A.k(0,q),null),B.bB,B.a7A,s.a,s.b)}}
 A.aqU.prototype={
 $0(){return this.a.V(new A.aqT())},
 $S:0}
@@ -51422,7 +51422,7 @@ else if(Math.abs(a)>=1)s=a<=0
 else{r=o.a.x
 r===$&&A.a()
 s=r>0.5}if(s){r=o.a
-r.z=B.bw
+r.z=B.bx
 r.jp(1,B.lJ,B.tK)}else{if(n)o.b.ed()
 r=o.a
 q=r.r
@@ -52050,7 +52050,7 @@ p=q.f
 if(p==null){q=q.e
 q.toString
 q=A.aIp(a,q)}else q=p
-s=A.N(q,r,B.aq,r,r,B.b1Y.cj(this.a.d!=null?B.jY.cO(a):B.hO),r,r)
+s=A.N(q,r,B.ao,r,r,B.b1Y.cj(this.a.d!=null?B.jY.cO(a):B.hO),r,r)
 q=this.a.e
 switch(q==null?r:q.b){case B.jR:case B.jS:case B.jT:case B.jU:case B.tk:case B.n0:case B.n1:case B.jV:case B.n3:case null:case void 0:return s
 case B.n2:q=B.jY.cO(a)
@@ -54675,7 +54675,7 @@ A:{s=b4
 if(B.aX===a6||B.co===a6||B.c3===a6||B.c4===a6){s=!0
 break A}if(B.af===a6||B.bu===a6)break A}a5=A.bW(b4,a5,!1,b4,b4,!1,b4,b4,!0,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,s,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4,b4)
 a0.toString
-a5=A.aV6(A.iN(a5,b4,b4,B.aq,!1,a0,b4,b4,B.b1),1.34)}c2=c2.f
+a5=A.aV6(A.iN(a5,b4,b4,B.ao,!1,a0,b4,b4,B.b1),1.34)}c2=c2.f
 s=c2.length
 if(s!==0)a7=new A.am(b,A.ag(c2,B.n,B.i,B.ae,0),b4)
 else if(c3===!0){c2=e.a
@@ -56134,7 +56134,7 @@ s=A.aEi(a)
 r=t.w
 q=A.bQ(a,B.m1,r).w
 p=s.Q
-if(p==null)p=B.a92
+if(p==null)p=B.a93
 o=q.f.a_(0,p)
 n=A.aLQ(a)
 m=s.at
@@ -56189,7 +56189,7 @@ return new A.N8(g,g,g,g,g,g,h.fy,g,i,B.aYE,g,g)}}
 A.Ar.prototype={
 o0(a,b,c,d){var s=this.Ia,r=s==null
 if((r?null:s.a)!==b){if(!r)s.l()
-s=this.Ia=A.c8(B.bA,b,B.bA)}s.toString
+s=this.Ia=A.c8(B.bB,b,B.bB)}s.toString
 return new A.cq(s,!1,this.a1v(a,b,c,d),null)},
 l(){var s=this.Ia
 if(s!=null)s.l()
@@ -56510,7 +56510,7 @@ r.a.toString
 r.d=A.ao8()
 s=r.gcu()
 r.a.toString
-s.da(0,B.bv,!1)},
+s.da(0,B.bw,!1)},
 aO(a){this.b1(a)
 this.a.toString},
 A(a){var s,r,q,p=null,o=this.a
@@ -56567,14 +56567,14 @@ geh(){return A.x(this.fy).y}}
 A.auj.prototype={
 $1(a){var s,r
 if(a.u(0,B.ag)){s=this.a.gb6().k3
-return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bv))return this.a.gb6().b
+return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bw))return this.a.gb6().b
 s=this.a.gb6()
 r=s.rx
 return r==null?s.k3:r},
 $S:7}
 A.auk.prototype={
 $1(a){var s,r,q=this
-if(a.u(0,B.bv)){if(a.u(0,B.aK))return q.a.gb6().b.b7(0.1)
+if(a.u(0,B.bw)){if(a.u(0,B.aK))return q.a.gb6().b.b7(0.1)
 if(a.u(0,B.a5))return q.a.gb6().b.b7(0.08)
 if(a.u(0,B.al))return q.a.gb6().b.b7(0.1)}if(a.u(0,B.aK)){s=q.a.gb6()
 r=s.rx
@@ -56611,7 +56611,7 @@ geh(){return A.x(this.fy).y}}
 A.asM.prototype={
 $1(a){var s,r
 if(a.u(0,B.ag)){s=this.a.gb6().k3
-return A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bv))return this.a.gb6().b
+return A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bw))return this.a.gb6().b
 s=this.a
 if(s.go){s=s.gb6()
 r=s.RG
@@ -56620,14 +56620,14 @@ $S:7}
 A.asN.prototype={
 $1(a){var s
 if(a.u(0,B.ag)){s=this.a.gb6().k3
-return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bv))return this.a.gb6().c
+return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bw))return this.a.gb6().c
 s=this.a
 if(s.go)return s.gb6().b
 return s.gb6().c},
 $S:7}
 A.asO.prototype={
 $1(a){var s,r=this
-if(a.u(0,B.bv)){if(a.u(0,B.aK))return r.a.gb6().c.b7(0.1)
+if(a.u(0,B.bw)){if(a.u(0,B.aK))return r.a.gb6().c.b7(0.1)
 if(a.u(0,B.a5))return r.a.gb6().c.b7(0.08)
 if(a.u(0,B.al))return r.a.gb6().c.b7(0.1)}s=r.a
 if(s.go){if(a.u(0,B.aK))return s.gb6().b.b7(0.1)
@@ -56661,7 +56661,7 @@ geh(){return A.x(this.fy).y}}
 A.asP.prototype={
 $1(a){var s,r
 if(a.u(0,B.ag)){s=this.a.gb6().k3
-return A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bv)){s=this.a.gb6()
+return A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bw)){s=this.a.gb6()
 r=s.Q
 return r==null?s.y:r}s=this.a
 if(s.go){s=s.gb6()
@@ -56673,7 +56673,7 @@ $S:7}
 A.asQ.prototype={
 $1(a){var s,r
 if(a.u(0,B.ag)){s=this.a.gb6().k3
-return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bv)){s=this.a.gb6()
+return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bw)){s=this.a.gb6()
 r=s.as
 return r==null?s.z:r}s=this.a
 if(s.go){s=s.gb6()
@@ -56684,7 +56684,7 @@ return r==null?s.z:r},
 $S:7}
 A.asR.prototype={
 $1(a){var s,r,q=this
-if(a.u(0,B.bv)){if(a.u(0,B.aK)){s=q.a.gb6()
+if(a.u(0,B.bw)){if(a.u(0,B.aK)){s=q.a.gb6()
 r=s.as
 return(r==null?s.z:r).b7(0.1)}if(a.u(0,B.a5)){s=q.a.gb6()
 r=s.as
@@ -56731,15 +56731,15 @@ ghp(){return A.x(this.fy).f},
 geh(){return A.x(this.fy).y}}
 A.awb.prototype={
 $1(a){var s,r
-if(a.u(0,B.ag)){if(a.u(0,B.bv)){s=this.a.gb6().k3
-return A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}return B.O}if(a.u(0,B.bv)){s=this.a.gb6()
+if(a.u(0,B.ag)){if(a.u(0,B.bw)){s=this.a.gb6().k3
+return A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}return B.O}if(a.u(0,B.bw)){s=this.a.gb6()
 r=s.xr
 return r==null?s.k3:r}return B.O},
 $S:7}
 A.awc.prototype={
 $1(a){var s,r
 if(a.u(0,B.ag)){s=this.a.gb6().k3
-return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bv)){s=this.a.gb6()
+return A.a9(97,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.bw)){s=this.a.gb6()
 r=s.y1
 return r==null?s.k2:r}s=this.a.gb6()
 r=s.rx
@@ -56747,7 +56747,7 @@ return r==null?s.k3:r},
 $S:7}
 A.awd.prototype={
 $1(a){var s,r,q=this
-if(a.u(0,B.bv)){if(a.u(0,B.aK)){s=q.a.gb6()
+if(a.u(0,B.bw)){if(a.u(0,B.aK)){s=q.a.gb6()
 r=s.y1
 s=r==null?s.k2:r
 return A.a9(B.d.ah(25.5),s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}if(a.u(0,B.a5)){s=q.a.gb6()
@@ -56767,7 +56767,7 @@ return A.a9(20,s.m()>>>16&255,s.m()>>>8&255,s.m()&255)}return B.O},
 $S:7}
 A.awe.prototype={
 $1(a){var s,r
-if(a.u(0,B.bv))return null
+if(a.u(0,B.bw))return null
 else{if(a.u(0,B.ag)){s=this.a.gb6().k3
 return new A.aZ(A.a9(31,s.m()>>>16&255,s.m()>>>8&255,s.m()&255),1,B.v,-1)}s=this.a.gb6()
 r=s.ry
@@ -56878,7 +56878,7 @@ s===$&&A.a()
 s.bq(0)
 s=this.db
 s===$&&A.a()
-s.z=B.bw
+s.z=B.bx
 s.jp(1,B.a_,B.tL)},
 b8(a){var s,r=this,q=r.cx
 q===$&&A.a()
@@ -56890,7 +56890,7 @@ q=r.db
 q===$&&A.a()
 q.st(0,s)
 if(s<1){q=r.db
-q.z=B.bw
+q.z=B.bx
 q.jp(1,B.a_,B.k5)}},
 acV(a){if(a===B.aL)this.l()},
 l(){var s=this,r=s.ch
@@ -57685,7 +57685,7 @@ r=s.e
 r.toString
 q=s.f
 p=s.c
-p=A.N(r,s.r,B.aq,o,o,q,p,o)
+p=A.N(r,s.r,B.ao,o,o,q,p,o)
 return A.bW(o,new A.cq(new A.aA(m,new A.aM(1,0,n),n.h("aA<aI.T>")),!1,p,o),!0,o,o,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o)},
 t3(){var s={},r=this.a,q=r.x
 s.a=r.w
@@ -57721,7 +57721,7 @@ p.toString
 s=s.a
 o=s.y
 n=s.c
-n=A.N(p,s.z,B.aq,m,m,o,n,m)
+n=A.N(p,s.z,B.ao,m,m,o,n,m)
 s=n}else s=p
 return A.bW(m,new A.cq(r,!1,A.aJ0(s,!0,q),m),!0,m,m,!1,m,m,m,m,m,m,m,m,l!==!0,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m)},
 $S:299}
@@ -58452,7 +58452,7 @@ if(h!=null){g=d3.gaA().Q
 h.toString
 l=d3.gaA()
 f=i.fy
-f=d3.gaA().ax==null?d4:B.aq
+f=d3.gaA().ax==null?d4:B.ao
 e=d3.a.e
 g=A.N(h,d3.gaA().ax,f,d4,d4,i,e,l.at)
 d=d3.a.y&&!d3.gacF()
@@ -58526,7 +58526,7 @@ else if(d3.gaA().ry!=null&&d3.gaA().ry!==""){c0=d3.a.r
 c1=d3.gaA().ry
 c1.toString
 n=d3.OX(d5,r).aT(A.dd(d3.gaA().x1,d3.gez(),n))
-b9=A.bW(d4,A.N(c1,d4,B.aq,d3.gaA().ai,d4,n,d4,d4),!0,d4,d4,!1,d4,d4,d4,d4,d4,d4,d4,d4,c0,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4)}else b9=d4
+b9=A.bW(d4,A.N(c1,d4,B.ao,d3.gaA().ai,d4,n,d4,d4),!0,d4,d4,!1,d4,d4,d4,d4,d4,d4,d4,d4,c0,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4,d4)}else b9=d4
 c2=d6.an(t.I).w
 switch(c2.a){case 1:n=!1
 break
@@ -59547,7 +59547,7 @@ n=n==null?o:n.b
 r=n}if(r==null)r=0
 q=a/20-8
 p=r-s
-return A.B(B.bA.a9(0,A.B(Math.abs(p)/a,0,1))*J.dX(p)*q,-q,q)},
+return A.B(B.bB.a9(0,A.B(Math.abs(p)/a,0,1))*J.dX(p)*q,-q,q)},
 QU(a){var s,r,q,p=this,o=p.y,n=p.a
 A:{if(B.f6===n.f){n=p.Q
 break A}n=n.d
@@ -60857,7 +60857,7 @@ q=r.a
 q.toString
 s=r.d
 b.toString
-q.z=B.bw
+q.z=B.bx
 q.jp(s,b,c).Kq(new A.amr(r))}else{r.f=s
 r.a.st(0,a);--r.f
 r.aE()}},
@@ -60978,7 +60978,7 @@ if(r==null)r=24
 return A.iN(A.Ow(j.Q,new A.ds(r,i,i,i,i,p,i,i,i)),i,i,B.c5,!0,o,i,i,B.b1)}}
 A.aAl.prototype={
 $1(a){var s,r,q=this
-if(a.u(0,B.bv)){s=q.a
+if(a.u(0,B.bw)){s=q.a
 r=q.b
 r=A.E(s.a,s.b,r.gt(r))
 r.toString
@@ -61408,7 +61408,7 @@ n=A.b([],t.F)
 q[k]=a4.t4(q[k],!1,new A.fK(new A.xJ(p,k),new A.bv(n,t.C),0),a4.gi9())}}}p=a4.a
 p.toString
 for(n=t.p,m=s.ch,j=s.z,i=t.b,h=t.WV,g=t.EK,f=m==null,e=j==null,d=0;d<5;++d){p=A.b7(g)
-if(d===a4.r)p.I(0,B.bv)
+if(d===a4.r)p.I(0,B.bw)
 a4.a.toString
 c=A.dd(a5,p,h)
 if(c==null)b=a5
@@ -61667,7 +61667,7 @@ geh(){return A.x(this.CW).y},
 gvJ(){return B.pW}}
 A.aAu.prototype={
 $1(a){var s,r=this
-if(a.u(0,B.bv)){if(a.u(0,B.aK))return r.a.gki().b.b7(0.1)
+if(a.u(0,B.bw)){if(a.u(0,B.aK))return r.a.gki().b.b7(0.1)
 if(a.u(0,B.a5))return r.a.gki().b.b7(0.08)
 if(a.u(0,B.al))return r.a.gki().b.b7(0.1)
 return null}if(a.u(0,B.aK))return r.a.gki().b.b7(0.1)
@@ -62815,7 +62815,7 @@ r.gfo()
 s=J.e(b.db,r.db)&&J.e(b.dx,r.dx)&&b.dy==r.dy&&b.fr==r.fr}return s}}
 A.ans.prototype={
 $1(a){var s
-if(a.u(0,B.bv)){s=this.a.e
+if(a.u(0,B.bw)){s=this.a.e
 return s==null?t.n8.a(s):s}return B.O},
 $S:7}
 A.a1H.prototype={}
@@ -68749,11 +68749,11 @@ this.bn$=a
 this.b0()},
 T3(a){var s=this,r=a.k4
 r=a.k3
-r=r==null?null:new A.dl(r,B.bB)
+r=r==null?null:new A.dl(r,B.bC)
 s.bA$=r
 r=a.p1
 r=a.ok
-r=r==null?null:new A.dl(r,B.bB)
+r=r==null?null:new A.dl(r,B.bC)
 s.bT$=r
 s.dI$=null
 s.bz$===$&&A.a()
@@ -69395,7 +69395,7 @@ this.Z()},
 sarQ(a,b){var s,r=this
 if(r.M===b)return
 r.M=b
-s=b===B.aq?"\u2026":null
+s=b===B.ao?"\u2026":null
 r.p.sI1(s)
 r.Z()},
 scV(a){var s=this.p
@@ -69443,7 +69443,7 @@ r.AI()
 return r.b.a.c.goO()},
 NK(a){var s=this,r=s.gpX()
 r.i_(s.j7(a,A.hn(),A.jt()))
-r.he(s.G||s.M===B.aq?a:1/0,a)
+r.he(s.G||s.M===B.ao?a:1/0,a)
 r=r.b.a.c
 return r.gaY(r)},
 b3(a){return this.NK(a)},
@@ -69459,11 +69459,11 @@ this.p.Z()},
 mi(a){var s,r=this,q=r.p
 q.i_(r.bZ)
 s=a.b
-s=r.G||r.M===B.aq?s:1/0
+s=r.G||r.M===B.ao?s:1/0
 q.he(s,a.a)},
 ci(a){var s=this,r=s.gpX(),q=a.b
 r.i_(s.j7(q,A.hn(),A.jt()))
-q=s.G||s.M===B.aq?q:1/0
+q=s.G||s.M===B.ao?q:1/0
 r.he(q,a.a)
 r=r.b
 q=r.c
@@ -69473,7 +69473,7 @@ eV(a){this.mi(t.k.a(A.q.prototype.gT.call(this)))
 return this.p.b.a.lT(B.N)},
 cD(a,b){var s=this,r=s.gpX(),q=a.b
 r.i_(s.j7(q,A.hn(),A.jt()))
-q=s.G||s.M===B.aq?q:1/0
+q=s.G||s.M===B.ao?q:1/0
 r.he(q,a.a)
 return s.gpX().b.a.lT(B.N)},
 bg(){var s,r,q,p,o,n,m,l,k,j,i,h=this,g=null,f=h.a4
@@ -69626,7 +69626,7 @@ b7.toString
 s=n.a(b7).ak$;++i}else{a=o.a(A.q.prototype.gT.call(b3))
 b6.i_(b3.bZ)
 a0=a.b
-a0=b3.G||b3.M===B.aq?a0:1/0
+a0=b3.G||b3.M===B.ao?a0:1/0
 b6.he(a0,a.a)
 a1=b6.nj(new A.hc(j,e,B.z,!1,c,d),B.jg,B.eo)
 if(a1.length===0)continue
@@ -74529,7 +74529,7 @@ if($.bi().c.c){if(r.zZ$==null)r.zZ$=r.anm()}else{s=r.zZ$
 if(s!=null)s.a.$0()
 r.zZ$=null}},
 abN(a){var s,r,q,p,o,n,m=a.d
-if(t.V4.b(m)){s=B.by.h8(m)
+if(t.V4.b(m)){s=B.bz.h8(m)
 if(J.e(s,B.b4))s=m
 r=new A.oI(a.a,a.b,a.c,s)}else r=a
 s=this.or$
@@ -75475,7 +75475,7 @@ A.a5u.prototype={
 $1(a){return this.ZO(a)},
 ZO(a){var s=0,r=A.a0(t.CL),q
 var $async$$1=A.a1(function(b,c){if(b===1)return A.Y(c,r)
-for(;;)switch(s){case 0:q=new A.tv(t.pE.a(B.by.h8(A.aE1(B.LE.h7(A.c5(B.d5.hJ(0,a)))))),A.C(t.N,t.Rk))
+for(;;)switch(s){case 0:q=new A.tv(t.pE.a(B.bz.h8(A.aE1(B.LE.h7(A.c5(B.d5.hJ(0,a)))))),A.C(t.N,t.Rk))
 s=1
 break
 case 1:return A.Z(q,r)}})
@@ -75908,13 +75908,13 @@ b.kc(8)
 s=b.d
 r=$.es()
 s.$flags&2&&A.aT(s,13)
-s.setFloat64(0,c,B.bx===r)
+s.setFloat64(0,c,B.by===r)
 b.a52(b.e)}else if(A.nh(c)){s=-2147483648<=c&&c<=2147483647
 r=b.d
 if(s){b.ff(0,3)
 s=$.es()
 r.$flags&2&&A.aT(r,8)
-r.setInt32(0,c,B.bx===s)
+r.setInt32(0,c,B.by===s)
 b.rX(b.e,0,4)}else{b.ff(0,4)
 s=$.es()
 B.br.Lb(r,0,c,s)}}else if(typeof c=="string"){b.ff(0,7)
@@ -75959,14 +75959,14 @@ case 1:return!0
 case 2:return!1
 case 3:s=b.b
 r=$.es()
-q=b.a.getInt32(s,B.bx===r)
+q=b.a.getInt32(s,B.by===r)
 b.b+=4
 return q
 case 4:return b.C8(0)
 case 6:b.kc(8)
 s=b.b
 r=$.es()
-q=b.a.getFloat64(s,B.bx===r)
+q=b.a.getFloat64(s,B.by===r)
 b.b+=8
 return q
 case 5:case 7:p=k.fs(b)
@@ -76015,21 +76015,21 @@ else{s=a.d
 if(b<=65535){a.ff(0,254)
 r=$.es()
 s.$flags&2&&A.aT(s,10)
-s.setUint16(0,b,B.bx===r)
+s.setUint16(0,b,B.by===r)
 a.rX(a.e,0,2)}else{a.ff(0,255)
 r=$.es()
 s.$flags&2&&A.aT(s,11)
-s.setUint32(0,b,B.bx===r)
+s.setUint32(0,b,B.by===r)
 a.rX(a.e,0,4)}}},
 fs(a){var s,r,q=a.pg(0)
 A:{if(254===q){s=a.b
 r=$.es()
-q=a.a.getUint16(s,B.bx===r)
+q=a.a.getUint16(s,B.by===r)
 a.b+=2
 s=q
 break A}if(255===q){s=a.b
 r=$.es()
-q=a.a.getUint32(s,B.bx===r)
+q=a.a.getUint32(s,B.by===r)
 a.b+=4
 s=q
 break A}s=q
@@ -76041,35 +76041,35 @@ s.eL(0,r,b)},
 $S:98}
 A.am4.prototype={
 jG(a){var s=A.aod(64)
-B.by.eL(0,s,a.a)
-B.by.eL(0,s,a.b)
+B.bz.eL(0,s,a.a)
+B.bz.eL(0,s,a.b)
 return s.mI()},
 iX(a){var s,r,q
 a.toString
 s=new A.D7(a)
-r=B.by.je(0,s)
-q=B.by.je(0,s)
+r=B.bz.je(0,s)
+q=B.bz.je(0,s)
 if(typeof r=="string"&&s.b>=a.byteLength)return new A.jP(r,q)
 else throw A.i(B.uH)},
 uK(a){var s=A.aod(64)
 s.ff(0,0)
-B.by.eL(0,s,a)
+B.bz.eL(0,s,a)
 return s.mI()},
 ol(a,b,c){var s=A.aod(64)
 s.ff(0,1)
-B.by.eL(0,s,a)
-B.by.eL(0,s,c)
-B.by.eL(0,s,b)
+B.bz.eL(0,s,a)
+B.bz.eL(0,s,c)
+B.bz.eL(0,s,b)
 return s.mI()},
 W7(a,b){return this.ol(a,null,b)},
 VC(a){var s,r,q,p,o,n
 if(a.byteLength===0)throw A.i(B.acc)
 s=new A.D7(a)
-if(s.pg(0)===0)return B.by.je(0,s)
-r=B.by.je(0,s)
-q=B.by.je(0,s)
-p=B.by.je(0,s)
-o=s.b<a.byteLength?A.d7(B.by.je(0,s)):null
+if(s.pg(0)===0)return B.bz.je(0,s)
+r=B.bz.je(0,s)
+q=B.bz.je(0,s)
+p=B.bz.je(0,s)
+o=s.b<a.byteLength?A.d7(B.bz.je(0,s)):null
 if(typeof r=="string")n=(q==null||typeof q=="string")&&s.b>=a.byteLength
 else n=!1
 if(n)throw A.i(A.aFb(r,p,A.d7(q),o))
@@ -76293,7 +76293,7 @@ A.ij.prototype={
 H(){return"ModifierKey."+this.b}}
 A.D5.prototype={
 gaqN(){var s,r,q=A.C(t.xS,t.Di)
-for(s=0;s<9;++s){r=B.wj[s]
+for(s=0;s<9;++s){r=B.wk[s]
 if(this.apV(r))q.n(0,r,B.fM)}return q}}
 A.mw.prototype={}
 A.ahe.prototype={
@@ -76331,7 +76331,7 @@ i=$.jG
 if(i!=null)i.$1(new A.cc(r,q,"services library",j,p,!1))}}return!1},
 ahZ(a1){var s,r,q,p,o,n,m,l,k,j,i,h,g=a1.c,f=g.gaqN(),e=t.v3,d=A.C(e,t.bd),c=A.b7(e),b=this.d,a=A.ey(new A.bH(b,A.r(b).h("bH<1>")),e),a0=a1 instanceof A.ov
 if(a0)a.I(0,g.gjU())
-for(s=g.a,r=null,q=0;q<9;++q){p=B.wj[q]
+for(s=g.a,r=null,q=0;q<9;++q){p=B.wk[q]
 o=$.aPd()
 n=o.i(0,new A.dy(p,B.dL))
 if(n==null)continue
@@ -76428,7 +76428,7 @@ break
 default:throw A.i(A.fb(p+" was invoked but isn't implemented by "+A.t(q).k(0)))}return A.Z(null,r)}})
 return A.a_($async$Fb,r)},
 a7g(a){if(a==null)return null
-return t.J1.a(B.by.h8(J.Lj(B.au.gcz(a),a.byteOffset,a.byteLength)))},
+return t.J1.a(B.bz.h8(J.Lj(B.au.gcz(a),a.byteOffset,a.byteLength)))},
 a_s(a){var s=this
 s.r.I(0,a)
 if(!s.f){s.f=!0
@@ -76437,7 +76437,7 @@ Oj(){var s,r,q,p,o=this
 if(!o.f)return
 o.f=!1
 for(s=o.r,r=A.cD(s,s.r,A.r(s).c),q=r.$ti.c;r.C();){p=r.d;(p==null?q.a(p):p).w=!1}s.a2(0)
-s=B.by.ca(o.a.a)
+s=B.bz.ca(o.a.a)
 s.toString
 B.pe.cr("put",J.lu(B.br.gcz(s),s.byteOffset,s.byteLength),t.H)},
 Wn(){if($.c4.p1$)return
@@ -78328,7 +78328,7 @@ s=o.x
 r=o.y
 q=A.C4(a)
 if(r.j(0,B.OF))r=new A.iC(1)
-p=s===B.aq?"\u2026":n
+p=s===B.ao?"\u2026":n
 s=new A.oA(A.F4(p,q,o.z,o.as,o.e,o.f,m,o.ax,r,o.at),o.w,s,o.ch,!1,0,n,n,new A.b4(),A.ay())
 s.aF()
 s.K(0,n)
@@ -80084,7 +80084,7 @@ break
 case 2:if(k.a.d.gbx())k.tV()
 if(k.p2!=null&&k.p4!=null){k.id.st(0,0)
 i=k.id
-i.z=B.bw
+i.z=B.bx
 i.jp(1,B.hu,B.nk)}break}},
 Qx(){var s,r,q,p,o=this,n=o.gal(),m=o.p2
 m.toString
@@ -89279,7 +89279,7 @@ s.c=new A.bN(r,t.gR)
 p=A.LB("DrivenScrollActivity",p,q.w)
 p.bc()
 p.c5$.I(0,s.gFP())
-p.z=B.bw
+p.z=B.bx
 p.jp(a,b,c).a.a.ji(s.gFN())
 s.d!==$&&A.aB()
 s.d=p
@@ -90561,7 +90561,7 @@ if(s!=a.e)if(s===!0){s=r.w
 if(s!=null)s.b8(0)
 s=r.x
 s===$&&A.a()
-s.z=B.bw
+s.z=B.bx
 s.jp(1,B.a_,null)}else{s=r.x
 s===$&&A.a()
 s.cU(0)}},
@@ -98993,10 +98993,10 @@ B.e=new A.a6U(0,"sRGB")
 B.H=new A.l(1,0.058823529411764705,0.09019607843137255,0.16470588235294117,B.e)
 B.W=new A.hw(600)
 B.H9=new A.m(!0,B.H,null,null,null,null,13,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6d=new A.bS("Votre sexe",null,B.H9,null,null,null,null,null,null,null)
-B.JR=new A.dN(B.d4,null,null,B.b6d,null)
-B.b6x=new A.bS("Votre nom",null,B.H9,null,null,null,null,null,null,null)
-B.JS=new A.dN(B.d4,null,null,B.b6x,null)
+B.b6e=new A.bS("Votre sexe",null,B.H9,null,null,null,null,null,null,null)
+B.JR=new A.dN(B.d4,null,null,B.b6e,null)
+B.b6y=new A.bS("Votre nom",null,B.H9,null,null,null,null,null,null,null)
+B.JS=new A.dN(B.d4,null,null,B.b6y,null)
 B.JT=new A.fA(0,1)
 B.JU=new A.fA(0,-1)
 B.qD=new A.fA(1,0)
@@ -99075,8 +99075,8 @@ B.K6=new A.nv("flutter/keyevent",B.eq,t.Al)
 B.mu=new A.amc()
 B.K7=new A.nv("flutter/lifecycle",B.mu,A.aJ("nv<y?>"))
 B.K8=new A.nv("flutter/system",B.eq,t.Al)
-B.by=new A.am0()
-B.hr=new A.nv("flutter/accessibility",B.by,t.Al)
+B.bz=new A.am0()
+B.hr=new A.nv("flutter/accessibility",B.bz,t.Al)
 B.qJ=new A.lA(0,0)
 B.qK=new A.lA(1,1)
 B.K9=new A.zw(12,"plus")
@@ -99157,8 +99157,8 @@ B.KJ=new A.W(B.S,null,null,null,null,null,B.aM)
 B.b_=new A.l(1,0.9372549019607843,0.9647058823529412,1,B.e)
 B.qX=new A.W(B.b_,null,null,null,null,null,B.aM)
 B.bn=new A.Fe(0,"clamp")
-B.wh=s([B.a6,B.I],t.g)
-B.oA=new A.f2(B.d4,B.dt,B.bn,B.wh,null,null)
+B.wi=s([B.a6,B.I],t.g)
+B.oA=new A.f2(B.d4,B.dt,B.bn,B.wi,null,null)
 B.KK=new A.W(null,null,null,B.qO,null,B.oA,B.r)
 B.Fu=new A.b_(24,24)
 B.qN=new A.cG(B.Fu,B.Fu,B.V,B.V)
@@ -99217,7 +99217,7 @@ B.r7=new A.i6(A.aJ("i6<df>"))
 B.r6=new A.i6(A.aJ("i6<z>"))
 B.fa=new A.Nr()
 B.LV=new A.Nu()
-B.bx=new A.Nu()
+B.by=new A.Nu()
 B.LW=new A.a9G()
 B.mr=new A.NN()
 B.baG=new A.NZ()
@@ -99434,7 +99434,7 @@ B.OB=new A.auC()
 B.a_=new A.Hk()
 B.OC=new A.Y_()
 B.cS=new A.avY()
-B.bz=new A.ayN()
+B.bA=new A.ayN()
 B.dx=new A.a_R()
 B.OD=new A.az9()
 B.jl=new A.a0Y()
@@ -99539,7 +99539,7 @@ B.hE=new A.l(1,0.796078431372549,0.8352941176470589,0.8823529411764706,B.e)
 B.Pv=new A.l(1,0.39215686274509803,1,0.8549019607843137,B.e)
 B.Pz=new A.l(1,1,0.7215686274509804,0.8156862745098039,B.e)
 B.ry=new A.l(1,1,0.4392156862745098,0.2627450980392157,B.e)
-B.ao=new A.l(1,0.2784313725490196,0.3333333333333333,0.4117647058823529,B.e)
+B.ap=new A.l(1,0.2784313725490196,0.3333333333333333,0.4117647058823529,B.e)
 B.mC=new A.l(1,0.00784313725490196,0.5333333333333333,0.8196078431372549,B.e)
 B.jy=new A.l(1,0.10196078431372549,0.054901960784313725,0.054901960784313725,B.e)
 B.jz=new A.l(1,0.8274509803921568,0.1843137254901961,0.1843137254901961,B.e)
@@ -99627,7 +99627,7 @@ B.jI=new A.l(0.3843137254901961,1,1,1,B.e)
 B.mV=new A.l(1,0.8784313725490196,0.9686274509803922,0.9803921568627451,B.e)
 B.tc=new A.l(0.6,1,1,1,B.e)
 B.td=new A.l(1,0.09803921568627451,0.4627450980392157,0.8235294117647058,B.e)
-B.ap=new A.l(0.7019607843137254,1,1,1,B.e)
+B.aq=new A.l(0.7019607843137254,1,1,1,B.e)
 B.jJ=new A.l(1,0.6196078431372549,0.6196078431372549,0.6196078431372549,B.e)
 B.R1=new A.l(1,0.5529411764705883,0.43137254901960786,0.38823529411764707,B.e)
 B.R2=new A.l(1,0.9254901960784314,0.2823529411764706,0.6,B.e)
@@ -99687,7 +99687,7 @@ B.cc=new A.ef(0.42,0,0.58,1)
 B.bb=new A.ef(0.25,0.1,0.25,1)
 B.RK=new A.ef(0.77,0,0.175,1)
 B.RL=new A.ef(0.075,0.82,0.165,1)
-B.bA=new A.ef(0,0,0.58,1)
+B.bB=new A.ef(0,0,0.58,1)
 B.tm=new A.ef(0.67,0.03,0.65,0.09)
 B.RM=new A.uU(0,"small")
 B.RN=new A.uU(1,"medium")
@@ -99964,27 +99964,27 @@ B.a8Z=new A.L(2,8,0,6)
 B.a9_=new A.L(32,0,32,0)
 B.a90=new A.L(32,32,32,32)
 B.a91=new A.L(3,3,3,3)
-B.a92=new A.L(40,24,40,24)
-B.a93=new A.L(40,40,40,40)
+B.a92=new A.L(3,6,3,6)
+B.a93=new A.L(40,24,40,24)
+B.a94=new A.L(40,40,40,40)
 B.ua=new A.L(4,0,0,0)
 B.ka=new A.L(4,0,4,0)
-B.a94=new A.L(4,14,4,14)
-B.a95=new A.L(4,3,4,3)
-B.a96=new A.L(4,4,4,4)
+B.a95=new A.L(4,14,4,14)
+B.a96=new A.L(4,3,4,3)
+B.a97=new A.L(4,4,4,4)
 B.bb1=new A.L(4,4,4,5)
 B.ub=new A.L(4,8,16,12)
 B.uc=new A.L(5,5,5,5)
-B.a98=new A.L(6,2,6,2)
+B.a99=new A.L(6,2,6,2)
 B.nt=new A.L(6,6,6,6)
-B.a99=new A.L(7,1,7,1)
+B.a9a=new A.L(7,1,7,1)
 B.ud=new A.L(7,2,7,2)
-B.a9a=new A.L(7,3,7,3)
-B.a9b=new A.L(8,0,2,0)
+B.a9b=new A.L(7,3,7,3)
+B.a9c=new A.L(8,0,2,0)
 B.ue=new A.L(8,0,8,0)
-B.a9c=new A.L(8,2,8,5)
+B.a9d=new A.L(8,2,8,5)
 B.hY=new A.L(8,3,8,3)
 B.uf=new A.L(8,4,8,4)
-B.a9d=new A.L(8,6,8,6)
 B.nu=new A.L(8,8,8,8)
 B.a9e=new A.L(9,4,9,4)
 B.a9f=new A.L(9,5,9,5)
@@ -100040,8 +100040,8 @@ B.ul=new A.qj(!1,!1,!1,!1)
 B.um=new A.qj(!1,!1,!1,!0)
 B.kn=new A.NM(0,"tight")
 B.b43=new A.m(!0,B.S,null,null,null,null,12.5,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b5Z=new A.bS("Ce m\xe9dicament est contre-indiqu\xe9 pour les pathologies s\xe9lectionn\xe9es.\nL'administration est fortement d\xe9conseill\xe9e.",null,B.b43,null,null,null,null,null,null,null)
-B.ac1=new A.h_(1,B.kn,B.b5Z,null)
+B.b6_=new A.bS("Ce m\xe9dicament est contre-indiqu\xe9 pour les pathologies s\xe9lectionn\xe9es.\nL'administration est fortement d\xe9conseill\xe9e.",null,B.b43,null,null,null,null,null,null,null)
+B.ac1=new A.h_(1,B.kn,B.b6_,null)
 B.ac2=new A.B2(null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.kf=new A.lR(!1,!1,!1,!1)
 B.kg=new A.lR(!1,!1,!1,!0)
@@ -100339,8 +100339,8 @@ B.vs=new A.nV(1,"gif")
 B.aeA=new A.kJ(B.vs,!1,1,"gif")
 B.vu=new A.kJ(B.vt,!1,4,"webp")
 B.kG=new A.kJ(B.vs,!0,2,"animatedGif")
-B.bB=s([],t.oU)
-B.aeC=new A.m6("\ufffc",null,null,null,!0,!0,B.bB)
+B.bC=s([],t.oU)
+B.aeC=new A.m6("\ufffc",null,null,null,!0,!0,B.bC)
 B.aeD=new A.nZ(null,null,null,null,null,null,null,null,null,B.o9,B.mr,!1,null,!1,null,null,null,null,null,null,null,null,!1,null,null,null,null,null,null,null,null,null,null,null,!1,null,null)
 B.bbd=new A.qN(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,!0,!1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,!0,null,null,null,null)
 B.b3r=new A.m(!0,B.d0,null,null,null,null,12.5,null,null,null,null,null,1.6,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -100356,7 +100356,7 @@ B.aNw=new A.k(0.208333,0.82)
 B.aNO=new A.k(0.25,1)
 B.hf=new A.Fa(B.aNC,B.aNE,B.aNM,B.aNw,B.aNO)
 B.vv=new A.ej(0,0.8888888888888888,B.hf)
-B.aeI=new A.ej(0.4,1,B.bA)
+B.aeI=new A.ej(0.4,1,B.bB)
 B.vw=new A.ej(0.5,1,B.bb)
 B.aeJ=new A.ej(0.6,1,B.a_)
 B.vx=new A.ej(0.25,1,B.bk)
@@ -100400,7 +100400,7 @@ B.id=new A.BT(2,"sizedSpan")
 B.vB=new A.BY(0,"opportunity")
 B.oz=new A.BY(2,"mandatory")
 B.vC=new A.BY(3,"endOfText")
-B.af4=new A.f2(B.cP,B.em,B.bn,B.wh,null,null)
+B.af4=new A.f2(B.cP,B.em,B.bn,B.wi,null,null)
 B.rw=new A.l(1,0.4235294117647059,0.38823529411764707,1,B.e)
 B.tf=new A.l(1,0.611764705882353,0.15294117647058825,0.6901960784313725,B.e)
 B.aDd=s([B.rw,B.tf],t.g)
@@ -100504,11 +100504,11 @@ B.b8Y=new A.hU(1,1)
 B.ajD=s([B.b8W,B.b90,B.b93,B.b95,B.b91,B.b9_,B.b8Z,B.b94,B.b92,B.b8X,B.b8Y],A.aJ("A<hU>"))
 B.eh=new A.mM(0,"left")
 B.f_=new A.mM(1,"right")
-B.bD=new A.mM(2,"center")
+B.bv=new A.mM(2,"center")
 B.iW=new A.mM(3,"justify")
 B.aW=new A.mM(4,"start")
 B.lF=new A.mM(5,"end")
-B.ajJ=s([B.eh,B.f_,B.bD,B.iW,B.aW,B.lF],A.aJ("A<mM>"))
+B.ajJ=s([B.eh,B.f_,B.bv,B.iW,B.aW,B.lF],A.aJ("A<mM>"))
 B.Wf=new A.p(10,10,B.Y,"Hyperkali\xe9mie aigu\xeb \u2014 dose fixe (UI), avec apport glucos\xe9",null)
 B.Wk=new A.p(0.05,0.1,B.Y,"Perfusion continue IVSE \u2014 UI/kg/h (acidoc\xe9tose, contr\xf4le glyc\xe9mique)",null)
 B.anm=s(["Risque d'hypoglyc\xe9mie s\xe9v\xe8re \u2014 surveillance glyc\xe9mique capillaire horaire obligatoire sous perfusion continue, resucrage imm\xe9diat si <0.7 g/l (3.9 mmol/l)","Hypokali\xe9mie induite (entr\xe9e intracellulaire du K\u207a avec le glucose) \u2014 surveiller la kali\xe9mie, notamment en association au traitement de l'hyperkali\xe9mie","Adsorption au plastique de la tubulure \u2014 purger avec 20\u201350 ml de solution avant de brancher au patient pour saturer les sites d'adsorption","Ne jamais administrer de bolus IV sans apport glucos\xe9 simultan\xe9 en dehors de l'hyperglyc\xe9mie symptomatique isol\xe9e","Voie IV strictement d\xe9di\xe9e (aucun autre m\xe9dicament dans la m\xeame tubulure) \u2014 risque d'erreur de dose gravissime, double v\xe9rification recommand\xe9e"],t.s)
@@ -100694,7 +100694,7 @@ B.a56=new A.a2("cefepime","C\xe9f\xe9pime","C\xe9f\xe9pime dichlorhydrate",B.aa,
 B.Wy=new A.p(45,90,B.y,"Dose/jour (composant ceftolozane, 3 prises)",6000)
 B.azo=s(["Antibiotique de r\xe9serve \u2014 usage \xe0 r\xe9server aux infections \xe0 bacilles Gram n\xe9gatif multir\xe9sistants (avis infectiologue recommand\xe9)","Ajustement r\xe9nal imp\xe9ratif \u2014 la dose pneumonie (2g/1g) diff\xe8re de la dose urinaire/abdominale (1g/500mg)",u.C],t.s)
 B.avE=s(["Insuffisance r\xe9nale (ajustement imp\xe9ratif et distinct selon l'indication)"],t.s)
-B.w9=s(["Peu d'interactions majeures d\xe9crites \xe0 ce jour"],t.s)
+B.wa=s(["Peu d'interactions majeures d\xe9crites \xe0 ce jour"],t.s)
 B.aHf=s(["Fonction r\xe9nale rapproch\xe9e","Documentation microbiologique (antibiogramme) avant/pendant traitement"],t.s)
 B.afx=s(["Infections urinaires compliqu\xe9es \xe0 bacille Gram n\xe9gatif multir\xe9sistant",u.dG,"Pneumonie nosocomiale/sous ventilation m\xe9canique \xe0 Pseudomonas r\xe9sistant (dose doubl\xe9e)"],t.s)
 B.bal=new A.ec()
@@ -100703,7 +100703,7 @@ B.bew=s([u.C],t.s)
 B.bfU=new A.rR(4,"donneesInsuffisantes")
 B.bfP=new A.rQ(4,"donneesInsuffisantes")
 B.L4=new A.ca()
-B.a6s=new A.a2("ceftolozane_tazobactam","Ceftolozane / Tazobactam","Ceftolozane/Tazobactam",B.aa,"C\xe9phalosporine anti-pyocyanique + inhibiteur de \u03b2-lactamase \u2014 R\xe9serve",B.Wy,B.aQ,"1 g/500 mg IV q8h (infections urinaires/intra-abdominales) ; 2 g/1 g IV q8h dans la pneumonie nosocomiale (dose doubl\xe9e).","Perfusion IV sur 1h.",null,null,null,null,"Flacon 1 g/500 mg. Reconstituer puis diluer dans 100 ml NaCl 0.9% ou G5%.",10,!0,!0,!1,null,"Ceftolozane inhibiteur des PLP avec forte affinit\xe9 anti-Pseudomonas + tazobactam inhibiteur des \u03b2-lactamases","30\u201360 min","T\xbd ~3 h",B.aB,null,null,"Mol\xe9cule de r\xe9serve \u2014 r\xe9serv\xe9e aux infections document\xe9es ou fortement suspect\xe9es \xe0 Pseudomonas multir\xe9sistant, en concertation avec un infectiologue.",B.azo,B.fN,B.avE,B.w9,B.aHf,B.afx,!1,B.L4,null,null,null,null)
+B.a6s=new A.a2("ceftolozane_tazobactam","Ceftolozane / Tazobactam","Ceftolozane/Tazobactam",B.aa,"C\xe9phalosporine anti-pyocyanique + inhibiteur de \u03b2-lactamase \u2014 R\xe9serve",B.Wy,B.aQ,"1 g/500 mg IV q8h (infections urinaires/intra-abdominales) ; 2 g/1 g IV q8h dans la pneumonie nosocomiale (dose doubl\xe9e).","Perfusion IV sur 1h.",null,null,null,null,"Flacon 1 g/500 mg. Reconstituer puis diluer dans 100 ml NaCl 0.9% ou G5%.",10,!0,!0,!1,null,"Ceftolozane inhibiteur des PLP avec forte affinit\xe9 anti-Pseudomonas + tazobactam inhibiteur des \u03b2-lactamases","30\u201360 min","T\xbd ~3 h",B.aB,null,null,"Mol\xe9cule de r\xe9serve \u2014 r\xe9serv\xe9e aux infections document\xe9es ou fortement suspect\xe9es \xe0 Pseudomonas multir\xe9sistant, en concertation avec un infectiologue.",B.azo,B.fN,B.avE,B.wa,B.aHf,B.afx,!1,B.L4,null,null,null,null)
 B.TU=new A.p(0,0,B.y,"Dose fixe adulte (non syst\xe9matiquement pond\xe9rale)",null)
 B.aog=s(["Antibiotique de dernier recours \u2014 prescription \xe0 r\xe9server aux infections document\xe9es \xe0 bact\xe9ries multir\xe9sistantes (BLSE, KPC) avec avis infectiologue","Ajustement r\xe9nal imp\xe9ratif","Allergie crois\xe9e avec les autres c\xe9phalosporines possible (partage la ceftazidime)"],t.s)
 B.anl=s([u.bG],t.s)
@@ -100712,7 +100712,7 @@ B.av5=s(["Infections \xe0 ent\xe9robact\xe9ries productrices de \u03b2-lactamase
 B.ba6=new A.ec()
 B.bbZ=s(["Infection \xe0 ent\xe9robact\xe9rie BLSE","Infection \xe0 ent\xe9robact\xe9rie productrice de carbap\xe9n\xe9mase KPC","Infection intra-abdominale compliqu\xe9e MDR"],t.s)
 B.L5=new A.ca()
-B.a6m=new A.a2("ceftazidime_avibactam","Ceftazidime / Avibactam","Ceftazidime/Avibactam",B.aa,"C\xe9phalosporine + inhibiteur de \u03b2-lactamase de nouvelle g\xe9n\xe9ration \u2014 R\xe9serve BLSE/carbap\xe9n\xe9mase",B.TU,B.aQ,"2 g/500 mg IV q8h chez l'adulte \xe0 fonction r\xe9nale normale.","Perfusion IV sur 2h (perfusion prolong\xe9e recommand\xe9e pour optimiser l'exposition PK/PD).",null,null,null,null,"Flacon 2 g/500 mg. Reconstituer puis diluer dans 100 ml NaCl 0.9% ou G5%.",20,!0,!0,!1,null,"Ceftazidime inhibitrice des PLP + avibactam, inhibiteur non \u03b2-lactame des \u03b2-lactamases (y compris certaines carbap\xe9n\xe9mases)","30\u201360 min","T\xbd ~2\u20133 h (les deux composants)",B.aB,null,null,"Mol\xe9cule de r\xe9serve \u2014 r\xe9serv\xe9e aux infections \xe0 ent\xe9robact\xe9ries BLSE ou productrices de carbap\xe9n\xe9mase (KPC), avis infectiologue indispensable.",B.aog,B.fN,B.anl,B.w9,B.aiY,B.av5,!1,B.L5,null,null,null,null)
+B.a6m=new A.a2("ceftazidime_avibactam","Ceftazidime / Avibactam","Ceftazidime/Avibactam",B.aa,"C\xe9phalosporine + inhibiteur de \u03b2-lactamase de nouvelle g\xe9n\xe9ration \u2014 R\xe9serve BLSE/carbap\xe9n\xe9mase",B.TU,B.aQ,"2 g/500 mg IV q8h chez l'adulte \xe0 fonction r\xe9nale normale.","Perfusion IV sur 2h (perfusion prolong\xe9e recommand\xe9e pour optimiser l'exposition PK/PD).",null,null,null,null,"Flacon 2 g/500 mg. Reconstituer puis diluer dans 100 ml NaCl 0.9% ou G5%.",20,!0,!0,!1,null,"Ceftazidime inhibitrice des PLP + avibactam, inhibiteur non \u03b2-lactame des \u03b2-lactamases (y compris certaines carbap\xe9n\xe9mases)","30\u201360 min","T\xbd ~2\u20133 h (les deux composants)",B.aB,null,null,"Mol\xe9cule de r\xe9serve \u2014 r\xe9serv\xe9e aux infections \xe0 ent\xe9robact\xe9ries BLSE ou productrices de carbap\xe9n\xe9mase (KPC), avis infectiologue indispensable.",B.aog,B.fN,B.anl,B.wa,B.aiY,B.av5,!1,B.L5,null,null,null,null)
 B.X2=new A.p(50,100,B.y,"Dose/jour (3\u20134 prises)",4000)
 B.Va=new A.p(60,100,B.y,"Dose/jour enfant",4000)
 B.aIP=s(["Risque convulsif plus \xe9lev\xe9 que les autres carbap\xe9n\xe8mes \u2014 prudence, voire \xe9viter, en cas d'\xe9pilepsie ou de l\xe9sion c\xe9r\xe9brale","Allergie crois\xe9e avec les p\xe9nicillines/c\xe9phalosporines possible mais plus faible qu'anticip\xe9e","Naus\xe9es/vomissements si perfusion trop rapide"],t.s)
@@ -102174,6 +102174,21 @@ B.aBC=s([B.a60,B.a70],t.e)
 B.l4=new A.k(0,2)
 B.KQ=new A.c7(0.75,B.aE,B.rL,B.l4,1.5)
 B.aBG=s([B.KQ],t.E)
+B.BN=new A.rq(null)
+B.b9D=new A.jk("Patient",B.i7,B.i8,B.BN)
+B.a7j=new A.AL(null)
+B.b9B=new A.jk("Drugs",B.oe,B.op,B.a7j)
+B.a7H=new A.AO(null)
+B.b9A=new A.jk("TechAnes",B.vj,B.ow,B.a7H)
+B.adf=new A.ab(984564,"MaterialIcons",!1)
+B.aWD=new A.D_(null)
+B.b9z=new A.jk("Emergency",B.adf,B.i9,B.aWD)
+B.aXN=new A.DD(null)
+B.b9y=new A.jk("VentiR\xe9glages",B.od,B.bZ,B.aXN)
+B.ve=new A.ab(983823,"MaterialIcons",!1)
+B.JX=new A.z4(null)
+B.b9C=new A.jk("Notes",B.ve,B.ve,B.JX)
+B.w9=s([B.b9D,B.b9B,B.b9A,B.b9z,B.b9y,B.b9C],A.aJ("A<jk>"))
 B.UU=new A.p(2.5,5,B.Y,"N\xe9bulisation \u2014 dose fixe non pond\xe9rale (mg)",null)
 B.TS=new A.p(1,5,B.b5,"IV continue \u2014 bronchospasme r\xe9fractaire (r\xe9a)",null)
 B.VL=new A.p(2.5,2.5,B.Y,"N\xe9bulisation enfant <6 ans (mg)",null)
@@ -102575,12 +102590,12 @@ B.awa=s(["Propofol ABSOLUMENT CONTRE-INDIQU\xc9 \u2014 collapsus cardiovasculair
 B.ajK=s(["K\xe9tamine : seul agent d'induction s\xfbr en choc (stimulant CV) \u2014 0.5\u20131 mg/kg","\xc9tomidate : alternative si k\xe9tamine CI \u2014 0.1\u20130.2 mg/kg","Remplissage vasculaire AVANT induction si possible (250\u2013500 ml cristallo\xefde)","Noradr\xe9naline en vasopresseur d\xe8s la salle d'urgence","Acide tranexamique 1 g IV < 3h du traumatisme"],t.s)
 B.arA=s(["Contr\xf4le du saignement AVANT induction si possible (garrot, compression)","Remplissage vasculaire rapide avant induction (Ringer Lactate)","Transfusion massive en ratio 1:1:1 (CGR:PFC:Plaquettes)","Objectif PAM \u226550\u201365 mmHg (hypotension permissive si pas de TCE)","Cible h\xe9moglobine \u22657\u20138 g/dL","\xc9viter l'hypothermie, l'acidose, la coagulopathie (triade l\xe9tale)"],t.s)
 B.ajn=s(["ketamine","etomidate","noradrenaline","rocuronium","ringer_lactate"],t.s)
-B.wf=s(["propofol","thiopental"],t.s)
+B.wg=s(["propofol","thiopental"],t.s)
 B.Sz=new A.bO("ketamine",0.5)
 B.Sp=new A.bO("etomidate",0.5)
 B.SD=new A.bO("midazolam",0.25)
 B.avH=s([B.Sz,B.Sp,B.SD],t.G)
-B.aPq=new A.M("choc_hemorragique","Choc H\xe9morragique","Instabilit\xe9 h\xe9modynamique s\xe9v\xe8re \u2014 hypovol\xe9mie critique",B.bq,B.o,B.awa,B.ajK,B.arA,B.ajn,B.wf,B.avH,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPq=new A.M("choc_hemorragique","Choc H\xe9morragique","Instabilit\xe9 h\xe9modynamique s\xe9v\xe8re \u2014 hypovol\xe9mie critique",B.bq,B.o,B.awa,B.ajK,B.arA,B.ajn,B.wg,B.avH,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aye=s(["Morphine CONTRE-INDIQU\xc9E \u2014 histamino-lib\xe9ration \u2192 bronchospasme s\xe9v\xe8re","Atracurium CONTRE-INDIQU\xc9 \u2014 histamino-lib\xe9ration importante","Thiopental : laryngospasme et bronchospasme fr\xe9quents \u2014 \xe9viter","L'intubation trach\xe9ale est le geste le plus \xe0 risque \u2014 toujours pr\xe9m\xe9diquer"],t.s)
 B.aDO=s(["K\xe9tamine : bronchodilatateur puissant \u2014 1\xe8re ligne pour SRI en crise d'asthme","Propofol : propri\xe9t\xe9s bronchodilatatrices \u2014 induction de choix hors SRI","Rocuronium ou Cisatracurium : pas d'histamino-lib\xe9ration \u2014 curares de choix","Lidoca\xefne 1.5 mg/kg IV 3 min avant intubation \u2014 att\xe9nue le bronchospasme r\xe9flexe"],t.s)
 B.aEz=s(["Pr\xe9m\xe9dication bronchodilatatrice : salbutamol 2.5 mg n\xe9bulis\xe9","Lidoca\xefne 1.5 mg/kg IV 3 min avant laryngoscopie","Ventilation : I:E=1:3, d\xe9bit inspiratoire \xe9lev\xe9, fr\xe9quence basse 12\u201314/min","PEEP minimale \u2014 risque de pi\xe9geage gazeux (auto-PEEP)","\xc9viter intubation nasotrach\xe9ale (stimulation plus importante)"],t.s)
@@ -102779,14 +102794,14 @@ B.aQy=new A.M("goitre","Goitre","Augmentation du volume thyro\xefdien \u2014 ris
 B.aoX=s(["Association fr\xe9quente ob\xe9sit\xe9/HTA/diab\xe8te/dyslipid\xe9mie \u2014 risque cardiovasculaire cumul\xe9","Risque de SAS associ\xe9 \u2014 \xe9valuer avant anesth\xe9sie (score STOP-BANG)","Risque accru de complications cardiovasculaires p\xe9riop\xe9ratoires"],t.s)
 B.ayb=s(["Bilan cardiovasculaire pr\xe9op\xe9ratoire complet si facteurs de risque multiples","Adapter les doses au poids r\xe9el/id\xe9al selon l'agent (cf. ob\xe9sit\xe9)","Monitorage glyc\xe9mique perop\xe9ratoire"],t.s)
 B.apm=s(["\xc9valuation multidisciplinaire pr\xe9op\xe9ratoire si facteurs de risque cumul\xe9s","Pr\xe9vention thromboembolique syst\xe9matique (risque accru)","Surveillance glyc\xe9mique et tensionnelle perop\xe9ratoire"],t.s)
-B.wb=s(["metformine"],t.s)
-B.aQk=new A.M("syndrome_metabolique","Syndrome M\xe9tabolique","Association ob\xe9sit\xe9/HTA/diab\xe8te/dyslipid\xe9mie \u2014 risque cardiovasculaire cumul\xe9",B.bL,B.o,B.aoX,B.ayb,B.apm,B.wb,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.wc=s(["metformine"],t.s)
+B.aQk=new A.M("syndrome_metabolique","Syndrome M\xe9tabolique","Association ob\xe9sit\xe9/HTA/diab\xe8te/dyslipid\xe9mie \u2014 risque cardiovasculaire cumul\xe9",B.bL,B.o,B.aoX,B.ayb,B.apm,B.wc,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.hw=new A.c6(11,"infectieuxDigestif")
 B.aJw=s(["D\xe9shydratation et troubles hydro\xe9lectrolytiques fr\xe9quents, surtout enfant et sujet \xe2g\xe9","Estomac plein fonctionnel \u2014 vomissements/diarrh\xe9e r\xe9cents, risque d'inhalation","Hypokali\xe9mie possible \u2014 surveiller avant curarisation"],t.s)
 B.asM=s(["R\xe9hydratation IV avant toute chirurgie non urgente","Induction en s\xe9quence rapide si estomac plein suspect\xe9"],t.s)
 B.auO=s(["Ionogramme sanguin si diarrh\xe9e/vomissements profus","Diff\xe9rer la chirurgie \xe9lective jusqu'\xe0 r\xe9hydratation compl\xe8te"],t.s)
-B.wi=s(["ringer_lactate"],t.s)
-B.aPX=new A.M("gastro_enterite_aigue","Gastro-ent\xe9rite Aigu\xeb","Infection digestive aigu\xeb \u2014 d\xe9shydratation et estomac plein fonctionnel",B.hw,B.o,B.aJw,B.asM,B.auO,B.wi,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.wj=s(["ringer_lactate"],t.s)
+B.aPX=new A.M("gastro_enterite_aigue","Gastro-ent\xe9rite Aigu\xeb","Infection digestive aigu\xeb \u2014 d\xe9shydratation et estomac plein fonctionnel",B.hw,B.o,B.aJw,B.asM,B.auO,B.wj,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.ag5=s([u.bT,"Fonction r\xe9nale \xe0 surveiller \u2014 risque d'insuffisance r\xe9nale fonctionnelle","Troubles ioniques associ\xe9s (natr\xe9mie, kali\xe9mie) \xe0 corriger"],t.s)
 B.agg=s(["R\xe9hydratation IV pr\xe9op\xe9ratoire avant toute chirurgie non urgente","R\xe9duire les doses d'induction \u2014 sensibilit\xe9 accrue \xe0 l'hypotension","\xc9ph\xe9drine ou noradr\xe9naline disponibles en cas d'hypotension \xe0 l'induction"],t.s)
 B.ajE=s(["Ionogramme et fonction r\xe9nale avant chirurgie \xe9lective si d\xe9shydratation significative","Remplissage vasculaire titr\xe9 selon la tol\xe9rance h\xe9modynamique"],t.s)
@@ -102803,8 +102818,8 @@ B.aOt=new A.M("rgo","Reflux Gastro-\u0152sophagien (RGO)","Risque d'inhalation b
 B.ajA=s(["Risque h\xe9morragique digestif \u2014 v\xe9rifier h\xe9moglobine si saignement actif ou r\xe9cent","AINS et cortico\xefdes majorent le risque de perforation ou de saignement","An\xe9mie chronique possible \u2014 bilan pr\xe9op\xe9ratoire recommand\xe9"],t.s)
 B.ai9=s(["\xc9viter les AINS en p\xe9riop\xe9ratoire \u2014 pr\xe9f\xe9rer parac\xe9tamol et opio\xefdes","IPP poursuivis en p\xe9riop\xe9ratoire"],t.s)
 B.ana=s(["NFS pr\xe9op\xe9ratoire si suspicion de saignement chronique","Surveillance des signes de saignement digestif en postop\xe9ratoire"],t.s)
-B.bC=s(["paracetamol"],t.s)
-B.aPg=new A.M("ulcere_gastroduodenal","Ulc\xe8re Gastro-Duod\xe9nal","Risque h\xe9morragique digestif \u2014 AINS et cortico\xefdes majorent le risque",B.fg,B.o,B.ajA,B.ai9,B.ana,B.bC,B.kP,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.bD=s(["paracetamol"],t.s)
+B.aPg=new A.M("ulcere_gastroduodenal","Ulc\xe8re Gastro-Duod\xe9nal","Risque h\xe9morragique digestif \u2014 AINS et cortico\xefdes majorent le risque",B.fg,B.o,B.ajA,B.ai9,B.ana,B.bD,B.kP,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aHg=s(["Hypovol\xe9mie aigu\xeb \u2014 risque de collapsus \xe0 l'induction, r\xe9duire les doses d'induction","Estomac plein \u2014 sang dig\xe9r\xe9 et caillots, induction en s\xe9quence rapide",u.g5],t.s)
 B.ahC=s(["Remplissage vasculaire et transfusion avant l'induction si possible",u.H,"Noradr\xe9naline disponible en cas de collapsus perop\xe9ratoire"],t.s)
 B.ai1=s(["Groupe sanguin, RAI et culots globulaires disponibles avant l'induction","Voies veineuses de gros calibre, monitorage invasif si instabilit\xe9","Sonde nasogastrique de vidange \xe0 discuter avant l'induction"],t.s)
@@ -102855,7 +102870,7 @@ B.aOd=new A.M("syndrome_intestin_irritable","Syndrome de l'Intestin Irritable","
 B.akd=s(["Opio\xefdes aggravent la constipation \u2014 risque d'il\xe9us postop\xe9ratoire","Distension abdominale chronique possible \u2014 \xe9valuer avant chirurgie abdominale"],t.s)
 B.ats=s(["Analg\xe9sie multimodale \u2014 \xe9pargne opio\xefde si possible","Laxatifs poursuivis en p\xe9riop\xe9ratoire"],t.s)
 B.asN=s(["Reprise du transit \xe0 surveiller en postop\xe9ratoire","Mobilisation pr\xe9coce recommand\xe9e"],t.s)
-B.aQE=new A.M("constipation_chronique","Constipation Chronique","Risque d'aggravation par les opio\xefdes \u2014 attention \xe0 l'il\xe9us postop\xe9ratoire",B.fg,B.o,B.akd,B.ats,B.asN,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQE=new A.M("constipation_chronique","Constipation Chronique","Risque d'aggravation par les opio\xefdes \u2014 attention \xe0 l'il\xe9us postop\xe9ratoire",B.fg,B.o,B.akd,B.ats,B.asN,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.dy=new A.c6(8,"infectieux")
 B.ak0=s(["Risque de progression vers py\xe9lon\xe9phrite ou sepsis si non trait\xe9e","Antibioth\xe9rapie \xe0 v\xe9rifier avant tout geste invasif urologique"],t.s)
 B.ak3=s(["Antibioth\xe9rapie adapt\xe9e \xe0 l'ECBU avant chirurgie urologique programm\xe9e","Prise en charge anesth\xe9sique standard si infection basse non compliqu\xe9e"],t.s)
@@ -102865,8 +102880,8 @@ B.aQ9=new A.M("infection_urinaire","Infection Urinaire","Infection des voies uri
 B.afN=s(["Risque de sepsis, voire choc septique \u2014 \xe9valuer la gravit\xe9 avant l'anesth\xe9sie","Douleur et fi\xe8vre \u2014 hydratation et antalgie \xe0 optimiser avant l'induction"],t.s)
 B.ajO=s([u.k,"Remplissage vasculaire et optimisation h\xe9modynamique pr\xe9op\xe9ratoire si sepsis"],t.s)
 B.azc=s(["Bilan biologique (NFS, CRP, h\xe9mocultures) et imagerie si signes de gravit\xe9","Surveillance h\xe9modynamique rapproch\xe9e en cas de sepsis associ\xe9"],t.s)
-B.wd=s(["noradrenaline"],t.s)
-B.aOU=new A.M("pyelonephrite","Py\xe9lon\xe9phrite","Infection r\xe9nale haute \u2014 risque de sepsis \xe0 \xe9valuer avant l'anesth\xe9sie",B.dy,B.o,B.afN,B.ajO,B.azc,B.wd,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.we=s(["noradrenaline"],t.s)
+B.aOU=new A.M("pyelonephrite","Py\xe9lon\xe9phrite","Infection r\xe9nale haute \u2014 risque de sepsis \xe0 \xe9valuer avant l'anesth\xe9sie",B.dy,B.o,B.afN,B.ajO,B.azc,B.we,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aF3=s([u.fm,"AINS efficaces en 1\xe8re intention si fonction r\xe9nale normale"],t.s)
 B.amb=s(["AINS (k\xe9toprof\xe8ne) en 1\xe8re intention si absence de contre-indication","Analg\xe9sie multimodale : parac\xe9tamol et opio\xefde titr\xe9 si AINS insuffisant"],t.s)
 B.aDk=s(["Imagerie (\xe9chographie/TDM) pour rechercher un obstacle et \xe9valuer la fonction r\xe9nale","Surveillance de la diur\xe8se et de la fonction r\xe9nale"],t.s)
@@ -102914,7 +102929,7 @@ B.ag3=s(["Poursuivre le traitement de fond habituel le jour de la chirurgie"],t.
 B.aOP=new A.M("migraine","Migraine","C\xe9phal\xe9e primaire r\xe9currente \u2014 pas de contre-indication anesth\xe9sique sp\xe9cifique",B.cp,B.o,B.ao7,B.aCp,B.ag3,B.kP,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aEL=s(["Pas de retentissement anesth\xe9sique sp\xe9cifique d\xe9montr\xe9"],t.s)
 B.aC0=s(["Prise en charge anesth\xe9sique standard","Antalgiques simples (parac\xe9tamol) efficaces habituellement"],t.s)
-B.aPx=new A.M("cephalee_tension","C\xe9phal\xe9e de Tension","C\xe9phal\xe9e primaire fr\xe9quente \u2014 sans retentissement anesth\xe9sique sp\xe9cifique",B.cp,B.o,B.aEL,B.aC0,B.di,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPx=new A.M("cephalee_tension","C\xe9phal\xe9e de Tension","C\xe9phal\xe9e primaire fr\xe9quente \u2014 sans retentissement anesth\xe9sique sp\xe9cifique",B.cp,B.o,B.aEL,B.aC0,B.di,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aCq=s(["Carbamaz\xe9pine fr\xe9quemment utilis\xe9e \u2014 inducteur enzymatique, acc\xe9l\xe8re le m\xe9tabolisme de certains agents"],t.s)
 B.aok=s(["Poursuivre le traitement de fond (carbamaz\xe9pine) jusqu'au matin de la chirurgie","Adapter les doses des agents m\xe9tabolis\xe9s par le CYP450"],t.s)
 B.aks=s(["V\xe9rifier le traitement en cours et ses interactions m\xe9dicamenteuses"],t.s)
@@ -102952,11 +102967,11 @@ B.aOc=new A.M("varicelle","Varicelle","Infection virale cutan\xe9e tr\xe8s conta
 B.apA=s(["Peu de retentissement anesth\xe9sique sp\xe9cifique \u2014 fi\xe8vre \xe0 contr\xf4ler"],t.s)
 B.atx=s(["Prise en charge anesth\xe9sique standard","Reporter la chirurgie \xe9lective en phase f\xe9brile aigu\xeb"],t.s)
 B.anF=s(["Isolement gouttelettes standard"],t.s)
-B.aQM=new A.M("oreillons","Oreillons","Infection virale des glandes salivaires \u2014 peu de retentissement anesth\xe9sique",B.hx,B.o,B.apA,B.atx,B.anF,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQM=new A.M("oreillons","Oreillons","Infection virale des glandes salivaires \u2014 peu de retentissement anesth\xe9sique",B.hx,B.o,B.apA,B.atx,B.anF,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aFs=s(["Peu de retentissement anesth\xe9sique sp\xe9cifique chez l'adulte","T\xe9ratog\xe8ne en cas de grossesse \u2014 prudence pour le personnel/entourage non immunis\xe9"],t.s)
 B.cF=s(["Prise en charge anesth\xe9sique standard"],t.s)
 B.ay2=s(["Isolement gouttelettes \u2014 v\xe9rifier le statut immunitaire du personnel enceinte"],t.s)
-B.aPS=new A.M("rubeole","Rub\xe9ole","Infection virale b\xe9nigne \u2014 attention particuli\xe8re si grossesse associ\xe9e",B.hx,B.o,B.aFs,B.cF,B.ay2,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPS=new A.M("rubeole","Rub\xe9ole","Infection virale b\xe9nigne \u2014 attention particuli\xe8re si grossesse associ\xe9e",B.hx,B.o,B.aFs,B.cF,B.ay2,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.hy=new A.c6(17,"maladiesTropicales")
 B.aJa=s(["An\xe9mie h\xe9molytique fr\xe9quente \u2014 NFS pr\xe9op\xe9ratoire recommand\xe9e","Hypoglyc\xe9mie fr\xe9quente, notamment sous quinine \u2014 surveillance glyc\xe9mique","Neuropaludisme : troubles de conscience et risque convulsif (forme grave)","Allongement du QT possible sous quinine/m\xe9floquine \u2014 prudence avec les agents allongeant le QT"],t.s)
 B.aso=s(["NFS et glyc\xe9mie pr\xe9op\xe9ratoires syst\xe9matiques","ECG si traitement par quinine ou m\xe9floquine en cours"],t.s)
@@ -103056,7 +103071,7 @@ B.ar_=s(["Risque d'\xe9volution vers un phlegmon ou un abc\xe8s p\xe9riamygdalie
 B.aCo=s([u.q,"Mat\xe9riel d'intubation difficile disponible si signes de compromission des voies a\xe9riennes"],t.s)
 B.arO=s(["\xc9valuation clinique des voies a\xe9riennes sup\xe9rieures avant toute anesth\xe9sie g\xe9n\xe9rale"],t.s)
 B.aQz=new A.M("angine_bacterienne","Angine Bact\xe9rienne","Infection pharyng\xe9e bact\xe9rienne \u2014 risque d'abc\xe8s et de compromission des voies a\xe9riennes",B.fe,B.o,B.ar_,B.aCo,B.arO,B.ie,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
-B.aPn=new A.M("pharyngite_virale","Pharyngite Virale","Infection virale pharyng\xe9e \u2014 peu de retentissement anesth\xe9sique",B.fe,B.o,B.dM,B.cF,B.di,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPn=new A.M("pharyngite_virale","Pharyngite Virale","Infection virale pharyng\xe9e \u2014 peu de retentissement anesth\xe9sique",B.fe,B.o,B.dM,B.cF,B.di,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aJy=s(["Hypertrophie amygdalienne volumineuse \u2014 risque d'intubation difficile et de SAOS associ\xe9"],t.s)
 B.aHm=s(["Mat\xe9riel d'intubation difficile disponible si hypertrophie s\xe9v\xe8re","\xc9valuer un SAOS associ\xe9, surtout chez l'enfant"],t.s)
 B.anX=s(["\xc9valuation des voies a\xe9riennes sup\xe9rieures avant l'anesth\xe9sie"],t.s)
@@ -103081,9 +103096,9 @@ B.jr=new A.c6(22,"ophtalmologie")
 B.arP=s(["Succinylcholine CONTRE-INDIQU\xc9E \u2014 augmente la pression intraoculaire (PIO)","Atropine et anticholinergiques : prudence \u2014 effet mydriatique, risque de majorer un angle ferm\xe9","\xc9viter toute man\u0153uvre augmentant la PIO (toux, hypertension, hypercapnie)"],t.s)
 B.als=s(["Curare non d\xe9polarisant pr\xe9f\xe9r\xe9 \xe0 l'induction","Propofol : effet favorable sur la PIO (diminution)","Pr\xe9vention des naus\xe9es/vomissements \u2014 \xe9vite l'augmentation de la PIO par les efforts de vomissement"],t.s)
 B.aoA=s(["Traitement hypotonisant oculaire poursuivi en p\xe9riop\xe9ratoire","\xc9viter toute hypertension ou hypercapnie perop\xe9ratoire"],t.s)
-B.we=s(["propofol","rocuronium"],t.s)
+B.wf=s(["propofol","rocuronium"],t.s)
 B.aGj=s(["succinylcholine","atropine"],t.s)
-B.aP2=new A.M("glaucome_aigu","Glaucome Aigu","\xc9l\xe9vation aigu\xeb de la pression intraoculaire \u2014 urgence ophtalmologique",B.jr,B.o,B.arP,B.als,B.aoA,B.we,B.aGj,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aP2=new A.M("glaucome_aigu","Glaucome Aigu","\xc9l\xe9vation aigu\xeb de la pression intraoculaire \u2014 urgence ophtalmologique",B.jr,B.o,B.arP,B.als,B.aoA,B.wf,B.aGj,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aDN=s(["Souvent r\xe9alis\xe9e sous anesth\xe9sie locale/topique \u2014 \xe9valuer la coop\xe9ration du patient","\xc9viter toute augmentation de la PIO (toux, effort) en perop\xe9ratoire"],t.s)
 B.awG=s(["Anesth\xe9sie topique ou loco-r\xe9gionale p\xe9ribulbaire selon le contexte"],t.s)
 B.agO=s(["Immobilit\xe9 du patient n\xe9cessaire pendant le geste \u2014 \xe9valuer la faisabilit\xe9 sous AL"],t.s)
@@ -103096,42 +103111,42 @@ B.aPu=new A.M("decollement_retine","D\xe9collement de R\xe9tine","Urgence ophtal
 B.aAA=s(["Globe oculaire ouvert possible \u2014 succinylcholine CONTRE-INDIQU\xc9E (augmente la PIO, risque d'extrusion du contenu oculaire)","\xc9viter toute toux, effort ou pression sur le globe (masque facial, laryngoscopie brutale)","Estomac plein fr\xe9quent (contexte traumatique) \u2014 dilemme induction s\xe9quence rapide/PIO \xe0 discuter"],t.s)
 B.arp=s(["Curare non d\xe9polarisant \xe0 d\xe9lai d'action rapide (rocuronium) pr\xe9f\xe9r\xe9 si s\xe9quence rapide n\xe9cessaire","Propofol pour l'induction \u2014 effet favorable sur la PIO","Anti\xe9m\xe9tiques prophylactiques syst\xe9matiques"],t.s)
 B.amq=s(["Protection du globe oculaire jusqu'\xe0 la prise en charge chirurgicale"],t.s)
-B.aP8=new A.M("corps_etranger_oculaire","Corps \xc9tranger Oculaire","Traumatisme oculaire ouvert possible \u2014 \xe9viter toute \xe9l\xe9vation de la PIO",B.jr,B.o,B.aAA,B.arp,B.amq,B.we,B.kQ,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aP8=new A.M("corps_etranger_oculaire","Corps \xc9tranger Oculaire","Traumatisme oculaire ouvert possible \u2014 \xe9viter toute \xe9l\xe9vation de la PIO",B.jr,B.o,B.aAA,B.arp,B.amq,B.wf,B.kQ,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.cT=new A.c6(23,"rhumatologieOrthopedie")
 B.asa=s(["Mobilit\xe9 articulaire limit\xe9e \u2014 \xe9valuer le positionnement perop\xe9ratoire (rachis cervical notamment)"],t.s)
 B.ayo=s(["Analg\xe9sie multimodale adapt\xe9e","Pr\xe9cautions de positionnement si arthrose cervicale s\xe9v\xe8re"],t.s)
 B.aHb=s(["\xc9valuer l'amplitude d'ouverture buccale et de mobilit\xe9 cervicale avant l'anesth\xe9sie"],t.s)
-B.aQB=new A.M("arthrose","Arthrose","D\xe9g\xe9n\xe9rescence articulaire chronique \u2014 analg\xe9sie adapt\xe9e, mobilit\xe9 limit\xe9e",B.cT,B.o,B.asa,B.ayo,B.aHb,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQB=new A.M("arthrose","Arthrose","D\xe9g\xe9n\xe9rescence articulaire chronique \u2014 analg\xe9sie adapt\xe9e, mobilit\xe9 limit\xe9e",B.cT,B.o,B.asa,B.ayo,B.aHb,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.ao5=s(["Instabilit\xe9 atlanto-axo\xefdienne possible \u2014 risque de l\xe9sion m\xe9dullaire lors de la laryngoscopie","Atteinte temporo-mandibulaire fr\xe9quente \u2014 risque d'ouverture buccale limit\xe9e (intubation difficile)","Corticoth\xe9rapie et immunosuppresseurs de fond \u2014 risque infectieux et insuffisance surr\xe9nalienne fonctionnelle"],t.s)
 B.as4=s(["Radiographie cervicale (clich\xe9s dynamiques) si suspicion d'instabilit\xe9 atlanto-axo\xefdienne","Intubation vigile ou fibroscopique si instabilit\xe9 cervicale ou ouverture buccale limit\xe9e",u.fa,"H\xe9misuccinate d'hydrocortisone \xe0 discuter si corticoth\xe9rapie prolong\xe9e (couverture du stress chirurgical)"],t.s)
 B.aqc=s(["\xc9valuation de la mobilit\xe9 cervicale et de l'ouverture buccale en pr\xe9op\xe9ratoire","Positionnement prudent en perop\xe9ratoire (minerve cervicale \xe0 discuter si instabilit\xe9 s\xe9v\xe8re)"],t.s)
-B.aOM=new A.M("polyarthrite_rhumatoide","Polyarthrite Rhumato\xefde","Maladie auto-immune articulaire \u2014 risque d'instabilit\xe9 cervicale et d'intubation difficile",B.cT,B.o,B.ao5,B.as4,B.aqc,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aOM=new A.M("polyarthrite_rhumatoide","Polyarthrite Rhumato\xefde","Maladie auto-immune articulaire \u2014 risque d'instabilit\xe9 cervicale et d'intubation difficile",B.cT,B.o,B.ao5,B.as4,B.aqc,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.apN=s(["Crise de goutte perop\xe9ratoire possible en cas de je\xfbne prolong\xe9 ou de d\xe9shydratation","AINS et colchicine : prudence si insuffisance r\xe9nale associ\xe9e (fr\xe9quente sur ce terrain)"],t.s)
 B.aCA=s(["Hydratation ad\xe9quate p\xe9riop\xe9ratoire \u2014 pr\xe9vient le d\xe9clenchement d'une crise","Colchicine ou AINS \xe0 faible dose en cas de crise, selon la fonction r\xe9nale"],t.s)
 B.aB9=s(["V\xe9rifier la fonction r\xe9nale avant prescription d'AINS"],t.s)
 B.aQL=new A.M("goutte","Goutte","Arthropathie microcristalline \u2014 crises douloureuses, interactions m\xe9dicamenteuses",B.cT,B.o,B.apN,B.aCA,B.aB9,B.kP,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.ayE=s(["Positionnement perop\xe9ratoire \xe0 adapter \u2014 \xe9viter l'hyperextension lombaire prolong\xe9e"],t.s)
 B.afg=s(["Analg\xe9sie multimodale adapt\xe9e","Coussins de soutien lombaire en d\xe9cubitus dorsal prolong\xe9"],t.s)
-B.aPU=new A.M("lombalgie","Lombalgie","Douleur lombaire commune \u2014 analg\xe9sie multimodale, positionnement adapt\xe9",B.cT,B.o,B.ayE,B.afg,B.di,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPU=new A.M("lombalgie","Lombalgie","Douleur lombaire commune \u2014 analg\xe9sie multimodale, positionnement adapt\xe9",B.cT,B.o,B.ayE,B.afg,B.di,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.awI=s(["Positionnement perop\xe9ratoire \xe0 adapter en cas de radiculalgie s\xe9v\xe8re"],t.s)
 B.aq7=s(["Analg\xe9sie multimodale \u2014 antalgiques neuropathiques si composante chronique"],t.s)
-B.aQr=new A.M("sciatique","Sciatique","Douleur radiculaire du membre inf\xe9rieur \u2014 analg\xe9sie multimodale",B.cT,B.o,B.awI,B.aq7,B.di,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQr=new A.M("sciatique","Sciatique","Douleur radiculaire du membre inf\xe9rieur \u2014 analg\xe9sie multimodale",B.cT,B.o,B.awI,B.aq7,B.di,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.atb=s(["\xc9valuer la mobilit\xe9 cervicale avant toute laryngoscopie directe \u2014 risque d'intubation difficile si limitation s\xe9v\xe8re"],t.s)
 B.aiz=s(["Vid\xe9olaryngoscope \xe0 disposition si mobilit\xe9 cervicale limit\xe9e"],t.s)
 B.aFa=s(["Positionnement prudent en perop\xe9ratoire"],t.s)
-B.aQh=new A.M("cervicalgie","Cervicalgie","Douleur cervicale commune \u2014 \xe9valuer la mobilit\xe9 avant intubation",B.cT,B.o,B.atb,B.aiz,B.aFa,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQh=new A.M("cervicalgie","Cervicalgie","Douleur cervicale commune \u2014 \xe9valuer la mobilit\xe9 avant intubation",B.cT,B.o,B.atb,B.aiz,B.aFa,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.apE=s(["Risque de syndrome d'embolie graisseuse (fractures des os longs/bassin) \u2014 surveiller d\xe9tresse respiratoire J1-J3","Estomac plein fr\xe9quent (contexte traumatique/urgence) \u2014 induction en s\xe9quence rapide","Douleur intense \u2014 analg\xe9sie pr\xe9coce et efficace n\xe9cessaire","Rechercher des l\xe9sions associ\xe9es en contexte de polytraumatisme"],t.s)
 B.agu=s(["Analg\xe9sie multimodale pr\xe9coce (bloc r\xe9gional si possible)","Immobilisation ad\xe9quate avant tout transport/mobilisation","Surveillance respiratoire rapproch\xe9e si fracture des os longs (embolie graisseuse)"],t.s)
 B.asE=s(["Bilan radiologique complet","Surveillance neurovasculaire du membre atteint"],t.s)
 B.aQ4=new A.M("fracture","Fracture","Traumatisme osseux \u2014 risque d'embolie graisseuse, douleur intense, estomac plein si urgence",B.cT,B.o,B.apE,B.agu,B.asE,B.w6,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.w7=s(["Analg\xe9sie multimodale standard"],t.s)
-B.aQH=new A.M("entorse","Entorse","L\xe9sion ligamentaire \u2014 analg\xe9sie standard, peu de retentissement anesth\xe9sique",B.cT,B.o,B.dM,B.w7,B.di,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQH=new A.M("entorse","Entorse","L\xe9sion ligamentaire \u2014 analg\xe9sie standard, peu de retentissement anesth\xe9sique",B.cT,B.o,B.dM,B.w7,B.di,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aij=s(["R\xe9duction souvent r\xe9alis\xe9e sous s\xe9dation proc\xe9durale \u2014 \xe9valuer le je\xfbne pr\xe9alable"],t.s)
 B.axh=s(["S\xe9dation proc\xe9durale titr\xe9e (k\xe9tamine ou propofol) pour la r\xe9duction"],t.s)
 B.aqP=s(["Surveillance neurovasculaire du membre atteint avant/apr\xe8s r\xe9duction"],t.s)
 B.aC7=s(["ketamine","propofol"],t.s)
 B.aPH=new A.M("luxation","Luxation","D\xe9placement articulaire \u2014 s\xe9dation ou anesth\xe9sie br\xe8ve pour r\xe9duction",B.cT,B.o,B.aij,B.axh,B.aqP,B.aC7,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
-B.aPm=new A.M("tendinite","Tendinite","Inflammation tendineuse \u2014 peu de retentissement anesth\xe9sique",B.cT,B.o,B.dM,B.w7,B.di,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPm=new A.M("tendinite","Tendinite","Inflammation tendineuse \u2014 peu de retentissement anesth\xe9sique",B.cT,B.o,B.dM,B.w7,B.di,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.alO=s(["Fragilit\xe9 osseuse \u2014 manipulations et positionnement \xe0 r\xe9aliser avec prudence extr\xeame","Risque de fracture perop\xe9ratoire lors de la mobilisation ou de l'installation","Syndrome d'implantation du ciment osseux (BCIS) possible en chirurgie proth\xe9tique \u2014 hypotension, hypoxie"],t.s)
 B.avZ=s(["Mobilisation et installation douces, en \xe9vitant les leviers articulaires forc\xe9s","Surveillance h\xe9modynamique rapproch\xe9e lors de la pose de ciment osseux"],t.s)
 B.aBQ=s(["Coussinage renforc\xe9 de tous les points d'appui"],t.s)
@@ -103145,12 +103160,12 @@ B.aOk=new A.M("depression","D\xe9pression","Trouble de l'humeur \u2014 interacti
 B.aDe=s(["Anxi\xe9t\xe9 p\xe9riop\xe9ratoire major\xe9e \u2014 impact possible sur la douleur per\xe7ue et la consommation d'analg\xe9siques"],t.s)
 B.ai4=s(["Pr\xe9m\xe9dication anxiolytique \xe0 discuter (benzodiaz\xe9pine \xe0 faible dose)","Communication rassurante renforc\xe9e"],t.s)
 B.arC=s(["Poursuivre le traitement anxiolytique de fond habituel"],t.s)
-B.wc=s(["midazolam"],t.s)
-B.aQc=new A.M("trouble_anxieux","Trouble Anxieux","Anxi\xe9t\xe9 chronique \u2014 pr\xe9m\xe9dication anxiolytique b\xe9n\xe9fique",B.fh,B.o,B.aDe,B.ai4,B.arC,B.wc,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.wd=s(["midazolam"],t.s)
+B.aQc=new A.M("trouble_anxieux","Trouble Anxieux","Anxi\xe9t\xe9 chronique \u2014 pr\xe9m\xe9dication anxiolytique b\xe9n\xe9fique",B.fh,B.o,B.aDe,B.ai4,B.arC,B.wd,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.an1=s(["Risque de crise de panique p\xe9riop\xe9ratoire \u2014 sympt\xf4mes pouvant mimer une urgence cardiorespiratoire"],t.s)
 B.ak4=s(["Pr\xe9m\xe9dication anxiolytique \xe0 discuter","Environnement calme et rassurant en pr\xe9op\xe9ratoire"],t.s)
 B.auA=s(["Poursuivre le traitement de fond habituel"],t.s)
-B.aQS=new A.M("trouble_panique","Trouble Panique","Attaques de panique r\xe9currentes \u2014 pr\xe9m\xe9dication anxiolytique et r\xe9assurance",B.fh,B.o,B.an1,B.ak4,B.auA,B.wc,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQS=new A.M("trouble_panique","Trouble Panique","Attaques de panique r\xe9currentes \u2014 pr\xe9m\xe9dication anxiolytique et r\xe9assurance",B.fh,B.o,B.an1,B.ak4,B.auA,B.wd,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.ap4=s(["Lithium : potentialise et prolonge l'effet des curares non d\xe9polarisants","Lithium : marge th\xe9rapeutique \xe9troite \u2014 AINS et diur\xe9tiques augmentent la lithi\xe9mie (toxicit\xe9)","Interruption brutale du traitement thymor\xe9gulateur : risque de d\xe9compensation de l'humeur"],t.s)
 B.aJp=s(["Poursuivre le lithium en p\xe9riop\xe9ratoire sauf avis psychiatrique contraire","R\xe9duire les doses de curares non d\xe9polarisants et monitorer le TOF","\xc9viter les AINS chez le patient sous lithium"],t.s)
 B.azg=s(["V\xe9rifier la lithi\xe9mie r\xe9cente si disponible"],t.s)
@@ -103168,14 +103183,14 @@ B.aP3=new A.M("insomnie","Insomnie","Trouble du sommeil chronique \u2014 tol\xe9
 B.ar0=s(["Magn\xe9sium sulfate en cours \u2014 potentialise et prolonge les curares non d\xe9polarisants","Thrombop\xe9nie et coagulopathie possibles \u2014 v\xe9rifier avant toute anesth\xe9sie p\xe9rim\xe9dullaire","HTA s\xe9v\xe8re \u2014 contr\xf4le tensionnel avant l'induction (risque d'AVC h\xe9morragique maternel)","\u0152d\xe8me des voies a\xe9riennes fr\xe9quent \u2014 intubation potentiellement difficile"],t.s)
 B.agY=s(["Lab\xe9talol ou nicardipine pour le contr\xf4le tensionnel","Anesth\xe9sie p\xe9rim\xe9dullaire pr\xe9coce si plaquettes >75-100 000/mm\xb3 et absence de coagulopathie","R\xe9duire la dose de curares non d\xe9polarisants (potentialisation par le magn\xe9sium)"],t.s)
 B.aya=s(["Bilan de coagulation et plaquettes avant toute anesth\xe9sie p\xe9rim\xe9dullaire","Surveillance stricte de la PA et de la prot\xe9inurie","Mat\xe9riel d'intubation difficile disponible (\u0153d\xe8me des voies a\xe9riennes)"],t.s)
-B.wa=s(["labetalol","nicardipine"],t.s)
+B.wb=s(["labetalol","nicardipine"],t.s)
 B.SV=new A.bO("rocuronium",0.7)
 B.vK=s([B.SV],t.G)
-B.aQj=new A.M("preeclampsie","Pr\xe9-\xe9clampsie","HTA gravidique avec prot\xe9inurie \u2014 risque maternel et f\u0153tal majeur",B.hz,B.o,B.ar0,B.agY,B.aya,B.wa,B.b,B.vK,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQj=new A.M("preeclampsie","Pr\xe9-\xe9clampsie","HTA gravidique avec prot\xe9inurie \u2014 risque maternel et f\u0153tal majeur",B.hz,B.o,B.ar0,B.agY,B.aya,B.wb,B.b,B.vK,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aiA=s(["Urgence vitale materno-f\u0153tale \u2014 convulsions g\xe9n\xe9ralis\xe9es","Magn\xe9sium sulfate : traitement de r\xe9f\xe9rence \u2014 potentialise les curares non d\xe9polarisants","Coagulopathie et thrombop\xe9nie possibles \u2014 anesth\xe9sie p\xe9rim\xe9dullaire souvent contre-indiqu\xe9e en urgence"],t.s)
 B.aBi=s(["Sulfate de magn\xe9sium IV \u2014 traitement et pr\xe9vention des r\xe9cidives convulsives","Anesth\xe9sie g\xe9n\xe9rale souvent n\xe9cessaire en urgence (troubles de conscience, coagulopathie)","Contr\xf4le tensionnel agressif (lab\xe9talol, nicardipine)"],t.s)
 B.auN=s(["Extraction f\u0153tale en urgence si \xe9tat maternel ou f\u0153tal pr\xe9occupant","Surveillance neurologique et tensionnelle rapproch\xe9e en post-partum imm\xe9diat"],t.s)
-B.aQP=new A.M("eclampsie","\xc9clampsie","Convulsions g\xe9n\xe9ralis\xe9es sur pr\xe9-\xe9clampsie \u2014 urgence materno-f\u0153tale",B.hz,B.o,B.aiA,B.aBi,B.auN,B.wa,B.b,B.vK,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQP=new A.M("eclampsie","\xc9clampsie","Convulsions g\xe9n\xe9ralis\xe9es sur pr\xe9-\xe9clampsie \u2014 urgence materno-f\u0153tale",B.hz,B.o,B.aiA,B.aBi,B.auN,B.wb,B.b,B.vK,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.atc=s(["Risque de rupture tubaire et d'h\xe9morragie interne massive \u2014 urgence chirurgicale potentielle","Estomac plein \u2014 induction en s\xe9quence rapide","Hypovol\xe9mie possible si rupture \u2014 \xe9valuer l'\xe9tat h\xe9modynamique avant l'induction"],t.s)
 B.aHa=s(["\xc9tomidate ou k\xe9tamine pour l'induction si instabilit\xe9 h\xe9modynamique","Groupe sanguin, RAI et culots globulaires disponibles avant l'intervention"],t.s)
 B.atS=s(["Bilan h\xe9modynamique et \xe9chographie en urgence","Voies veineuses de gros calibre si suspicion de rupture"],t.s)
@@ -103195,24 +103210,24 @@ B.rm=new A.c6(18,"infectieuxObstetrical")
 B.ax6=s(["Infection mammaire \u2014 \xe9valuer les crit\xe8res de gravit\xe9 (abc\xe8s, sepsis) avant l'anesth\xe9sie"],t.s)
 B.axf=s([u.q,"Analg\xe9sie multimodale \u2014 douleur locale souvent importante"],t.s)
 B.aAW=s(["Poursuite de l'allaitement \xe0 \xe9valuer selon les mol\xe9cules utilis\xe9es"],t.s)
-B.aOK=new A.M("mastite","Mastite","Infection mammaire \u2014 \xe9valuer les crit\xe8res de gravit\xe9 avant l'anesth\xe9sie",B.rm,B.o,B.ax6,B.axf,B.aAW,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aOK=new A.M("mastite","Mastite","Infection mammaire \u2014 \xe9valuer les crit\xe8res de gravit\xe9 avant l'anesth\xe9sie",B.rm,B.o,B.ax6,B.axf,B.aAW,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.auw=s(["Risque de sepsis post-partum ou post-abortum \u2014 \xe9valuer les crit\xe8res de gravit\xe9"],t.s)
 B.afA=s(["Antibioth\xe9rapie d\xe9but\xe9e avant tout geste si signes de gravit\xe9","Remplissage vasculaire si signes de sepsis"],t.s)
 B.amv=s(["Bilan biologique (NFS, CRP, h\xe9mocultures) si signes de gravit\xe9"],t.s)
-B.aQb=new A.M("endometrite","Endom\xe9trite","Infection ut\xe9rine post-partum ou post-abortum \u2014 risque de sepsis",B.rm,B.o,B.auw,B.afA,B.amv,B.wd,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQb=new A.M("endometrite","Endom\xe9trite","Infection ut\xe9rine post-partum ou post-abortum \u2014 risque de sepsis",B.rm,B.o,B.auw,B.afA,B.amv,B.we,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.rn=new A.c6(29,"gynecologie")
 B.aIV=s(["Risque de torsion ou de rupture \u2014 douleur aigu\xeb, possible h\xe9mop\xe9ritoine","Estomac plein si chirurgie en urgence"],t.s)
 B.alD=s(["Induction en s\xe9quence rapide si chirurgie en urgence (torsion, rupture)","Analg\xe9sie multimodale"],t.s)
 B.aEr=s(["\xc9chographie pelvienne pour caract\xe9riser le kyste"],t.s)
-B.aQt=new A.M("kyste_ovarien","Kyste Ovarien","Formation kystique ovarienne \u2014 risque de torsion ou de rupture",B.rn,B.o,B.aIV,B.alD,B.aEr,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQt=new A.M("kyste_ovarien","Kyste Ovarien","Formation kystique ovarienne \u2014 risque de torsion ou de rupture",B.rn,B.o,B.aIV,B.alD,B.aEr,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.ajr=s(["An\xe9mie chronique possible si m\xe9norragies associ\xe9es \u2014 bilan pr\xe9op\xe9ratoire recommand\xe9","Volumineux fibromes : compression vasculaire (veine cave) possible en d\xe9cubitus dorsal"],t.s)
 B.aCP=s(["NFS pr\xe9op\xe9ratoire \u2014 corriger une an\xe9mie chronique si pr\xe9sente","D\xe9cubitus lat\xe9ral gauche partiel si compression cave suspect\xe9e"],t.s)
 B.aDw=s(["Groupe sanguin et RAI si risque h\xe9morragique per-chirurgical \xe9lev\xe9"],t.s)
-B.aQv=new A.M("fibrome_uterin","Fibrome Ut\xe9rin","Tumeur b\xe9nigne ut\xe9rine \u2014 an\xe9mie chronique possible, compression vasculaire si volumineux",B.rn,B.o,B.ajr,B.aCP,B.aDw,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQv=new A.M("fibrome_uterin","Fibrome Ut\xe9rin","Tumeur b\xe9nigne ut\xe9rine \u2014 an\xe9mie chronique possible, compression vasculaire si volumineux",B.rn,B.o,B.ajr,B.aCP,B.aDw,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.at5=s(["Association fr\xe9quente avec ob\xe9sit\xe9, insulinor\xe9sistance et diab\xe8te \u2014 \xe9valuer les comorbidit\xe9s","Risque cardiovasculaire cumul\xe9 (syndrome m\xe9tabolique associ\xe9)"],t.s)
 B.ano=s(["Bilan m\xe9tabolique pr\xe9op\xe9ratoire si comorbidit\xe9s associ\xe9es (se r\xe9f\xe9rer \xe0 'Syndrome M\xe9tabolique')","Adapter les doses au poids r\xe9el/id\xe9al selon l'agent si ob\xe9sit\xe9 associ\xe9e"],t.s)
 B.ak7=s(["Glyc\xe9mie pr\xe9op\xe9ratoire si insulinor\xe9sistance connue"],t.s)
-B.aPj=new A.M("sopk","Syndrome des Ovaires Polykystiques","Trouble endocrinien fr\xe9quent \u2014 insulinor\xe9sistance et comorbidit\xe9s m\xe9taboliques",B.bL,B.o,B.at5,B.ano,B.ak7,B.wb,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aPj=new A.M("sopk","Syndrome des Ovaires Polykystiques","Trouble endocrinien fr\xe9quent \u2014 insulinor\xe9sistance et comorbidit\xe9s m\xe9taboliques",B.bL,B.o,B.at5,B.ano,B.ak7,B.wc,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aoY=s(["Vasopl\xe9gie majeure \u2014 r\xe9duire fortement les doses d'induction (agents vasodilatateurs mal tol\xe9r\xe9s)","Propofol et thiopental : prudence extr\xeame \u2014 risque de collapsus cardiovasculaire","Acidose et coagulopathie fr\xe9quentes \u2014 bilan biologique urgent"],t.s)
 B.aEi=s(["Noradr\xe9naline en 1\xe8re ligne pour le support h\xe9modynamique",u.H,"Remplissage vasculaire guid\xe9 associ\xe9 aux vasopresseurs"],t.s)
 B.axU=s(["Antibioth\xe9rapie probabiliste dans l'heure suivant le diagnostic","Lactates, h\xe9mocultures et bilan infectieux en urgence","Monitorage h\xe9modynamique invasif"],t.s)
@@ -103224,7 +103239,7 @@ B.amS=s(["Tout agent inotrope n\xe9gatif mal tol\xe9r\xe9 \u2014 propofol et thi
 B.alB=s(["\xc9tomidate pour l'induction \u2014 stabilit\xe9 h\xe9modynamique maximale","Dobutamine ou milrinone pour le support inotrope","Noradr\xe9naline si composante vasopl\xe9gique associ\xe9e"],t.s)
 B.ahL=s(["\xc9chocardiographie pour \xe9valuer la fonction ventriculaire","Monitorage h\xe9modynamique invasif syst\xe9matique"],t.s)
 B.az1=s(["etomidate","dobutamine","milrinone"],t.s)
-B.aOe=new A.M("choc_cardiogenique","Choc Cardiog\xe9nique","D\xe9faillance de la pompe cardiaque \u2014 bas d\xe9bit s\xe9v\xe8re",B.bq,B.o,B.amS,B.alB,B.ahL,B.az1,B.wf,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aOe=new A.M("choc_cardiogenique","Choc Cardiog\xe9nique","D\xe9faillance de la pompe cardiaque \u2014 bas d\xe9bit s\xe9v\xe8re",B.bq,B.o,B.amS,B.alB,B.ahL,B.az1,B.wg,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.apl=s(["Urgence vitale \u2014 adr\xe9naline IMM\xc9DIATE en 1\xe8re intention (titration IV en contexte perop\xe9ratoire)","Arr\xeater imm\xe9diatement l'exposition \xe0 l'agent suspect\xe9 (curare, latex, antibiotique, chlorhexidine)","Curares : cause la plus fr\xe9quente d'anaphylaxie perop\xe9ratoire \u2014 suspecter en priorit\xe9"],t.s)
 B.akD=s(["Adr\xe9naline titr\xe9e IV \u2014 bolus r\xe9p\xe9t\xe9s selon la s\xe9v\xe9rit\xe9","Remplissage vasculaire massif (vasopl\xe9gie et fuite capillaire)","Arr\xeat de tous les agents administr\xe9s r\xe9cemment, maintien des seuls agents indispensables"],t.s)
 B.aCW=s(["Bilan allergologique \xe0 distance (tryptase \xe0 H+1-2, puis tests cutan\xe9s \xe0 4-6 semaines)","D\xe9claration de pharmacovigilance syst\xe9matique","Consultation d'allergo-anesth\xe9sie avant toute anesth\xe9sie ult\xe9rieure"],t.s)
@@ -103240,7 +103255,7 @@ B.awX=s(["Rocuronium \xe0 dose augment\xe9e si curarisation n\xe9cessaire apr\xe
 B.aEw=s(["\xc9valuation pr\xe9coce des voies a\xe9riennes si br\xfblure de la face/du cou","R\xe9chauffement actif syst\xe9matique (pertes thermiques majeures)","Surveillance de la kali\xe9mie avant toute utilisation de succinylcholine"],t.s)
 B.Sq=new A.bO("rocuronium",1.5)
 B.avB=s([B.Sq],t.G)
-B.aQY=new A.M("brulure","Br\xfblure","L\xe9sion thermique \xe9tendue \u2014 hyperkali\xe9mie sous succinylcholine, r\xe9sistance aux curares",B.et,B.o,B.aBr,B.awX,B.aEw,B.wi,B.kQ,B.avB,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQY=new A.M("brulure","Br\xfblure","L\xe9sion thermique \xe9tendue \u2014 hyperkali\xe9mie sous succinylcholine, r\xe9sistance aux curares",B.et,B.o,B.aBr,B.awX,B.aEw,B.wj,B.kQ,B.avB,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.js=new A.c6(26,"toxicologie")
 B.aGl=s(["Estomac plein syst\xe9matique \u2014 induction en s\xe9quence rapide si anesth\xe9sie n\xe9cessaire","Interactions potentielles avec le toxique en cause \u2014 identifier la mol\xe9cule ing\xe9r\xe9e","Troubles de conscience possibles \u2014 protection des voies a\xe9riennes \xe0 \xe9valuer"],t.s)
 B.alg=s(["Antidote sp\xe9cifique si disponible et identifi\xe9","R\xe9duire les doses d'agents d\xe9presseurs si toxique lui-m\xeame d\xe9presseur du SNC"],t.s)
@@ -103334,7 +103349,7 @@ B.aOj=new A.M("retard_croissance_malnutrition","Retard de Croissance / Malnutrit
 B.aGJ=s(["Cause non identifi\xe9e \u2014 \xe9carter une cause infectieuse active avant toute chirurgie \xe9lective"],t.s)
 B.azT=s(["Bilan \xe9tiologique complet avant chirurgie programm\xe9e non urgente"],t.s)
 B.vH=s(["Diff\xe9rer la chirurgie \xe9lective tant que la cause n'est pas identifi\xe9e si possible"],t.s)
-B.aOr=new A.M("fievre_origine_inconnue","Fi\xe8vre d'Origine Inconnue","Fi\xe8vre prolong\xe9e sans cause identifi\xe9e \u2014 bilan \xe9tiologique avant chirurgie \xe9lective",B.dy,B.o,B.aGJ,B.azT,B.vH,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aOr=new A.M("fievre_origine_inconnue","Fi\xe8vre d'Origine Inconnue","Fi\xe8vre prolong\xe9e sans cause identifi\xe9e \u2014 bilan \xe9tiologique avant chirurgie \xe9lective",B.dy,B.o,B.aGJ,B.azT,B.vH,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.avD=s(["\xc9carter une cause cardiaque (trouble du rythme, valvulopathie) avant toute anesth\xe9sie \xe9lective"],t.s)
 B.awE=s(["Bilan cardiologique (ECG, \xe9chocardiographie) si syncope non expliqu\xe9e ou r\xe9cidivante"],t.s)
 B.atJ=s(["ECG pr\xe9op\xe9ratoire syst\xe9matique"],t.s)
@@ -103343,9 +103358,9 @@ B.aGg=s(["Peu de retentissement anesth\xe9sique sp\xe9cifique \u2014 rechercher 
 B.aoQ=s(["Anti\xe9m\xe9tiques prophylactiques recommand\xe9s (naus\xe9es associ\xe9es fr\xe9quentes)"],t.s)
 B.aQm=new A.M("vertige","Vertige","Sensation de trouble de l'\xe9quilibre \u2014 peu de retentissement anesth\xe9sique sp\xe9cifique",B.et,B.o,B.aGg,B.cF,B.aoQ,B.b,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.arx=s(["Sympt\xf4me non sp\xe9cifique \u2014 rechercher une cause sous-jacente avant chirurgie \xe9lective"],t.s)
-B.wk=s(["Bilan \xe9tiologique orient\xe9 selon le contexte clinique"],t.s)
+B.wl=s(["Bilan \xe9tiologique orient\xe9 selon le contexte clinique"],t.s)
 B.auB=s(["Diff\xe9rer la chirurgie \xe9lective tant que la cause n'est pas \xe9cart\xe9e si suspicion de gravit\xe9"],t.s)
-B.aQ_=new A.M("malaise","Malaise","Sympt\xf4me non sp\xe9cifique \u2014 rechercher une cause cardiovasculaire, m\xe9tabolique ou neurologique",B.et,B.o,B.arx,B.wk,B.auB,B.b,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQ_=new A.M("malaise","Malaise","Sympt\xf4me non sp\xe9cifique \u2014 rechercher une cause cardiovasculaire, m\xe9tabolique ou neurologique",B.et,B.o,B.arx,B.wl,B.auB,B.b,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aCO=s(["\xc9carter un syndrome coronarien aigu (se r\xe9f\xe9rer \xe0 'SCA/Infarctus') avant toute chirurgie \xe9lective"],t.s)
 B.afu=s(["ECG et troponine si douleur r\xe9cente ou non caract\xe9ris\xe9e"],t.s)
 B.axP=s(["Diff\xe9rer la chirurgie \xe9lective tant que la cause n'est pas \xe9cart\xe9e"],t.s)
@@ -103361,7 +103376,7 @@ B.aQu=new A.M("douleur_abdominale_aigue","Douleur Abdominale Aigu\xeb","Sympt\xf
 B.agI=s(["Risque de convulsion f\xe9brile chez le jeune enfant (se r\xe9f\xe9rer \xe0 'Crise Convulsive F\xe9brile')","Diff\xe9rer la chirurgie \xe9lective en phase f\xe9brile aigu\xeb"],t.s)
 B.alz=s(["Antipyr\xe9tiques pr\xe9op\xe9ratoires si fi\xe8vre significative","Contr\xf4le thermique perop\xe9ratoire"],t.s)
 B.axb=s(["Diff\xe9rer la chirurgie \xe9lective jusqu'\xe0 r\xe9solution de la fi\xe8vre si possible"],t.s)
-B.aQG=new A.M("fievre_enfant","Fi\xe8vre chez l'Enfant","Hyperthermie de l'enfant \u2014 risque de convulsion f\xe9brile, contr\xf4le thermique n\xe9cessaire",B.dy,B.o,B.agI,B.alz,B.axb,B.bC,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.aQG=new A.M("fievre_enfant","Fi\xe8vre chez l'Enfant","Hyperthermie de l'enfant \u2014 risque de convulsion f\xe9brile, contr\xf4le thermique n\xe9cessaire",B.dy,B.o,B.agI,B.alz,B.axb,B.bD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.aBj=s(["\xc9voque un diab\xe8te sucr\xe9 ou un diab\xe8te insipide \u2014 bilan glyc\xe9mique et ionique n\xe9cessaire"],t.s)
 B.aiF=s(["Glyc\xe9mie et ionogramme pr\xe9op\xe9ratoires","Se r\xe9f\xe9rer \xe0 'Diab\xe8te' si glyc\xe9mie confirm\xe9e \xe9lev\xe9e"],t.s)
 B.apd=s(["Bilan \xe9tiologique avant chirurgie \xe9lective si sympt\xf4me non explor\xe9"],t.s)
@@ -103389,8 +103404,8 @@ B.aGP=s(["NFS et bilan de coagulation si saignement significatif"],t.s)
 B.aDD=s(["nacl_09"],t.s)
 B.aOJ=new A.M("rectorragie","Rectorragie","Saignement digestif bas \u2014 \xe9valuer l'hypovol\xe9mie, principes proches de l'h\xe9morragie digestive",B.bq,B.o,B.ay5,B.aJl,B.aGP,B.aDD,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
 B.ap1=s(["Rechercher une cause infectieuse, tumorale ou auto-immune sous-jacente avant chirurgie \xe9lective"],t.s)
-B.aPp=new A.M("syndrome_inflammatoire","Syndrome Inflammatoire","\xc9l\xe9vation des marqueurs inflammatoires \u2014 rechercher la cause sous-jacente",B.dy,B.o,B.ap1,B.wk,B.vH,B.b,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
-B.wg=s([B.aP6,B.aPs,B.aQw,B.aPw,B.aQ1,B.aON,B.aPq,B.aPA,B.aQl,B.aOg,B.aQO,B.aQD,B.aOF,B.aQU,B.aQf,B.aP9,B.aQ8,B.aPQ,B.aPW,B.aQR,B.aQs,B.aOx,B.aQK,B.aQ6,B.aOB,B.aOV,B.aPB,B.aOC,B.aQ3,B.aOG,B.aOO,B.aOp,B.aQa,B.aOH,B.aPf,B.aPy,B.aQ7,B.aPb,B.aPF,B.aQy,B.aQk,B.aPX,B.aP4,B.aOt,B.aPg,B.aQd,B.aPe,B.aOq,B.aPT,B.aP_,B.aPl,B.aQ2,B.aPo,B.aOd,B.aQE,B.aQ9,B.aOU,B.aQF,B.aPM,B.aQi,B.aOR,B.aP5,B.aQJ,B.aOm,B.aOA,B.aOP,B.aPx,B.aPz,B.aQx,B.aOv,B.aQq,B.aOW,B.aOc,B.aQM,B.aPS,B.aOL,B.aPJ,B.aOu,B.aOw,B.aPr,B.aPZ,B.aQe,B.aOn,B.aOE,B.aP1,B.aQI,B.aPc,B.aOQ,B.aQo,B.aPd,B.aOX,B.aOy,B.aQW,B.aQQ,B.aOZ,B.aQ0,B.aOT,B.aOI,B.aOs,B.aQz,B.aPn,B.aQn,B.aPt,B.aOl,B.aQC,B.aPY,B.aP2,B.aQ5,B.aPu,B.aP8,B.aQB,B.aOM,B.aQL,B.aPU,B.aQr,B.aQh,B.aQ4,B.aQH,B.aPH,B.aPm,B.aPL,B.aOk,B.aQc,B.aQS,B.aOz,B.aPi,B.aP3,B.aQj,B.aQP,B.aQA,B.aPN,B.aOo,B.aOK,B.aQb,B.aQt,B.aQv,B.aPj,B.aPv,B.aOe,B.aOY,B.aP7,B.aQY,B.aOS,B.aOD,B.aPI,B.aPP,B.aQX,B.aPK,B.aPE,B.aQV,B.aQg,B.aPV,B.aQZ,B.aPD,B.aOh,B.aPa,B.aPk,B.aP0,B.aQp,B.aPR,B.aOj,B.aOr,B.aPC,B.aQm,B.aQ_,B.aQN,B.aQT,B.aQu,B.aQG,B.aOi,B.aPG,B.aPh,B.aOf,B.aPO,B.aOJ,B.aPp],t.In)
+B.aPp=new A.M("syndrome_inflammatoire","Syndrome Inflammatoire","\xc9l\xe9vation des marqueurs inflammatoires \u2014 rechercher la cause sous-jacente",B.dy,B.o,B.ap1,B.wl,B.vH,B.b,B.b,B.w,"",B.b,B.b,B.b,B.b,B.b,"","","","","",B.b,B.b,!1)
+B.wh=s([B.aP6,B.aPs,B.aQw,B.aPw,B.aQ1,B.aON,B.aPq,B.aPA,B.aQl,B.aOg,B.aQO,B.aQD,B.aOF,B.aQU,B.aQf,B.aP9,B.aQ8,B.aPQ,B.aPW,B.aQR,B.aQs,B.aOx,B.aQK,B.aQ6,B.aOB,B.aOV,B.aPB,B.aOC,B.aQ3,B.aOG,B.aOO,B.aOp,B.aQa,B.aOH,B.aPf,B.aPy,B.aQ7,B.aPb,B.aPF,B.aQy,B.aQk,B.aPX,B.aP4,B.aOt,B.aPg,B.aQd,B.aPe,B.aOq,B.aPT,B.aP_,B.aPl,B.aQ2,B.aPo,B.aOd,B.aQE,B.aQ9,B.aOU,B.aQF,B.aPM,B.aQi,B.aOR,B.aP5,B.aQJ,B.aOm,B.aOA,B.aOP,B.aPx,B.aPz,B.aQx,B.aOv,B.aQq,B.aOW,B.aOc,B.aQM,B.aPS,B.aOL,B.aPJ,B.aOu,B.aOw,B.aPr,B.aPZ,B.aQe,B.aOn,B.aOE,B.aP1,B.aQI,B.aPc,B.aOQ,B.aQo,B.aPd,B.aOX,B.aOy,B.aQW,B.aQQ,B.aOZ,B.aQ0,B.aOT,B.aOI,B.aOs,B.aQz,B.aPn,B.aQn,B.aPt,B.aOl,B.aQC,B.aPY,B.aP2,B.aQ5,B.aPu,B.aP8,B.aQB,B.aOM,B.aQL,B.aPU,B.aQr,B.aQh,B.aQ4,B.aQH,B.aPH,B.aPm,B.aPL,B.aOk,B.aQc,B.aQS,B.aOz,B.aPi,B.aP3,B.aQj,B.aQP,B.aQA,B.aPN,B.aOo,B.aOK,B.aQb,B.aQt,B.aQv,B.aPj,B.aPv,B.aOe,B.aOY,B.aP7,B.aQY,B.aOS,B.aOD,B.aPI,B.aPP,B.aQX,B.aPK,B.aPE,B.aQV,B.aQg,B.aPV,B.aQZ,B.aPD,B.aOh,B.aPa,B.aPk,B.aP0,B.aQp,B.aPR,B.aOj,B.aOr,B.aPC,B.aQm,B.aQ_,B.aQN,B.aQT,B.aQu,B.aQG,B.aOi,B.aPG,B.aPh,B.aOf,B.aPO,B.aOJ,B.aPp],t.In)
 B.aR=new A.lO(3,"vasoactive")
 B.tA=new A.p(0,0,B.cW,"Pas de bolus",null)
 B.TV=new A.p(0.01,3,B.b5,"Perfusion IVSE voie centrale",null)
@@ -103600,7 +103615,7 @@ B.p7=new A.ij(5,"numLockModifier")
 B.p8=new A.ij(6,"scrollLockModifier")
 B.p9=new A.ij(7,"functionModifier")
 B.Bw=new A.ij(8,"symbolModifier")
-B.wj=s([B.fQ,B.fR,B.fS,B.fT,B.p6,B.p7,B.p8,B.p9,B.Bw],A.aJ("A<ij>"))
+B.wk=s([B.fQ,B.fR,B.fS,B.fT,B.p6,B.p7,B.p8,B.p9,B.Bw],A.aJ("A<ij>"))
 B.aGq=s(["vt","fr","peep","fio2","insp_pressure","trigger","ie","minute_volume","insp_flow"],t.s)
 B.Ux=new A.p(1,1,B.Y,"Application cutan\xe9e unique \u2014 traitement topique, pas de dose syst\xe9mique",null)
 B.axn=s(["Traiter simultan\xe9ment les sujets contacts proches (literie, v\xeatements) pour \xe9viter la r\xe9infestation","Irritation cutan\xe9e locale possible","Ne pas appliquer sur muqueuses ni plaies ouvertes \xe9tendues"],t.s)
@@ -103657,21 +103672,6 @@ B.aGT=s(["Ne doit jamais \xeatre administr\xe9e apr\xe8s le 7\xe8me jour suivant
 B.anf=s(["Prophylaxie post-exposition rabique (morsure/griffure d'animal suspect), cat\xe9gorie III OMS"],t.s)
 B.a65=new A.a2("immunoglobuline_antirabique","Immunoglobuline Antirabique","Immunoglobulines humaines ou \xe9quines antirabiques",B.ad,"Immunoprophylaxie Post-Exposition \u2014 Rage",B.VJ,B.tz,"Infiltration de la plus grande partie de la dose autour et dans la plaie de morsure, le reliquat en IM \xe0 distance. Associ\xe9e syst\xe9matiquement \xe0 la vaccination antirabique (sch\xe9ma post-exposition complet).","Non applicable \u2014 infiltration locale et injection IM uniquement.",null,null,null,null,"Ampoule pr\xeate \xe0 l'emploi, dose calcul\xe9e selon le poids (20 UI/kg humaine ou 40 UI/kg \xe9quine).",null,!0,!0,!1,null,"Neutralisation passive imm\xe9diate du virus rabique le temps que la vaccination induise une immunit\xe9 active","Imm\xe9diat (protection passive)","Dose unique, associ\xe9e au sch\xe9ma vaccinal complet",B.A,null,null,"Doit \xeatre administr\xe9e le plus pr\xe9cocement possible apr\xe8s exposition, id\xe9alement dans les 7 jours suivant la 1\xe8re dose de vaccin.",B.aGT,B.b,B.b,B.b,B.b,B.anf,!1,null,null,null,null,"S\xe9rums / Immunoglobulines")
 B.aJh=s([B.a5Q,B.a73,B.a65],t.e)
-B.BN=new A.rq(null)
-B.b9C=new A.jk("Patient",B.i7,B.i8,B.BN)
-B.aXN=new A.DD(null)
-B.b9y=new A.jk("Respiratoire",B.od,B.bZ,B.aXN)
-B.a7j=new A.AL(null)
-B.b9A=new A.jk("Drugs",B.oe,B.op,B.a7j)
-B.a7H=new A.AO(null)
-B.b9D=new A.jk("Pathologies",B.vj,B.ow,B.a7H)
-B.adf=new A.ab(984564,"MaterialIcons",!1)
-B.aWD=new A.D_(null)
-B.b9z=new A.jk("Emergency",B.adf,B.i9,B.aWD)
-B.ve=new A.ab(983823,"MaterialIcons",!1)
-B.JX=new A.z4(null)
-B.b9B=new A.jk("Notes",B.ve,B.ve,B.JX)
-B.wm=s([B.b9C,B.b9y,B.b9A,B.b9D,B.b9z,B.b9B],A.aJ("A<jk>"))
 B.J=new A.C5(0,"ignored")
 B.bP=new A.j(4294967304)
 B.il=new A.j(4294967323)
@@ -105381,16 +105381,16 @@ B.aO4=new A.am(B.ua,B.adA,null)
 B.aO5=new A.am(B.ka,B.vq,null)
 B.adp=new A.bl(B.b6,13,B.S,null,null)
 B.aO6=new A.am(B.tT,B.adp,null)
-B.a97=new A.L(6,0,0,0)
+B.a98=new A.L(6,0,0,0)
 B.QH=new A.l(1,0.9372549019607843,0.6235294117647059,0.15294117647058825,B.e)
 B.adq=new A.bl(B.b6,17,B.QH,null,null)
-B.aO7=new A.am(B.a97,B.adq,null)
+B.aO7=new A.am(B.a98,B.adq,null)
 B.aef=new A.bl(B.i7,20,B.ak,null,null)
 B.aO8=new A.am(B.tY,B.aef,null)
 B.a84=new A.L(0,20,0,0)
 B.b42=new A.m(!0,B.bM,null,null,null,null,12,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6k=new A.bS("Aucune fiche d\xe9taill\xe9e n'est encore renseign\xe9e pour cette pathologie.",null,B.b42,null,null,null,null,null,null,null)
-B.aO9=new A.am(B.a84,B.b6k,null)
+B.b6l=new A.bS("Aucune fiche d\xe9taill\xe9e n'est encore renseign\xe9e pour cette pathologie.",null,B.b42,null,null,null,null,null,null,null)
+B.aO9=new A.am(B.a84,B.b6l,null)
 B.BM=new A.vY(null)
 B.cs=new A.PW(0,"fill")
 B.cj=new A.PW(1,"stroke")
@@ -106108,12 +106108,12 @@ B.Jn=new A.aF("Cdyn et Cstat basses","Cause restrictive/mixte (SDRA, \u0153d\xe8
 B.aF6=s([B.IW,B.Jn],t.f)
 B.aLO=new A.bg(B.cg,"\xc9cart Ppic \u2212 Pplat","Reflet direct de la composante r\xe9sistive")
 B.aqn=s([B.aLO],t.O)
-B.wl=s(["Non applicable \u2014 grandeur mesur\xe9e"],t.s)
+B.wm=s(["Non applicable \u2014 grandeur mesur\xe9e"],t.s)
 B.aIm=s(["Interpr\xe9ter la Cdyn isol\xe9ment sans la comparer \xe0 la Cstat"],t.s)
 B.aHc=s(["Bronchospasme (asthme, BPCO) : chute isol\xe9e de la Cdyn, Cstat conserv\xe9e","SDRA : chute conjointe de Cdyn et Cstat"],t.s)
 B.awK=s(["Un \xe9cart Ppic-Pplat > 5-10 cmH\u2082O oriente vers une composante r\xe9sistive dominante"],t.s)
 B.alF=s([u.D,"Egan's Fundamentals of Respiratory Care"],t.s)
-B.aXI=new A.cS("Compliance Dynamique (Cdyn)","Distensibilit\xe9 en pr\xe9sence de flux",B.jP,B.kF,"La compliance dynamique int\xe8gre, en plus de l'\xe9lasticit\xe9 pulmonaire, la r\xe9sistance des voies a\xe9riennes puisqu'elle est mesur\xe9e \xe0 la pression de cr\xeate (Ppic) et non \xe0 la pression plateau. Cdyn = Vt / (Ppic \u2212 PEEP).","Compar\xe9e \xe0 la Cstat, elle permet de s\xe9parer une cause restrictive d'une cause obstructive.",B.aqJ,"CIBLE NORMALE (mise \xe0 l'\xe9chelle du PBW)","Variable","mL/cmH\u2082O","\u2248 55-80 % de la compliance statique attendue",B.aIE,B.aCd,"INTERPR\xc9TATION",B.aF6,B.aqn,"Source : Tobin, Principles and Practice of Mechanical Ventilation","Toujours inf\xe9rieure \xe0 la compliance statique. L'\xe9cart entre Cdyn et Cstat est proportionnel \xe0 la r\xe9sistance des voies a\xe9riennes.","D\xe9pister une composante obstructive (bronchospasme, bouchon, sonde coud\xe9e).","40 - 80 mL/cmH\u2082O chez l'adulte sain","Cdyn = Vt (mL) \xf7 (Pression de cr\xeate \u2212 PEEP)",B.wl,B.wl,B.aIm,B.aHc,B.awK,B.alF)
+B.aXI=new A.cS("Compliance Dynamique (Cdyn)","Distensibilit\xe9 en pr\xe9sence de flux",B.jP,B.kF,"La compliance dynamique int\xe8gre, en plus de l'\xe9lasticit\xe9 pulmonaire, la r\xe9sistance des voies a\xe9riennes puisqu'elle est mesur\xe9e \xe0 la pression de cr\xeate (Ppic) et non \xe0 la pression plateau. Cdyn = Vt / (Ppic \u2212 PEEP).","Compar\xe9e \xe0 la Cstat, elle permet de s\xe9parer une cause restrictive d'une cause obstructive.",B.aqJ,"CIBLE NORMALE (mise \xe0 l'\xe9chelle du PBW)","Variable","mL/cmH\u2082O","\u2248 55-80 % de la compliance statique attendue",B.aIE,B.aCd,"INTERPR\xc9TATION",B.aF6,B.aqn,"Source : Tobin, Principles and Practice of Mechanical Ventilation","Toujours inf\xe9rieure \xe0 la compliance statique. L'\xe9cart entre Cdyn et Cstat est proportionnel \xe0 la r\xe9sistance des voies a\xe9riennes.","D\xe9pister une composante obstructive (bronchospasme, bouchon, sonde coud\xe9e).","40 - 80 mL/cmH\u2082O chez l'adulte sain","Cdyn = Vt (mL) \xf7 (Pression de cr\xeate \u2212 PEEP)",B.wm,B.wm,B.aIm,B.aHc,B.awK,B.alF)
 B.azX=s(["Reflet global de la ventilation alv\xe9olaire","Outil de v\xe9rification crois\xe9e Vt/FR"],t.s)
 B.aSu=new A.by("Permet une v\xe9rification rapide de la coh\xe9rence des r\xe9glages")
 B.aB2=s([B.aSu],t.V)
@@ -106150,34 +106150,34 @@ B.bE=new A.anU(1,"down")
 B.adO=new A.bl(B.cX,16,B.I,null,null)
 B.aU=new A.c2(10,null,null,null)
 B.Hg=new A.m(!0,B.I,null,null,null,null,11.5,B.W,null,null,null,null,1.4,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6w=new A.bS("Ces param\xe8tres sont des recommandations initiales.\nAjustez selon la pathologie, les gaz du sang et la m\xe9canique respiratoire.",null,B.Hg,null,null,null,null,null,null,null)
-B.ac0=new A.h_(1,B.kn,B.b6w,null)
+B.b6x=new A.bS("Ces param\xe8tres sont des recommandations initiales.\nAjustez selon la pathologie, les gaz du sang et la m\xe9canique respiratoire.",null,B.Hg,null,null,null,null,null,null,null)
+B.ac0=new A.h_(1,B.kn,B.b6x,null)
 B.aAE=s([B.adO,B.aU,B.ac0],t.p)
 B.aXU=new A.ir(B.at,B.i,B.j,B.n,null,B.bE,null,0,B.aAE,null)
 B.ad6=new A.ab(983334,"MaterialIcons",!1)
 B.ae0=new A.bl(B.ad6,16,B.m,null,null)
 B.pR=new A.c2(5,null,null,null)
 B.Hc=new A.m(!0,B.m,null,null,null,null,12,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6i=new A.bS("Sauver",null,B.Hc,null,null,null,null,null,null,null)
-B.ahv=s([B.ae0,B.pR,B.b6i],t.p)
+B.b6j=new A.bS("Sauver",null,B.Hc,null,null,null,null,null,null,null)
+B.ahv=s([B.ae0,B.pR,B.b6j],t.p)
 B.aXV=new A.ir(B.at,B.i,B.ae,B.n,null,B.bE,null,0,B.ahv,null)
 B.acV=new A.ab(63624,"MaterialIcons",!1)
 B.ae6=new A.bl(B.acV,13,B.G,null,null)
 B.aV=new A.c2(6,null,null,null)
 B.b57=new A.m(!0,B.G,null,null,null,null,11.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b62=new A.bS("Ces informations ne seront demand\xe9es qu'une seule fois.",null,B.b57,null,null,null,null,null,null,null)
-B.aCr=s([B.ae6,B.aV,B.b62],t.p)
+B.b63=new A.bS("Ces informations ne seront demand\xe9es qu'une seule fois.",null,B.b57,null,null,null,null,null,null,null)
+B.aCr=s([B.ae6,B.aV,B.b63],t.p)
 B.aXW=new A.ir(B.at,B.cG,B.j,B.n,null,B.bE,null,0,B.aCr,null)
 B.adN=new A.bl(B.ky,14,B.C,null,null)
 B.b2T=new A.m(!0,B.C,null,null,null,null,12,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b5Y=new A.bS("Remplissez le formulaire ci-dessus",null,B.b2T,null,null,null,null,null,null,null)
-B.aEp=s([B.adN,B.aV,B.b5Y],t.p)
+B.b5Z=new A.bS("Remplissez le formulaire ci-dessus",null,B.b2T,null,null,null,null,null,null,null)
+B.aEp=s([B.adN,B.aV,B.b5Z],t.p)
 B.aXX=new A.ir(B.at,B.i,B.ae,B.n,null,B.bE,null,0,B.aEp,null)
 B.ads=new A.bl(B.kD,11,B.aF,null,null)
 B.iR=new A.c2(3,null,null,null)
 B.b1b=new A.m(!0,B.aF,null,null,null,null,10,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6l=new A.bS("Recommand\xe9",null,B.b1b,null,null,null,null,null,null,null)
-B.aHY=s([B.ads,B.iR,B.b6l],t.p)
+B.b6m=new A.bS("Recommand\xe9",null,B.b1b,null,null,null,null,null,null,null)
+B.aHY=s([B.ads,B.iR,B.b6m],t.p)
 B.aXY=new A.ir(B.at,B.i,B.ae,B.n,null,B.bE,null,0,B.aHY,null)
 B.ae3=new A.bl(B.b6,11,B.bO,null,null)
 B.b4U=new A.m(!0,B.bO,null,null,null,null,10,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -106187,13 +106187,13 @@ B.aXZ=new A.ir(B.at,B.i,B.ae,B.n,null,B.bE,null,0,B.aBv,null)
 B.acC=new A.ab(63084,"MaterialIcons",!1)
 B.adW=new A.bl(B.acC,null,B.a6,null,null)
 B.a8=new A.c2(8,null,null,null)
-B.b66=new A.bS("Fiche export\xe9e",null,null,null,null,null,null,null,null,null)
-B.aG6=s([B.adW,B.a8,B.b66],t.p)
+B.b67=new A.bS("Fiche export\xe9e",null,null,null,null,null,null,null,null,null)
+B.aG6=s([B.adW,B.a8,B.b67],t.p)
 B.aY_=new A.ir(B.at,B.i,B.j,B.n,null,B.bE,null,0,B.aG6,null)
 B.ado=new A.bl(B.kz,11,B.S,null,null)
 B.b1w=new A.m(!0,B.S,null,null,null,null,10,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b69=new A.bS("Contre-indiqu\xe9",null,B.b1w,null,null,null,null,null,null,null)
-B.avk=s([B.ado,B.iR,B.b69],t.p)
+B.b6a=new A.bS("Contre-indiqu\xe9",null,B.b1w,null,null,null,null,null,null,null)
+B.avk=s([B.ado,B.iR,B.b6a],t.p)
 B.aY0=new A.ir(B.at,B.i,B.ae,B.n,null,B.bE,null,0,B.avk,null)
 B.adT=new A.bl(B.df,18,B.m,null,null)
 B.b6A=new A.bS("Fiche sauvegard\xe9e",null,null,null,null,null,null,null,null,null)
@@ -106324,8 +106324,8 @@ B.aN9={click:0,touchstart:1,touchend:2,pointerdown:3,pointermove:4,pointerup:5}
 B.aYR=new A.fX(B.aN9,6,t.fF)
 B.aYS=new A.eL([B.FZ,B.FU],A.aJ("eL<fM>"))
 B.G7=new A.eL([B.bh,B.bR,B.dn,B.c1,B.ct],t.Lu)
-B.bv=new A.cC(4,"selected")
-B.G8=new A.eL([B.bv],t.El)
+B.bw=new A.cC(4,"selected")
+B.G8=new A.eL([B.bw],t.El)
 B.QP=new A.l(0.23529411764705882,0,0,0,B.e)
 B.KU=new A.c7(0.5,B.aE,B.QP,B.eS,10)
 B.axe=s([B.KU],t.E)
@@ -106576,7 +106576,7 @@ B.b0i=new A.jc(5,null,null)
 B.b0j=new A.jc(6,null,null)
 B.a1=new A.SK(1,"even")
 B.b0k=new A.x5(1,"fade")
-B.aq=new A.x5(2,"ellipsis")
+B.ao=new A.x5(2,"ellipsis")
 B.b0l=new A.x5(3,"visible")
 B.hc=new A.aH(0,B.z)
 B.b0m=new A.bI(0,0)
@@ -106584,7 +106584,7 @@ B.b0n=new A.F7(null,null,null)
 B.b0o=new A.F8(B.t,null)
 B.b2w=new A.m(!0,B.a6,null,null,null,null,22,B.az,null,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b0p=new A.e9("ANESTH\xc9SIE",null,null,B.ba,null,null,null,null,null,null,B.b2w)
-B.b3i=new A.m(!0,B.ap,null,null,null,null,22,B.uF,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b3i=new A.m(!0,B.aq,null,null,null,null,22,B.uF,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b0s=new A.e9(" & ",null,null,B.ba,null,null,null,null,null,null,B.b3i)
 B.b2B=new A.m(!0,B.bV,null,null,null,null,22,B.az,null,3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b0r=new A.e9("R\xc9ANIMATION",null,null,B.ba,null,null,null,null,null,null,B.b2B)
@@ -106602,7 +106602,7 @@ B.b1n=new A.m(!0,B.bO,null,null,null,null,12,B.W,null,null,null,null,null,null,n
 B.b1o=new A.m(!0,B.ex,null,null,null,null,16,B.az,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.H7=new A.m(!0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.pZ,null,null,null,null,null,null,null,null)
 B.H8=new A.m(!0,B.ex,null,null,null,null,null,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.Ha=new A.m(!0,B.ao,null,null,null,null,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.Ha=new A.m(!0,B.ap,null,null,null,null,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.q6=new A.m(!0,B.G,null,null,null,null,13,B.L,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b1O=new A.m(!0,B.jE,null,null,null,null,11.5,B.W,null,null,null,null,1.35,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b1Y=new A.m(!1,null,null,null,null,null,15,B.L,null,-0.15,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -106696,18 +106696,18 @@ B.b29=new A.m(!0,B.aj,null,"Roboto",B.aG,null,null,null,null,null,null,null,null
 B.b2z=new A.m(!0,B.F,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"blackHelsinki labelMedium",null,null,null,null)
 B.b5g=new A.m(!0,B.F,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"blackHelsinki labelSmall",null,null,null,null)
 B.b5G=new A.dU(B.b4L,B.b3h,B.b4s,B.b3X,B.b1W,B.b0Q,B.b12,B.b3t,B.b4B,B.b4M,B.b1K,B.b4g,B.b29,B.b2z,B.b5g)
-B.b4P=new A.m(!0,B.ap,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity displayLarge",null,null,null,null)
-B.b15=new A.m(!0,B.ap,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity displayMedium",null,null,null,null)
-B.b4Q=new A.m(!0,B.ap,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity displaySmall",null,null,null,null)
-B.b5e=new A.m(!0,B.ap,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity headlineLarge",null,null,null,null)
-B.b1e=new A.m(!0,B.ap,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity headlineMedium",null,null,null,null)
+B.b4P=new A.m(!0,B.aq,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity displayLarge",null,null,null,null)
+B.b15=new A.m(!0,B.aq,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity displayMedium",null,null,null,null)
+B.b4Q=new A.m(!0,B.aq,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity displaySmall",null,null,null,null)
+B.b5e=new A.m(!0,B.aq,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity headlineLarge",null,null,null,null)
+B.b1e=new A.m(!0,B.aq,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity headlineMedium",null,null,null,null)
 B.b2p=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity headlineSmall",null,null,null,null)
 B.b1u=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity titleLarge",null,null,null,null)
 B.b3H=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity titleMedium",null,null,null,null)
 B.b3K=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity titleSmall",null,null,null,null)
 B.b45=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity bodyLarge",null,null,null,null)
 B.b3o=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity bodyMedium",null,null,null,null)
-B.b3f=new A.m(!0,B.ap,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity bodySmall",null,null,null,null)
+B.b3f=new A.m(!0,B.aq,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity bodySmall",null,null,null,null)
 B.b1R=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity labelLarge",null,null,null,null)
 B.b3j=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity labelMedium",null,null,null,null)
 B.b1l=new A.m(!0,B.m,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedwoodCity labelSmall",null,null,null,null)
@@ -106728,18 +106728,18 @@ B.b4C=new A.m(!1,null,null,null,null,null,15,B.M,null,null,null,B.aw,null,null,n
 B.b4j=new A.m(!1,null,null,null,null,null,12,B.L,null,null,null,B.aw,null,null,null,null,null,null,null,null,null,"dense labelMedium 2014",null,null,null,null)
 B.b4R=new A.m(!1,null,null,null,null,null,11,B.L,null,null,null,B.aw,null,null,null,null,null,null,null,null,null,"dense labelSmall 2014",null,null,null,null)
 B.b5I=new A.dU(B.b5r,B.b5m,B.b3S,B.b1y,B.b4d,B.b0O,B.b4H,B.b3x,B.b3q,B.b0P,B.b3M,B.b2v,B.b4C,B.b4j,B.b4R)
-B.b2W=new A.m(!0,B.ap,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond displayLarge",null,null,null,null)
-B.b0J=new A.m(!0,B.ap,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond displayMedium",null,null,null,null)
-B.b4Y=new A.m(!0,B.ap,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond displaySmall",null,null,null,null)
-B.b10=new A.m(!0,B.ap,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond headlineLarge",null,null,null,null)
-B.b46=new A.m(!0,B.ap,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond headlineMedium",null,null,null,null)
+B.b2W=new A.m(!0,B.aq,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond displayLarge",null,null,null,null)
+B.b0J=new A.m(!0,B.aq,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond displayMedium",null,null,null,null)
+B.b4Y=new A.m(!0,B.aq,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond displaySmall",null,null,null,null)
+B.b10=new A.m(!0,B.aq,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond headlineLarge",null,null,null,null)
+B.b46=new A.m(!0,B.aq,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond headlineMedium",null,null,null,null)
 B.b3b=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond headlineSmall",null,null,null,null)
 B.b4V=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond titleLarge",null,null,null,null)
 B.b1x=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond titleMedium",null,null,null,null)
 B.b1j=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond titleSmall",null,null,null,null)
 B.b5j=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond bodyLarge",null,null,null,null)
 B.b4q=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond bodyMedium",null,null,null,null)
-B.b3J=new A.m(!0,B.ap,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond bodySmall",null,null,null,null)
+B.b3J=new A.m(!0,B.aq,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond bodySmall",null,null,null,null)
 B.b11=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond labelLarge",null,null,null,null)
 B.b2g=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond labelMedium",null,null,null,null)
 B.b0u=new A.m(!0,B.m,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteRedmond labelSmall",null,null,null,null)
@@ -106760,18 +106760,18 @@ B.b1k=new A.m(!1,null,null,null,null,null,15,B.D,null,null,null,B.N,null,null,nu
 B.b1P=new A.m(!1,null,null,null,null,null,12,B.L,null,null,null,B.N,null,null,null,null,null,null,null,null,null,"tall labelMedium 2014",null,null,null,null)
 B.b4W=new A.m(!1,null,null,null,null,null,11,B.L,null,null,null,B.N,null,null,null,null,null,null,null,null,null,"tall labelSmall 2014",null,null,null,null)
 B.b5K=new A.dU(B.b2s,B.b4D,B.b2P,B.b2O,B.b4o,B.b3D,B.b2o,B.b0S,B.b4N,B.b14,B.b2c,B.b2Y,B.b1k,B.b1P,B.b4W)
-B.b1N=new A.m(!0,B.ap,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView displayLarge",null,null,null,null)
-B.b1V=new A.m(!0,B.ap,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView displayMedium",null,null,null,null)
-B.b1i=new A.m(!0,B.ap,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView displaySmall",null,null,null,null)
-B.b0v=new A.m(!0,B.ap,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView headlineLarge",null,null,null,null)
-B.b2A=new A.m(!0,B.ap,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView headlineMedium",null,null,null,null)
+B.b1N=new A.m(!0,B.aq,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView displayLarge",null,null,null,null)
+B.b1V=new A.m(!0,B.aq,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView displayMedium",null,null,null,null)
+B.b1i=new A.m(!0,B.aq,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView displaySmall",null,null,null,null)
+B.b0v=new A.m(!0,B.aq,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView headlineLarge",null,null,null,null)
+B.b2A=new A.m(!0,B.aq,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView headlineMedium",null,null,null,null)
 B.b5i=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView headlineSmall",null,null,null,null)
 B.b1g=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView titleLarge",null,null,null,null)
 B.b1D=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView titleMedium",null,null,null,null)
 B.b3I=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView titleSmall",null,null,null,null)
 B.b2E=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView bodyLarge",null,null,null,null)
 B.b5p=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView bodyMedium",null,null,null,null)
-B.b5o=new A.m(!0,B.ap,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView bodySmall",null,null,null,null)
+B.b5o=new A.m(!0,B.aq,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView bodySmall",null,null,null,null)
 B.b1T=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView labelLarge",null,null,null,null)
 B.b3U=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView labelMedium",null,null,null,null)
 B.b50=new A.m(!0,B.m,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteMountainView labelSmall",null,null,null,null)
@@ -106792,18 +106792,18 @@ B.b30=new A.m(!1,null,null,null,null,null,14,B.M,null,0.1,null,B.aw,1.43,B.a1,nu
 B.b4z=new A.m(!1,null,null,null,null,null,12,B.M,null,0.5,null,B.aw,1.33,B.a1,null,null,null,null,null,null,null,"dense labelMedium 2021",null,null,null,null)
 B.b5A=new A.m(!1,null,null,null,null,null,11,B.M,null,0.5,null,B.aw,1.45,B.a1,null,null,null,null,null,null,null,"dense labelSmall 2021",null,null,null,null)
 B.b5M=new A.dU(B.b4e,B.b3Q,B.b40,B.b1E,B.b2u,B.b5w,B.b3a,B.b1L,B.b4r,B.b4K,B.b1J,B.b0T,B.b30,B.b4z,B.b5A)
-B.b5x=new A.m(!0,B.ap,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino displayLarge",null,null,null,null)
-B.b4X=new A.m(!0,B.ap,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino displayMedium",null,null,null,null)
-B.b3Z=new A.m(!0,B.ap,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino displaySmall",null,null,null,null)
-B.b2q=new A.m(!0,B.ap,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino headlineLarge",null,null,null,null)
-B.b4t=new A.m(!0,B.ap,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino headlineMedium",null,null,null,null)
+B.b5x=new A.m(!0,B.aq,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino displayLarge",null,null,null,null)
+B.b4X=new A.m(!0,B.aq,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino displayMedium",null,null,null,null)
+B.b3Z=new A.m(!0,B.aq,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino displaySmall",null,null,null,null)
+B.b2q=new A.m(!0,B.aq,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino headlineLarge",null,null,null,null)
+B.b4t=new A.m(!0,B.aq,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino headlineMedium",null,null,null,null)
 B.b2h=new A.m(!0,B.m,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino headlineSmall",null,null,null,null)
 B.b3F=new A.m(!0,B.m,null,"CupertinoSystemDisplay",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino titleLarge",null,null,null,null)
 B.b4l=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino titleMedium",null,null,null,null)
 B.b3C=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino titleSmall",null,null,null,null)
 B.b53=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino bodyLarge",null,null,null,null)
 B.b24=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino bodyMedium",null,null,null,null)
-B.b2U=new A.m(!0,B.ap,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino bodySmall",null,null,null,null)
+B.b2U=new A.m(!0,B.aq,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino bodySmall",null,null,null,null)
 B.b2k=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino labelLarge",null,null,null,null)
 B.b0G=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino labelMedium",null,null,null,null)
 B.b0F=new A.m(!0,B.m,null,"CupertinoSystemText",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteCupertino labelSmall",null,null,null,null)
@@ -106864,18 +106864,18 @@ B.b1v=new A.m(!0,B.aj,null,"Segoe UI",null,null,null,null,null,null,null,null,nu
 B.b5v=new A.m(!0,B.F,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"blackRedmond labelMedium",null,null,null,null)
 B.b5q=new A.m(!0,B.F,null,"Segoe UI",null,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"blackRedmond labelSmall",null,null,null,null)
 B.b5R=new A.dU(B.b1q,B.b2y,B.b5u,B.b2b,B.b2H,B.b4u,B.b38,B.b41,B.b51,B.b2f,B.b1M,B.b0y,B.b1v,B.b5v,B.b5q)
-B.b1m=new A.m(!0,B.ap,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki displayLarge",null,null,null,null)
-B.b4i=new A.m(!0,B.ap,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki displayMedium",null,null,null,null)
-B.b2e=new A.m(!0,B.ap,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki displaySmall",null,null,null,null)
-B.b5k=new A.m(!0,B.ap,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki headlineLarge",null,null,null,null)
-B.b2L=new A.m(!0,B.ap,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki headlineMedium",null,null,null,null)
+B.b1m=new A.m(!0,B.aq,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki displayLarge",null,null,null,null)
+B.b4i=new A.m(!0,B.aq,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki displayMedium",null,null,null,null)
+B.b2e=new A.m(!0,B.aq,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki displaySmall",null,null,null,null)
+B.b5k=new A.m(!0,B.aq,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki headlineLarge",null,null,null,null)
+B.b2L=new A.m(!0,B.aq,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki headlineMedium",null,null,null,null)
 B.b1_=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki headlineSmall",null,null,null,null)
 B.b0x=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki titleLarge",null,null,null,null)
 B.b4Z=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki titleMedium",null,null,null,null)
 B.b1X=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki titleSmall",null,null,null,null)
 B.b5f=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki bodyLarge",null,null,null,null)
 B.b3v=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki bodyMedium",null,null,null,null)
-B.b5t=new A.m(!0,B.ap,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki bodySmall",null,null,null,null)
+B.b5t=new A.m(!0,B.aq,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki bodySmall",null,null,null,null)
 B.b3s=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki labelLarge",null,null,null,null)
 B.b4S=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki labelMedium",null,null,null,null)
 B.b1a=new A.m(!0,B.m,null,"Roboto",B.aG,null,null,null,null,null,null,null,null,null,null,null,null,B.u,null,null,null,"whiteHelsinki labelSmall",null,null,null,null)
@@ -106920,53 +106920,53 @@ B.b0K=new A.m(!0,B.F,null,".AppleSystemUIFont",null,null,null,null,null,null,nul
 B.b5V=new A.dU(B.b34,B.b1F,B.b35,B.b3G,B.b1f,B.b1p,B.b21,B.b3z,B.b2j,B.b4c,B.b0C,B.b0X,B.b48,B.b4A,B.b0K)
 B.b1H=new A.m(!0,B.I,null,null,null,null,12.5,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b5W=new A.bS("Aller au profil patient",null,B.b1H,null,null,null,null,null,null,null)
-B.b5X=new A.bS("Fiche de surveillance op\xe9ratoire",null,B.lI,null,null,null,null,null,null,null)
-B.b3Y=new A.m(!0,B.a6,null,null,null,null,null,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6_=new A.bS("Sauvegarder",null,B.b3Y,null,null,null,null,null,null,null)
-B.b4O=new A.m(!0,B.H,null,null,null,null,26,B.az,null,-0.3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b60=new A.bS("Bienvenue !",null,B.b4O,null,null,null,null,null,null,null)
-B.b2l=new A.m(!0,B.aF,null,null,null,null,10,B.az,null,0.4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b61=new A.bS("PRIVIL\xc9GI\xc9S",null,B.b2l,null,null,null,null,null,null,null)
-B.b3R=new A.m(!0,B.dC,null,null,null,null,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b63=new A.bS("Parcourez et s\xe9lectionnez une cat\xe9gorie de pathologie",null,B.b3R,null,null,null,B.aq,1,null,null)
-B.b64=new A.bS("Quitter",null,null,null,null,null,null,null,null,null)
-B.b4y=new A.m(!0,B.iz,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b65=new A.bS("Supprimer",null,B.b4y,null,null,null,null,null,null,null)
-B.b2F=new A.m(!0,B.d0,null,null,null,null,13,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b67=new A.bS('Cr\xe9ez votre premi\xe8re fiche de surveillance\nop\xe9ratoire en appuyant sur "+ Nouvelle".',null,B.b2F,B.bD,null,null,null,null,null,null)
-B.b25=new A.m(!0,B.ak,null,null,null,null,13.5,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b68=new A.bS("Pour commencer, veuillez\nrenseigner vos informations",null,B.b25,B.bD,null,null,null,null,null,null)
-B.b37=new A.m(!0,B.I,null,null,null,null,16,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6a=new A.bS("Aucune fiche d'anesth\xe9sie",null,B.b37,null,null,null,null,null,null,null)
-B.Hf=new A.m(!0,B.m,null,null,null,null,15,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6b=new A.bS("D\xe9marrer l'application",null,B.Hf,null,null,null,null,null,null,null)
-B.b6c=new A.bS("Annuler",null,null,null,null,null,null,null,null,null)
-B.b6e=new A.bS("Collez-la dans un email, Word ou WhatsApp.",null,B.He,null,null,null,null,null,null,null)
-B.b6f=new A.bS("Continuer",null,B.Hf,null,null,null,null,null,null,null)
-B.b6g=new A.bS("Modifications non sauvegard\xe9es",null,null,null,null,null,null,null,null,null)
-B.b1U=new A.m(!0,B.H,null,null,null,null,28,B.az,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6h=new A.bS("Merci !",null,B.b1U,null,null,null,null,null,null,null)
-B.b2K=new A.m(!0,B.a6,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6j=new A.bS("Fermer",null,B.b2K,null,null,null,null,null,null,null)
-B.b1t=new A.m(!0,null,null,null,null,null,17,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6m=new A.bS("Aide",null,B.b1t,null,null,null,null,null,null,null)
-B.b6n=new A.bS("La fiche a \xe9t\xe9 copi\xe9e dans le presse-papier.",null,B.H6,null,null,null,null,null,null,null)
-B.b0t=new A.m(!0,B.ak,null,null,null,null,14,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6o=new A.bS("Vos informations ont \xe9t\xe9\nenregistr\xe9es avec succ\xe8s.",null,B.b0t,B.bD,null,null,null,null,null,null)
-B.b3W=new A.m(!0,B.C,null,null,null,null,10,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6p=new A.bS("Doses ajust\xe9es",null,B.b3W,null,null,null,null,null,null,null)
-B.b0A=new A.m(!0,B.jI,null,null,null,null,10,B.W,null,2.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6q=new A.bS("SURVEILLER  |  PROT\xc9GER  |  SAUVER",null,B.b0A,null,null,null,null,null,null,null)
-B.b6r=new A.bS("  \xb7  ",null,B.lI,null,null,null,null,null,null,null)
-B.b2C=new A.m(!0,B.S,null,null,null,null,10,B.az,null,0.4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6s=new A.bS("CONTRE-INDIQU\xc9S",null,B.b2C,null,null,null,null,null,null,null)
-B.b3_=new A.m(!0,B.H,null,null,null,null,13,B.az,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6t=new A.bS("Anesth\xe9sie & R\xe9animation",null,B.b3_,null,null,null,null,null,null,null)
-B.b6u=new A.bS("Supprimer la fiche ?",null,null,null,null,null,null,null,null,null)
-B.b3N=new A.m(!0,B.a6,null,null,null,null,9,B.D,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6v=new A.bS("ASSISTANT CLINIQUE",null,B.b3N,null,null,null,null,null,null,null)
 B.b52=new A.m(!0,B.ex,null,null,null,null,17,B.D,null,-0.3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.b6y=new A.bS("Pathologies",null,B.b52,null,null,null,B.aq,1,null,null)
+B.b5X=new A.bS("TechAnes",null,B.b52,null,null,null,B.ao,1,null,null)
+B.b5Y=new A.bS("Fiche de surveillance op\xe9ratoire",null,B.lI,null,null,null,null,null,null,null)
+B.b3Y=new A.m(!0,B.a6,null,null,null,null,null,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b60=new A.bS("Sauvegarder",null,B.b3Y,null,null,null,null,null,null,null)
+B.b4O=new A.m(!0,B.H,null,null,null,null,26,B.az,null,-0.3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b61=new A.bS("Bienvenue !",null,B.b4O,null,null,null,null,null,null,null)
+B.b2l=new A.m(!0,B.aF,null,null,null,null,10,B.az,null,0.4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b62=new A.bS("PRIVIL\xc9GI\xc9S",null,B.b2l,null,null,null,null,null,null,null)
+B.b3R=new A.m(!0,B.dC,null,null,null,null,11,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b64=new A.bS("Parcourez et s\xe9lectionnez une cat\xe9gorie de pathologie",null,B.b3R,null,null,null,B.ao,1,null,null)
+B.b65=new A.bS("Quitter",null,null,null,null,null,null,null,null,null)
+B.b4y=new A.m(!0,B.iz,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b66=new A.bS("Supprimer",null,B.b4y,null,null,null,null,null,null,null)
+B.b2F=new A.m(!0,B.d0,null,null,null,null,13,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b68=new A.bS('Cr\xe9ez votre premi\xe8re fiche de surveillance\nop\xe9ratoire en appuyant sur "+ Nouvelle".',null,B.b2F,B.bv,null,null,null,null,null,null)
+B.b25=new A.m(!0,B.ak,null,null,null,null,13.5,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b69=new A.bS("Pour commencer, veuillez\nrenseigner vos informations",null,B.b25,B.bv,null,null,null,null,null,null)
+B.b37=new A.m(!0,B.I,null,null,null,null,16,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6b=new A.bS("Aucune fiche d'anesth\xe9sie",null,B.b37,null,null,null,null,null,null,null)
+B.Hf=new A.m(!0,B.m,null,null,null,null,15,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6c=new A.bS("D\xe9marrer l'application",null,B.Hf,null,null,null,null,null,null,null)
+B.b6d=new A.bS("Annuler",null,null,null,null,null,null,null,null,null)
+B.b6f=new A.bS("Collez-la dans un email, Word ou WhatsApp.",null,B.He,null,null,null,null,null,null,null)
+B.b6g=new A.bS("Continuer",null,B.Hf,null,null,null,null,null,null,null)
+B.b6h=new A.bS("Modifications non sauvegard\xe9es",null,null,null,null,null,null,null,null,null)
+B.b1U=new A.m(!0,B.H,null,null,null,null,28,B.az,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6i=new A.bS("Merci !",null,B.b1U,null,null,null,null,null,null,null)
+B.b2K=new A.m(!0,B.a6,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6k=new A.bS("Fermer",null,B.b2K,null,null,null,null,null,null,null)
+B.b1t=new A.m(!0,null,null,null,null,null,17,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6n=new A.bS("Aide",null,B.b1t,null,null,null,null,null,null,null)
+B.b6o=new A.bS("La fiche a \xe9t\xe9 copi\xe9e dans le presse-papier.",null,B.H6,null,null,null,null,null,null,null)
+B.b0t=new A.m(!0,B.ak,null,null,null,null,14,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6p=new A.bS("Vos informations ont \xe9t\xe9\nenregistr\xe9es avec succ\xe8s.",null,B.b0t,B.bv,null,null,null,null,null,null)
+B.b3W=new A.m(!0,B.C,null,null,null,null,10,B.W,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6q=new A.bS("Doses ajust\xe9es",null,B.b3W,null,null,null,null,null,null,null)
+B.b0A=new A.m(!0,B.jI,null,null,null,null,10,B.W,null,2.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6r=new A.bS("SURVEILLER  |  PROT\xc9GER  |  SAUVER",null,B.b0A,null,null,null,null,null,null,null)
+B.b6s=new A.bS("  \xb7  ",null,B.lI,null,null,null,null,null,null,null)
+B.b2C=new A.m(!0,B.S,null,null,null,null,10,B.az,null,0.4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6t=new A.bS("CONTRE-INDIQU\xc9S",null,B.b2C,null,null,null,null,null,null,null)
+B.b3_=new A.m(!0,B.H,null,null,null,null,13,B.az,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6u=new A.bS("Anesth\xe9sie & R\xe9animation",null,B.b3_,null,null,null,null,null,null,null)
+B.b6v=new A.bS("Supprimer la fiche ?",null,null,null,null,null,null,null,null,null)
+B.b3N=new A.m(!0,B.a6,null,null,null,null,9,B.D,null,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.b6w=new A.bS("ASSISTANT CLINIQUE",null,B.b3N,null,null,null,null,null,null,null)
 B.b4b=new A.m(!0,B.I,null,null,null,null,11,B.D,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.b6z=new A.bS("Voir justifications",null,B.b4b,null,null,null,null,null,null,null)
 B.b0I=new A.m(!0,B.bf,null,null,null,null,13,B.az,null,0.3,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -107172,7 +107172,7 @@ B.b8w=new A.mU("nourrisson (1-12 mois)",2,15,45,85)
 B.b8x=new A.mU("5-12 ans",15,60,100,170)
 B.b8y=new A.mU("adulte",30,300,130,230)
 B.b8z=new A.mU("2-5 ans",10,25,80,120)
-B.bw=new A.xq(0,"forward")
+B.bx=new A.xq(0,"forward")
 B.j4=new A.xq(1,"reverse")
 B.b8A=new A.G4(0,"checkbox")
 B.b8B=new A.G4(1,"radio")
@@ -107365,7 +107365,7 @@ $.yJ=null
 $.KP=null
 $.KQ=null
 $.aGm=!1
-$.aP=B.bz
+$.aP=B.bA
 $.aN5=A.C(t.N,A.aJ("aW<oJ>(y,b2<y,y>)"))
 $.aNn=A.C(t.C_,t.lT)
 $.iv=null
@@ -107531,7 +107531,7 @@ q.toString
 return A.fv(q)})
 s($,"b7M","aHx",()=>A.aTm(A.aCN(0,0)))
 s($,"b30","a4h",()=>A.b1A("_$dart_dartClosure"))
-s($,"b7Q","aRb",()=>B.bz.ho(new A.aDi()))
+s($,"b7Q","aRb",()=>B.bA.ho(new A.aDi()))
 s($,"b74","aQI",()=>A.b([new J.OH()],A.aJ("A<DM>")))
 s($,"b5h","aPp",()=>A.mQ(A.anD({
 toString:function(){return"$receiver$"}})))
@@ -107567,7 +107567,7 @@ s($,"b31","aOm",()=>A.hE("^([+-]?\\d{4,6})-?(\\d\\d)-?(\\d\\d)(?:[ T](\\d\\d)(?:
 s($,"b6u","eI",()=>A.u9(B.b7m))
 s($,"b5a","Ld",()=>{A.aW2()
 return $.aha})
-s($,"b3m","es",()=>J.Lj(B.aN_.gcz(A.aVo(A.ng(A.b([1],t.t)))),0,null).getInt8(0)===1?B.bx:B.LV)
+s($,"b3m","es",()=>J.Lj(B.aN_.gcz(A.aVo(A.ng(A.b([1],t.t)))),0,null).getInt8(0)===1?B.by:B.LV)
 s($,"b7x","a4u",()=>new A.a6k(A.C(t.N,A.aJ("mY"))))
 s($,"b62","aPX",()=>new A.aBc())
 s($,"b5V","aPT",()=>new A.axA(50,A.C(A.aJ("HZ"),t.ke)))
