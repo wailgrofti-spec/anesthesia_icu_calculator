@@ -115,7 +115,7 @@ class _RespiratoryScreenState extends State<RespiratoryScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Paramètres respiratoires',
+                  'VentiRéglages',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: textP),
                 ),
                 Text(

@@ -321,8 +321,9 @@ class _PatientScreenState extends State<PatientScreen>
   //  ① HEADER
   // ══════════════════════════════════════════════════════════════════════════
   Widget _buildHeader(AppProvider provider, patient) {
+    final displayName = _userPrenom.isNotEmpty ? _userPrenom : 'Utilisateur';
     return SliverAppBar(
-      expandedHeight: 110,
+      expandedHeight: 96,
       pinned: true,
       backgroundColor: _isDark ? _PC.darkCard : _PC.card,
       elevation: 0,
@@ -334,39 +335,36 @@ class _PatientScreenState extends State<PatientScreen>
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const ArLogo(size: 36),
+            const ArLogo(size: 32),
             const SizedBox(width: 10),
             Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // "Bonjour, X" si prénom connu
-                if (_userPrenom.isNotEmpty) ...[
-                  Text('Bonjour,',
-                    style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.w500,
-                      color: const Color(0xFF2ECDC8),
-                      letterSpacing: 0.4)),
-                  Text(_userPrenom,
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w800,
+                Text('Bonjour,',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w500,
+                    color: _isDark ? _PC.darkTextSub : _PC.textSecond,
+                    letterSpacing: 0.2)),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(displayName,
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700,
+                        color: _txtMain,
+                        letterSpacing: -0.3)),
+                    const SizedBox(width: 3),
+                    Icon(
+                      Icons.chevron_right_rounded,
+                      size: 16,
                       color: _PC.accent,
-                      letterSpacing: -0.2)),
-                ] else ...[
-                  Text('Données patient',
-                    style: const TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0xFF2ECDC8),
-                      letterSpacing: 0.6)),
-                  Text('Anesthésie & Réanimation',
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700,
-                      color: _txtMain)),
-                ],
+                    ),
+                  ],
+                ),
               ],
             ),
           ],
@@ -440,105 +438,105 @@ class _PatientScreenState extends State<PatientScreen>
   //  ① INPUT CARD  (Poids / Taille / Âge / Sexe — une rangée)
   // ══════════════════════════════════════════════════════════════════════════
   Widget _buildInputCard(patient) {
-    final weightField = _PatientInputField(
-      label: 'Poids', unit: 'kg',
-      controller: _weightCtrl,
-      hint: '70',
-      icon: Icons.monitor_weight_outlined,
-      decimal: true,
-      action: TextInputAction.next,
-      onChanged: (_) => _update(),
-      isDark: _isDark,
-    );
-    final heightField = _PatientInputField(
-      label: 'Taille', unit: 'cm',
-      controller: _heightCtrl,
-      hint: '170',
-      icon: Icons.height_rounded,
-      action: TextInputAction.next,
-      onChanged: (_) => _update(),
-      isDark: _isDark,
-    );
-    final ageField = _PatientInputField(
-      label: 'Âge', unit: _ageUnit.label,
-      controller: _ageCtrl,
-      hint: _ageUnit == AgeUnit.years ? '45' : (_ageUnit == AgeUnit.months ? '6' : '15'),
-      icon: Icons.cake_outlined,
-      decimal: true,
-      action: TextInputAction.done,
-      onChanged: (_) => _update(),
-      isDark: _isDark,
-    );
-    final sexField = _SexSelectorCards(
-      value: _sex,
-      isDark: _isDark,
-      onChanged: (v) { setState(() => _sex = v); _update(); },
-    );
-
-    return _SoftCard(
-      isDark: _isDark,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // ── Layout responsive ────────────────────────────────────────
-          // Sur petits écrans (téléphones), 4 champs sur une seule ligne
-          // n'ont pas assez de place (l'icône + le suffixe "kg/cm" écrasent
-          // le chiffre saisi). En dessous de 600px de large on passe donc
-          // en grille 2x2 ; au-dessus (tablette/desktop) on garde la ligne
-          // unique d'origine.
-          LayoutBuilder(builder: (context, constraints) {
-            final narrow = constraints.maxWidth < 600;
-            if (narrow) {
-              return Column(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Expanded(child: weightField),
-                      const SizedBox(width: 10),
-                      Expanded(child: heightField),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Expanded(child: ageField),
-                      const SizedBox(width: 10),
-                      Expanded(child: sexField),
-                    ],
-                  ),
-                ],
-              );
-            }
-            return Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Expanded(child: weightField),
-                const SizedBox(width: 10),
-                Expanded(child: heightField),
-                const SizedBox(width: 10),
-                Expanded(child: ageField),
-                const SizedBox(width: 10),
-                Expanded(child: sexField),
-              ],
-            );
-          }),
-
-          // Sélecteur d'unité d'âge — toujours visible (permet de saisir
-          // en jours/mois/années à tout moment, indépendamment du mode
-          // pédiatrique automatique/manuel).
-          const SizedBox(height: 10),
-          Align(
-            alignment: Alignment.centerRight,
-            child: _AgeUnitSelector(
-              value: _ageUnit,
-              isDark: _isDark,
-              onChanged: _onAgeUnitChanged,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Ligne 1 : Poids, Taille, Âge — cartes premium
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(child: _MetricInputCard(
+                label: 'Poids',
+                unit: 'kg',
+                controller: _weightCtrl,
+                hint: '70',
+                icon: Icons.monitor_weight_outlined,
+                decimal: true,
+                action: TextInputAction.next,
+                onChanged: (_) => _update(),
+                isDark: _isDark,
+              )),
+              const SizedBox(width: 8),
+              Expanded(child: _MetricInputCard(
+                label: 'Taille',
+                unit: 'cm',
+                controller: _heightCtrl,
+                hint: '170',
+                icon: Icons.straighten_rounded,
+                decimal: false,
+                action: TextInputAction.next,
+                onChanged: (_) => _update(),
+                isDark: _isDark,
+              )),
+              const SizedBox(width: 8),
+              Expanded(child: _MetricInputCard(
+                label: 'Âge',
+                unit: _ageUnit.label,
+                controller: _ageCtrl,
+                hint: _ageUnit == AgeUnit.years ? '45' : (_ageUnit == AgeUnit.months ? '6' : '15'),
+                icon: Icons.cake_outlined,
+                decimal: true,
+                action: TextInputAction.done,
+                onChanged: (_) => _update(),
+                isDark: _isDark,
+              )),
+            ],
           ),
-        ],
-      ),
+        ),
+        const SizedBox(height: 10),
+        // Ligne 2 : Sexe et Unité
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                flex: 1,
+                child: _SoftCard(
+                  isDark: _isDark,
+                  child: _SexSelectorCards(
+                    value: _sex,
+                    isDark: _isDark,
+                    onChanged: (v) { setState(() => _sex = v); _update(); },
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                flex: 1,
+                child: _SoftCard(
+                  isDark: _isDark,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 2, bottom: 6),
+                        child: Row(
+                          children: [
+                            Icon(Icons.calendar_month_outlined, size: 14, color: _isDark ? _PC.darkTextSub : _PC.accent),
+                            const SizedBox(width: 4),
+                            Text('Unité',
+                              style: TextStyle(
+                                fontSize: 11, fontWeight: FontWeight.w600, letterSpacing: 0.5,
+                                color: _isDark ? _PC.darkTextSub : _PC.textSecond)),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: _AgeUnitSelector(
+                          value: _ageUnit,
+                          isDark: _isDark,
+                          onChanged: _onAgeUnitChanged,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -1090,19 +1088,19 @@ class _ScoreButton extends StatelessWidget {
         height: 42,
         decoration: active
           ? BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF6C63FF), Color(0xFF9B8FFF)],
+              gradient: LinearGradient(
+                colors: [_PC.accent, _PC.accent.withOpacity(0.8)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight),
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: const [
+              shape: BoxShape.circle,
+              boxShadow: [
                 BoxShadow(
-                  color: Color(0x3A6C63FF),
-                  blurRadius: 10, offset: Offset(0, 4)),
+                  color: _PC.accent.withOpacity(0.3),
+                  blurRadius: 8, offset: const Offset(0, 4)),
               ])
           : BoxDecoration(
               color: isDark ? _PC.darkInput : _PC.inputFill,
-              borderRadius: BorderRadius.circular(12),
+              shape: BoxShape.circle,
               border: Border.all(
                 color: isDark ? _PC.darkBorder : const Color(0xFFE4E5F0))),
         child: Center(
@@ -1154,21 +1152,29 @@ class _JeunField extends StatelessWidget {
           hintStyle: TextStyle(
             color: isDark ? _PC.darkTextSub : _PC.textSecond,
             fontSize: 14, fontWeight: FontWeight.w400),
-          prefixIcon: Icon(Icons.access_time_rounded,
-            size: 18,
-            color: isDark ? _PC.darkTextSub : _PC.textSecond),
+          // Contrainte réduite : évite que l'icône 48dp par défaut
+          // écrase l'espace du chiffre sur les petits écrans en portrait.
+          prefixIconConstraints: const BoxConstraints(
+            minWidth: 30, minHeight: 0),
+          prefixIcon: Padding(
+            padding: const EdgeInsets.only(left: 8, right: 2),
+            child: Icon(Icons.access_time_rounded,
+              size: 16,
+              color: isDark ? _PC.darkTextSub : _PC.textSecond),
+          ),
           suffixText: 'h',
           suffixStyle: TextStyle(
             fontSize: 13, fontWeight: FontWeight.w500,
             color: isDark ? _PC.darkTextSub : _PC.textSecond),
           border: InputBorder.none,
           contentPadding: const EdgeInsets.symmetric(
-            horizontal: 12, vertical: 14),
+            horizontal: 4, vertical: 14),
         ),
       ),
     );
   }
 }
+
 
 // ── Note clinique item ───────────────────────────────────────────────────────
 class _NoteItem {
@@ -1189,8 +1195,7 @@ class _ClinicalNoteRow extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       decoration: BoxDecoration(
         color: note.color.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(12),
-        border: Border(left: BorderSide(color: note.color, width: 3))),
+        borderRadius: BorderRadius.circular(12)),
       child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Icon(note.icon, color: note.color, size: 18),
         const SizedBox(width: 12),
@@ -1225,6 +1230,121 @@ class _SoftCard extends StatelessWidget {
         ],
       ),
       child: child,
+    );
+  }
+}
+
+// ── MetricInputCard ──────────────────────────────────────────────────────────
+// Carte premium Poids / Taille / Âge : icône ronde centrée en haut,
+// label, champ de saisie en bas — style iOS médical.
+class _MetricInputCard extends StatefulWidget {
+  final String label, unit, hint;
+  final TextEditingController controller;
+  final IconData icon;
+  final bool decimal;
+  final TextInputAction? action;
+  final ValueChanged<String> onChanged;
+  final bool isDark;
+
+  const _MetricInputCard({
+    required this.label, required this.unit,
+    required this.controller, required this.hint,
+    required this.icon, required this.onChanged,
+    required this.isDark,
+    this.decimal = false, this.action,
+  });
+
+  @override State<_MetricInputCard> createState() => _MetricInputCardState();
+}
+
+class _MetricInputCardState extends State<_MetricInputCard> {
+  bool _focused = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final bg     = widget.isDark ? _PC.darkCard   : _PC.card;
+    final border = _focused
+        ? _PC.accent
+        : (widget.isDark ? _PC.darkBorder : const Color(0xFFE8ECF4));
+
+    return Focus(
+      onFocusChange: (f) => setState(() => _focused = f),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
+        decoration: BoxDecoration(
+          color: bg,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: border, width: _focused ? 1.5 : 1),
+          boxShadow: widget.isDark ? [] : [
+            BoxShadow(
+              color: _focused
+                  ? _PC.accent.withOpacity(0.10)
+                  : const Color(0x0F000000),
+              blurRadius: _focused ? 12 : 16,
+              offset: const Offset(0, 4)),
+          ],
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Icône ronde
+            Container(
+              width: 34, height: 34,
+              decoration: BoxDecoration(
+                color: _focused
+                    ? _PC.accent.withOpacity(0.12)
+                    : (widget.isDark ? _PC.darkInput : _PC.accentLight),
+                shape: BoxShape.circle),
+              child: Icon(widget.icon, size: 17,
+                color: _focused ? _PC.accent
+                    : (widget.isDark ? _PC.darkTextSub : _PC.accent)),
+            ),
+            const SizedBox(height: 8),
+            // Label
+            Text(widget.label,
+              style: TextStyle(
+                fontSize: 10.5,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.4,
+                color: _focused ? _PC.accent
+                    : (widget.isDark ? _PC.darkTextSub : _PC.textSecond))),
+            const SizedBox(height: 6),
+            // Champ de saisie
+            TextField(
+              controller: widget.controller,
+              textInputAction: widget.action,
+              textAlign: TextAlign.center,
+              keyboardType: widget.decimal
+                  ? const TextInputType.numberWithOptions(decimal: true)
+                  : TextInputType.number,
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
+              onChanged: widget.onChanged,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w800,
+                color: widget.isDark ? _PC.darkText : _PC.textPrimary),
+              decoration: InputDecoration(
+                isDense: true,
+                hintText: widget.hint,
+                hintStyle: TextStyle(
+                  color: widget.isDark ? _PC.darkTextSub : const Color(0xFFCBD5E1),
+                  fontSize: 20, fontWeight: FontWeight.w600),
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.zero,
+              ),
+            ),
+            // Unité
+            Text(widget.unit,
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+                color: _focused ? _PC.accent
+                    : (widget.isDark ? _PC.darkTextSub : _PC.textSecond))),
+          ],
+        ),
+      ),
     );
   }
 }

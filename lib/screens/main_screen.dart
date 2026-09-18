@@ -14,7 +14,6 @@ import 'respiratory_screen.dart';
 import 'drugs_screen.dart';
 import 'ecran_pathologies.dart';
 import 'protocols_screen.dart';    // vrai écran Emergency/Protocoles
-import 'courses_screen.dart';
 import 'anesthesia_notes_screen.dart';
 
 // ============================================================
@@ -57,19 +56,13 @@ const List<_NavData> _navItems = [
     screen:     PatientScreen(),
   ),
   _NavData(
-    label:      'Respiratoire',
-    icon:       Icons.air_outlined,
-    activeIcon: Icons.air_rounded,
-    screen:     RespiratoryScreen(),
-  ),
-  _NavData(
     label:      'Drugs',
     icon:       Icons.medication_outlined,
     activeIcon: Icons.medication_rounded,
     screen:     DrugsScreen(),
   ),
   _NavData(
-    label:      'Pathologies',
+    label:      'TechAnes',
     icon:       Icons.medical_information_outlined,
     activeIcon: Icons.medical_information_rounded,
     screen:     EcranPathologies(),
@@ -81,10 +74,10 @@ const List<_NavData> _navItems = [
     screen:     ProtocolsScreen(),
   ),
   _NavData(
-    label:      'Cours',
-    icon:       Icons.menu_book_outlined,
-    activeIcon: Icons.menu_book_rounded,
-    screen:     CoursesScreen(),
+    label:      'VentiRéglages',
+    icon:       Icons.air_outlined,
+    activeIcon: Icons.air_rounded,
+    screen:     RespiratoryScreen(),
   ),
   _NavData(
     label:      'Notes',
@@ -155,53 +148,34 @@ class _FloatingNavBar extends StatelessWidget {
     final bottomPad = MediaQuery.of(context).padding.bottom;
 
     return Container(
-      margin: EdgeInsets.fromLTRB(12, 0, 12, bottomPad > 0 ? bottomPad : 10),
+      margin: EdgeInsets.fromLTRB(16, 0, 16, bottomPad > 0 ? bottomPad : 12),
       decoration: BoxDecoration(
-        color:        barBg,
-        borderRadius: BorderRadius.circular(24),
-        border:       Border.all(color: barBorder, width: 0.8),
+        color: barBg,
+        borderRadius: BorderRadius.circular(32),
+        border: Border.all(color: barBorder, width: 0.5),
         boxShadow: [
           BoxShadow(
-            color:        _Nav.shadow,
-            blurRadius:   20,
+            color: _Nav.shadow,
+            blurRadius: 24,
             spreadRadius: 0,
-            offset:       const Offset(0, 6),
+            offset: const Offset(0, 8),
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            // Teal gradient accent line at top of nav bar
-            Container(
-              height: 2,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    const Color(0xFF0F4C81).withOpacity(isDark ? 0.8 : 0.6),
-                    const Color(0xFF2DD4BF).withOpacity(isDark ? 0.8 : 0.6),
-                  ],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: List.generate(_navItems.length, (i) => _NavItem(
-                  data:     _navItems[i],
-                  isActive: i == currentIndex,
-                  isDark:   isDark,
-                  inactIc:  inactIc,
-                  onTap:    () => onTap(i),
-                )),
-              ),
-            ),
-          ],
+        borderRadius: BorderRadius.circular(32),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: List.generate(_navItems.length, (i) => _NavItem(
+              data:     _navItems[i],
+              isActive: i == currentIndex,
+              isDark:   isDark,
+              inactIc:  inactIc,
+              onTap:    () => onTap(i),
+            )),
+          ),
         ),
       ),
     );
@@ -229,20 +203,13 @@ class _NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:    onTap,
+      onTap: onTap,
       behavior: HitTestBehavior.opaque,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        curve:    Curves.easeInOut,
-        padding:  isActive
-            ? const EdgeInsets.symmetric(horizontal: 10, vertical: 5)
-            : const EdgeInsets.symmetric(horizontal: 6,  vertical: 5),
-        decoration: BoxDecoration(
-          color: isActive
-              ? (isDark ? _Nav.darkActive : _Nav.accentLight)
-              : Colors.transparent,
-          borderRadius: BorderRadius.circular(16),
-        ),
+        curve: Curves.easeInOut,
+        padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 6),
+        color: Colors.transparent,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -250,18 +217,35 @@ class _NavItem extends StatelessWidget {
               duration: const Duration(milliseconds: 180),
               child: Icon(
                 isActive ? data.activeIcon : data.icon,
-                key:   ValueKey(isActive),
-                size:  20,
+                key: ValueKey(isActive),
+                size: 24,
                 color: isActive ? _Nav.accent : inactIc,
               ),
             ),
-            const SizedBox(height: 2),
+            const SizedBox(height: 4),
             Text(
               data.label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize:   8.5,
-                fontWeight: isActive ? FontWeight.w700 : FontWeight.w500,
-                color:      isActive ? _Nav.accent : inactIc,
+                fontSize: 9.5,
+                fontWeight: isActive ? FontWeight.w600 : FontWeight.w500,
+                color: isActive ? _Nav.accent : inactIc,
+              ),
+            ),
+            const SizedBox(height: 4),
+            // Petit indicateur bleu sous le texte
+            AnimatedOpacity(
+              opacity: isActive ? 1.0 : 0.0,
+              duration: const Duration(milliseconds: 200),
+              child: Container(
+                width: 4,
+                height: 4,
+                decoration: const BoxDecoration(
+                  color: _Nav.accent,
+                  shape: BoxShape.circle,
+                ),
               ),
             ),
           ],

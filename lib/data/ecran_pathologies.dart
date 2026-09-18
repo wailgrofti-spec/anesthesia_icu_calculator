@@ -32,6 +32,15 @@ class _C {
   static const bordure      = Color(0xFFE8ECF4);
   static const bordClaire   = Color(0xFFCBD5E1);
   static const cardShadow   = Color(0x0F0F172A);
+
+  // ── Palette Dark Mode ──────────────────────────────────────────
+  static const darkBg     = Color(0xFF08111F);
+  static const darkCard   = Color(0xFF0F172A);
+  static const darkInput  = Color(0xFF16233A);
+  static const darkBorder = Color(0xFF334155);
+  static const darkText   = Color(0xFFF8FAFC);
+  static const darkSub    = Color(0xFF94A3B8);
+  static const darkMuted  = Color(0xFF64748B);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -48,6 +57,8 @@ class _EcranPathologiesState extends State<EcranPathologies> {
   final _rechercheCtrl = TextEditingController();
   String _requete = '';
 
+  bool get _isDark => Theme.of(context).brightness == Brightness.dark;
+
   @override
   void dispose() {
     _rechercheCtrl.dispose();
@@ -56,57 +67,69 @@ class _EcranPathologiesState extends State<EcranPathologies> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AppProvider>(
-      builder: (ctx, prov, _) {
-        final parCategorie  = prov.pathologiesParCategorie;
-        final selectionnees = prov.pathologiesSelectionnees;
+    final isDark = _isDark;
+    final bg = isDark ? _C.darkBg : _C.fondPage;
 
-        return Column(
-          children: [
-            _EnTetePhases(
-              phase: _phase,
-              nbSelectionnees: selectionnees.length,
-              rechercheController: _rechercheCtrl,
-              requete: _requete,
-              onRechercheChanged: (v) => setState(() => _requete = v),
-              onChangerPhase: (p) {
-                if (p == 1 && selectionnees.isEmpty) return;
-                setState(() => _phase = p);
-              },
-              onReinitialiser: () {
-                prov.reinitialiserPathologies();
-                setState(() => _phase = 0);
-              },
-            ),
-            Expanded(
-              child: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 280),
-                transitionBuilder: (child, anim) =>
-                    FadeTransition(opacity: anim, child: child),
-                child: _phase == 0
-                    ? _PhaseSelection(
-                        key: const ValueKey(0),
-                        parCategorie: parCategorie,
-                        selectionnees: selectionnees,
-                        requete: _requete,
-                        onToggle: prov.basculerPathologie,
-                        onReinitialiser: prov.reinitialiserPathologies,
-                        onSuivant: selectionnees.isNotEmpty
-                            ? () => setState(() => _phase = 1)
-                            : null,
-                      )
-                    : _PhaseResultats(
-                        key: const ValueKey(1),
-                        selectionnees: selectionnees,
-                        preferes: prov.drugsPreferesIds,
-                        contreIndiques: prov.drugsContreindiqueIds,
-                        onRetour: () => setState(() => _phase = 0),
-                      ),
-              ),
-            ),
-          ],
-        );
-      },
+    return Scaffold(
+      backgroundColor: bg,
+      body: SafeArea(
+        bottom: false,
+        child: Consumer<AppProvider>(
+          builder: (ctx, prov, _) {
+            final parCategorie  = prov.pathologiesParCategorie;
+            final selectionnees = prov.pathologiesSelectionnees;
+
+            return Column(
+              children: [
+                _EnTetePhases(
+                  phase: _phase,
+                  nbSelectionnees: selectionnees.length,
+                  rechercheController: _rechercheCtrl,
+                  requete: _requete,
+                  isDark: isDark,
+                  onRechercheChanged: (v) => setState(() => _requete = v),
+                  onChangerPhase: (p) {
+                    if (p == 1 && selectionnees.isEmpty) return;
+                    setState(() => _phase = p);
+                  },
+                  onReinitialiser: () {
+                    prov.reinitialiserPathologies();
+                    setState(() => _phase = 0);
+                  },
+                ),
+                Expanded(
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 280),
+                    transitionBuilder: (child, anim) =>
+                        FadeTransition(opacity: anim, child: child),
+                    child: _phase == 0
+                        ? _PhaseSelection(
+                            key: const ValueKey(0),
+                            parCategorie: parCategorie,
+                            selectionnees: selectionnees,
+                            requete: _requete,
+                            isDark: isDark,
+                            onToggle: prov.basculerPathologie,
+                            onReinitialiser: prov.reinitialiserPathologies,
+                            onSuivant: selectionnees.isNotEmpty
+                                ? () => setState(() => _phase = 1)
+                                : null,
+                          )
+                        : _PhaseResultats(
+                            key: const ValueKey(1),
+                            selectionnees: selectionnees,
+                            preferes: prov.drugsPreferesIds,
+                            contreIndiques: prov.drugsContreindiqueIds,
+                            isDark: isDark,
+                            onRetour: () => setState(() => _phase = 0),
+                          ),
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 }
@@ -119,6 +142,7 @@ class _EnTetePhases extends StatelessWidget {
   final int nbSelectionnees;
   final TextEditingController rechercheController;
   final String requete;
+  final bool isDark;
   final ValueChanged<String> onRechercheChanged;
   final ValueChanged<int> onChangerPhase;
   final VoidCallback onReinitialiser;
@@ -128,6 +152,7 @@ class _EnTetePhases extends StatelessWidget {
     required this.nbSelectionnees,
     required this.rechercheController,
     required this.requete,
+    required this.isDark,
     required this.onRechercheChanged,
     required this.onChangerPhase,
     required this.onReinitialiser,
@@ -142,6 +167,7 @@ class _EnTetePhases extends StatelessWidget {
             child: _CompactSearchBar(
               controller: rechercheController,
               query: requete,
+              isDark: isDark,
               onChanged: onRechercheChanged,
               onClear: () {
                 rechercheController.clear();
@@ -153,10 +179,13 @@ class _EnTetePhases extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Colors.white,
+      decoration: BoxDecoration(
+        color: isDark ? _C.darkCard : Colors.white,
         border: Border(
-          bottom: BorderSide(color: _C.bordure, width: 1),
+          bottom: BorderSide(
+            color: isDark ? _C.darkBorder : _C.bordure,
+            width: 1,
+          ),
         ),
       ),
       child: Column(
@@ -172,7 +201,7 @@ class _EnTetePhases extends StatelessWidget {
                 Container(
                   width: 44, height: 44,
                   decoration: BoxDecoration(
-                    color: _C.bleuFond,
+                    color: isDark ? _C.darkInput : _C.bleuFond,
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: const Icon(
@@ -188,7 +217,7 @@ class _EnTetePhases extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Text(
+                      Text(
                         'Pathologies',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -196,17 +225,17 @@ class _EnTetePhases extends StatelessWidget {
                           fontSize: 17,
                           fontWeight: FontWeight.w700,
                           letterSpacing: -0.3,
-                          color: _C.textePrim,
+                          color: isDark ? _C.darkText : _C.textePrim,
                         ),
                       ),
                       const SizedBox(height: 2),
-                      const Text(
+                      Text(
                         'Parcourez et sélectionnez une catégorie de pathologie',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 11,
-                          color: _C.texteSec,
+                          color: isDark ? _C.darkSub : _C.texteSec,
                         ),
                       ),
                     ],
@@ -228,6 +257,7 @@ class _EnTetePhases extends StatelessWidget {
                 _StepperPremium(
                   phase: phase,
                   nbSelectionnees: nbSelectionnees,
+                  isDark: isDark,
                   onChangerPhase: onChangerPhase,
                 ),
                 if (phase == 1) ...[
@@ -237,9 +267,12 @@ class _EnTetePhases extends StatelessWidget {
                     child: Container(
                       width: 32, height: 32,
                       decoration: BoxDecoration(
-                        color: _C.fondPage,
+                        color: isDark ? _C.darkInput : _C.fondPage,
                         shape: BoxShape.circle,
-                        border: Border.all(color: _C.bordure, width: 1.5),
+                        border: Border.all(
+                          color: isDark ? _C.darkBorder : _C.bordure,
+                          width: 1.5,
+                        ),
                       ),
                       child: const Icon(Icons.refresh_rounded, size: 15, color: _C.bleu),
                     ),
@@ -258,11 +291,13 @@ class _EnTetePhases extends StatelessWidget {
 class _CompactSearchBar extends StatefulWidget {
   final TextEditingController controller;
   final String query;
+  final bool isDark;
   final ValueChanged<String> onChanged;
   final VoidCallback onClear;
   const _CompactSearchBar({
     required this.controller,
     required this.query,
+    required this.isDark,
     required this.onChanged,
     required this.onClear,
   });
@@ -293,45 +328,57 @@ class _CompactSearchBarState extends State<_CompactSearchBar> {
       animation: widget.controller,
       builder: (context, _) {
         final hasText = widget.controller.text.isNotEmpty;
+        final isDark = widget.isDark;
         return AnimatedContainer(
           duration: const Duration(milliseconds: 180),
           height: 46,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: isDark ? _C.darkInput : Colors.white,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: _focused
-                  ? _C.bleu.withOpacity(0.35)
-                  : _C.bordure,
+                  ? _C.bleu.withOpacity(isDark ? 0.60 : 0.35)
+                  : (isDark ? _C.darkBorder : _C.bordure),
               width: _focused ? 1.4 : 1,
             ),
             boxShadow: _focused
-                ? [BoxShadow(
-                    color: _C.bleu.withOpacity(0.08),
-                    blurRadius: 0,
-                    spreadRadius: 4,
-                  )]
+                ? [
+                    BoxShadow(
+                      color: _C.bleu.withOpacity(isDark ? 0.16 : 0.08),
+                      blurRadius: 0,
+                      spreadRadius: 4,
+                    )
+                  ]
                 : [],
           ),
           child: Row(children: [
             const SizedBox(width: 14),
-            Icon(Icons.search_rounded, size: 19,
-                color: _focused || hasText ? _C.bleu : _C.texteMuted),
+            Icon(Icons.search_rounded,
+                size: 19,
+                color: _focused || hasText
+                    ? _C.bleu
+                    : (isDark ? _C.darkSub : _C.texteMuted)),
             const SizedBox(width: 8),
             Expanded(
               child: TextField(
                 controller: widget.controller,
                 focusNode: _focus,
                 onChanged: widget.onChanged,
-                style: const TextStyle(
-                    fontSize: 13.5, fontWeight: FontWeight.w600, color: _C.textePrim),
+                style: TextStyle(
+                  fontSize: 13.5,
+                  fontWeight: FontWeight.w600,
+                  color: isDark ? _C.darkText : _C.textePrim,
+                ),
                 cursorColor: _C.bleu,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   isDense: true,
                   border: InputBorder.none,
                   hintText: 'Rechercher...',
                   hintStyle: TextStyle(
-                      fontSize: 13.5, color: _C.texteMuted, fontWeight: FontWeight.w500),
+                    fontSize: 13.5,
+                    color: isDark ? _C.darkSub : _C.texteMuted,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ),
@@ -340,14 +387,18 @@ class _CompactSearchBarState extends State<_CompactSearchBar> {
                 onTap: widget.onClear,
                 behavior: HitTestBehavior.opaque,
                 child: Container(
-                  width: 28, height: 28,
+                  width: 28,
+                  height: 28,
                   margin: const EdgeInsets.only(right: 9),
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFF1F3F7),
+                  decoration: BoxDecoration(
+                    color: isDark ? _C.darkBorder : const Color(0xFFF1F3F7),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.close_rounded,
-                      size: 14, color: _C.textePrim),
+                  child: Icon(
+                    Icons.close_rounded,
+                    size: 14,
+                    color: isDark ? _C.darkText : _C.textePrim,
+                  ),
                 ),
               )
             else
@@ -363,11 +414,13 @@ class _CompactSearchBarState extends State<_CompactSearchBar> {
 class _StepperPremium extends StatelessWidget {
   final int phase;
   final int nbSelectionnees;
+  final bool isDark;
   final ValueChanged<int> onChangerPhase;
 
   const _StepperPremium({
     required this.phase,
     required this.nbSelectionnees,
+    required this.isDark,
     required this.onChangerPhase,
   });
 
@@ -376,27 +429,29 @@ class _StepperPremium extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: _C.fondPage,
+        color: isDark ? _C.darkInput : _C.fondPage,
         borderRadius: BorderRadius.circular(28),
-        border: Border.all(color: _C.bordure),
+        border: Border.all(color: isDark ? _C.darkBorder : _C.bordure),
       ),
       child: Row(mainAxisSize: MainAxisSize.min, children: [
         _PiluleEtape(
           numero: 1,
           titre: 'Sélection',
           actif: phase == 0,
+          isDark: isDark,
           onTap: () => onChangerPhase(0),
         ),
         Container(
           width: 20,
           height: 1.5,
           margin: const EdgeInsets.symmetric(horizontal: 2),
-          color: _C.bordClaire,
+          color: isDark ? _C.darkBorder : _C.bordClaire,
         ),
         _PiluleEtape(
           numero: 2,
           titre: 'Résultats',
           actif: phase == 1,
+          isDark: isDark,
           badge: nbSelectionnees > 0 ? nbSelectionnees : null,
           onTap: nbSelectionnees > 0 ? () => onChangerPhase(1) : null,
         ),
@@ -409,6 +464,7 @@ class _PiluleEtape extends StatelessWidget {
   final int numero;
   final String titre;
   final bool actif;
+  final bool isDark;
   final int? badge;
   final VoidCallback? onTap;
 
@@ -416,6 +472,7 @@ class _PiluleEtape extends StatelessWidget {
     required this.numero,
     required this.titre,
     required this.actif,
+    required this.isDark,
     this.badge,
     this.onTap,
   });
@@ -436,9 +493,12 @@ class _PiluleEtape extends StatelessWidget {
         child: Row(mainAxisSize: MainAxisSize.min, children: [
           AnimatedContainer(
             duration: const Duration(milliseconds: 250),
-            width: 20, height: 20,
+            width: 20,
+            height: 20,
             decoration: BoxDecoration(
-              color: actif ? Colors.white.withOpacity(0.22) : _C.bleuFond,
+              color: actif
+                  ? Colors.white.withOpacity(0.22)
+                  : (isDark ? _C.darkCard : _C.bleuFond),
               shape: BoxShape.circle,
             ),
             child: Center(
@@ -447,7 +507,11 @@ class _PiluleEtape extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w800,
-                  color: actif ? Colors.white : (disabled ? _C.texteMuted : _C.bleu),
+                  color: actif
+                      ? Colors.white
+                      : (disabled
+                          ? (isDark ? _C.darkMuted : _C.texteMuted)
+                          : (isDark ? const Color(0xFF38BDF8) : _C.bleu)),
                 ),
               ),
             ),
@@ -458,7 +522,11 @@ class _PiluleEtape extends StatelessWidget {
             style: TextStyle(
               fontSize: 13.5,
               fontWeight: FontWeight.w600,
-              color: actif ? Colors.white : (disabled ? _C.texteMuted : _C.texteSec),
+              color: actif
+                  ? Colors.white
+                  : (disabled
+                      ? (isDark ? _C.darkMuted : _C.texteMuted)
+                      : (isDark ? _C.darkSub : _C.texteSec)),
             ),
           ),
           if (badge != null) ...[
@@ -574,14 +642,19 @@ void ouvrirFicheInfo(BuildContext context, Pathologie pathologie, Color couleur)
 class _FilAriane extends StatelessWidget {
   final List<Pathologie> selectionnees;
   final bool showHome;
+  final bool isDark;
 
-  const _FilAriane({required this.selectionnees, this.showHome = false});
+  const _FilAriane({
+    required this.selectionnees,
+    this.showHome = false,
+    required this.isDark,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      color: isDark ? _C.darkCard : Colors.white,
       padding: const EdgeInsets.fromLTRB(12, 8, 12, 10),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -590,7 +663,7 @@ class _FilAriane extends StatelessWidget {
             Container(
               width: 28, height: 28,
               decoration: BoxDecoration(
-                color: _C.bleuFond,
+                color: isDark ? _C.darkInput : _C.bleuFond,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: const Icon(Icons.home_rounded, size: 15, color: _C.bleu),
@@ -604,11 +677,11 @@ class _FilAriane extends StatelessWidget {
             final i = e.key;
             final p = e.value;
             return [
-              _ChipBreadcrumb(nom: p.nom),
+              _ChipBreadcrumb(nom: p.nom, isDark: isDark),
               if (i < selectionnees.length - 1)
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 4),
-                  child: Icon(Icons.chevron_right_rounded, size: 16, color: _C.bleuBord),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: Icon(Icons.chevron_right_rounded, size: 16, color: isDark ? _C.darkBorder : _C.bleuBord),
                 ),
             ];
           }),
@@ -620,20 +693,25 @@ class _FilAriane extends StatelessWidget {
 
 class _ChipBreadcrumb extends StatelessWidget {
   final String nom;
-  const _ChipBreadcrumb({required this.nom});
+  final bool isDark;
+  const _ChipBreadcrumb({required this.nom, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
       decoration: BoxDecoration(
-        color: _C.bleuFond,
+        color: isDark ? _C.darkInput : _C.bleuFond,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: _C.bleuBord),
+        border: Border.all(color: isDark ? _C.darkBorder : _C.bleuBord),
       ),
       child: Text(
         nom,
-        style: const TextStyle(fontSize: 11, color: _C.bleuDark, fontWeight: FontWeight.w600),
+        style: TextStyle(
+          fontSize: 11,
+          color: isDark ? const Color(0xFF93C5FD) : _C.bleuDark,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }
@@ -646,6 +724,7 @@ class _PhaseSelection extends StatelessWidget {
   final Map<CategoriePathologie, List<Pathologie>> parCategorie;
   final List<Pathologie> selectionnees;
   final String requete;
+  final bool isDark;
   final void Function(String) onToggle;
   final VoidCallback onReinitialiser;
   final VoidCallback? onSuivant;
@@ -655,6 +734,7 @@ class _PhaseSelection extends StatelessWidget {
     required this.parCategorie,
     required this.selectionnees,
     required this.requete,
+    required this.isDark,
     required this.onToggle,
     required this.onReinitialiser,
     required this.onSuivant,
@@ -677,10 +757,10 @@ class _PhaseSelection extends StatelessWidget {
     }
 
     return Container(
-      color: _C.fondPage,
+      color: isDark ? _C.darkBg : _C.fondPage,
       child: Column(children: [
         if (!enRecherche && selectionnees.isNotEmpty)
-          _FilAriane(selectionnees: selectionnees, showHome: false),
+          _FilAriane(selectionnees: selectionnees, showHome: false, isDark: isDark),
         Expanded(
           child: enRecherche
               ? _ResultatsRecherche(
@@ -688,31 +768,56 @@ class _PhaseSelection extends StatelessWidget {
                   resultats: resultats,
                   onToggle: onToggle,
                   bottomPad: bottomPad,
+                  isDark: isDark,
                 )
               : ListView(
                   padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad),
                   children: [
-                    ...(parCategorie.entries.toList()
-                          // ── Tri alphabétique A→Z des catégories (par leur libellé) ──
-                          ..sort((a, b) => a.value.first.labelCategorie
-                              .toLowerCase()
-                              .compareTo(b.value.first.labelCategorie.toLowerCase())))
+                    ...((){
+                          // ── Ordre clinique personnalisé ──
+                          const ordreCliniqueCustom = [
+                            CategoriePathologie.cardiovasculaire,
+                            CategoriePathologie.hepatique,
+                            CategoriePathologie.metabolique,
+                            CategoriePathologie.respiratoire,
+                            CategoriePathologie.neurologique,
+                            CategoriePathologie.renal,
+                            CategoriePathologie.traumatologieUrgences,
+                            CategoriePathologie.urologie,
+                          ];
+                          int priorite(CategoriePathologie c) {
+                            final idx = ordreCliniqueCustom.indexOf(c);
+                            return idx == -1 ? 9999 : idx;
+                          }
+                          final entries = parCategorie.entries.toList()
+                            ..sort((a, b) {
+                              final pa = priorite(a.key);
+                              final pb = priorite(b.key);
+                              if (pa != pb) return pa.compareTo(pb);
+                              return a.value.first.labelCategorie
+                                  .toLowerCase()
+                                  .compareTo(b.value.first.labelCategorie.toLowerCase());
+                            });
+                          return entries;
+                        }())
                         .map((e) => _CarteCategorie(
                               categorie: e.key,
                               // ── Tri alphabétique A→Z des pathologies dans la catégorie ──
                               pathologies: [...e.value]..sort((a, b) =>
                                   a.nom.toLowerCase().compareTo(b.nom.toLowerCase())),
+                              isDark: isDark,
                               onToggle: onToggle,
                             )),
                     if (selectionnees.length >= 2) ...[
                       const SizedBox(height: 4),
-                      _CarteEssentiel(selectionnees: selectionnees),
+                      _CarteEssentiel(selectionnees: selectionnees, isDark: isDark),
                     ],
                     // ── Bouton juste sous la dernière carte ──
                     const SizedBox(height: 12),
                     _BoutonSuivant(
                       onTap: onSuivant,
                       nbSelectionnees: selectionnees.length,
+                      isDark: isDark,
                     ),
                   ],
                 ),
@@ -725,6 +830,7 @@ class _PhaseSelection extends StatelessWidget {
             child: _BoutonSuivant(
               onTap: onSuivant,
               nbSelectionnees: selectionnees.length,
+              isDark: isDark,
             ),
           ),
       ]),
@@ -738,12 +844,14 @@ class _ResultatsRecherche extends StatelessWidget {
   final List<Pathologie> resultats;
   final void Function(String) onToggle;
   final double bottomPad;
+  final bool isDark;
 
   const _ResultatsRecherche({
     required this.requete,
     required this.resultats,
     required this.onToggle,
     required this.bottomPad,
+    required this.isDark,
   });
 
   @override
@@ -752,12 +860,12 @@ class _ResultatsRecherche extends StatelessWidget {
       return ListView(
         padding: EdgeInsets.fromLTRB(28, 60, 28, bottomPad),
         children: [
-          const Icon(Icons.search_off_rounded, size: 42, color: _C.texteMuted),
+          Icon(Icons.search_off_rounded, size: 42, color: isDark ? _C.darkSub : _C.texteMuted),
           const SizedBox(height: 12),
           Text(
             'Aucune pathologie ne correspond à « $requete »',
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: _C.texteMuted),
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: isDark ? _C.darkSub : _C.texteMuted),
           ),
         ],
       );
@@ -773,7 +881,7 @@ class _ResultatsRecherche extends StatelessWidget {
       children: [
         Text(
           '${resultats.length} résultat${resultats.length > 1 ? "s" : ""}',
-          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: _C.texteMuted),
+          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: isDark ? _C.darkSub : _C.texteMuted),
         ),
         const SizedBox(height: 8),
         ...parCat.entries.expand((e) {
@@ -790,7 +898,12 @@ class _ResultatsRecherche extends StatelessWidget {
                 ),
               ]),
             ),
-            ...e.value.map((p) => _LignePathologie(pathologie: p, onToggle: onToggle, couleur: c)),
+            ...e.value.map((p) => _LignePathologie(
+                  pathologie: p,
+                  onToggle: onToggle,
+                  couleur: c,
+                  isDark: isDark,
+                )),
           ];
         }),
       ],
@@ -801,53 +914,59 @@ class _ResultatsRecherche extends StatelessWidget {
 class _BoutonSuivant extends StatelessWidget {
   final VoidCallback? onTap;
   final int nbSelectionnees;
-  const _BoutonSuivant({required this.onTap, required this.nbSelectionnees});
+  final bool isDark;
+  const _BoutonSuivant({
+    required this.onTap,
+    required this.nbSelectionnees,
+    required this.isDark,
+  });
 
   @override
   Widget build(BuildContext context) {
     final actif = onTap != null;
     return GestureDetector(
-        onTap: onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 15),
-          decoration: BoxDecoration(
-            gradient: actif
-                ? const LinearGradient(
-                    colors: [Color(0xFF6C63FF), Color(0xFF9C27B0)],
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 15),
+        decoration: BoxDecoration(
+          gradient: actif
+              ? const LinearGradient(
+                  colors: [Color(0xFF6C63FF), Color(0xFF9C27B0)],
+                )
+              : null,
+          color: actif ? null : (isDark ? _C.darkCard : _C.bordure),
+          borderRadius: BorderRadius.circular(16),
+          border: !actif && isDark ? Border.all(color: _C.darkBorder) : null,
+          boxShadow: actif
+              ? [
+                  BoxShadow(
+                    color: _C.bleu.withOpacity(0.30),
+                    blurRadius: 16,
+                    offset: const Offset(0, 6),
                   )
-                : null,
-            color: actif ? null : _C.bordure,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: actif
-                ? [
-                    BoxShadow(
-                      color: _C.bleu.withOpacity(0.30),
-                      blurRadius: 16,
-                      offset: const Offset(0, 6),
-                    )
-                  ]
-                : [],
-          ),
-          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Text(
-              actif
-                  ? 'Voir les résultats ($nbSelectionnees pathologie${nbSelectionnees > 1 ? "s" : ""})'
-                  : 'Sélectionnez au moins une pathologie',
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w700,
-                color: actif ? Colors.white : _C.texteMuted,
-              ),
-            ),
-            if (actif) ...[
-              const SizedBox(width: 8),
-              const Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 18),
-            ],
-          ]),
+                ]
+              : [],
         ),
-      );
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(
+            actif
+                ? 'Voir les résultats ($nbSelectionnees pathologie${nbSelectionnees > 1 ? "s" : ""})'
+                : 'Sélectionnez au moins une pathologie',
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: actif ? Colors.white : (isDark ? _C.darkSub : _C.texteMuted),
+            ),
+          ),
+          if (actif) ...[
+            const SizedBox(width: 8),
+            const Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 18),
+          ],
+        ]),
+      ),
+    );
   }
 }
 
@@ -855,11 +974,13 @@ class _BoutonSuivant extends StatelessWidget {
 class _CarteCategorie extends StatefulWidget {
   final CategoriePathologie categorie;
   final List<Pathologie> pathologies;
+  final bool isDark;
   final void Function(String) onToggle;
 
   const _CarteCategorie({
     required this.categorie,
     required this.pathologies,
+    required this.isDark,
     required this.onToggle,
   });
 
@@ -884,25 +1005,30 @@ class _CarteCategorieState extends State<_CarteCategorie> {
   Widget build(BuildContext context) {
     final nbSel = widget.pathologies.where((p) => p.estSelectionnee).length;
     final c = _couleur;
+    final isDark = widget.isDark;
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 250),
       curve: Curves.easeOut,
       margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: isDark ? _C.darkCard : Colors.white,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: nbSel > 0 ? c.withOpacity(0.35) : _C.bordure,
+          color: nbSel > 0
+              ? c.withOpacity(isDark ? 0.60 : 0.35)
+              : (isDark ? _C.darkBorder : _C.bordure),
           width: nbSel > 0 ? 1.5 : 1,
         ),
-        boxShadow: [
-          BoxShadow(
-            color: _C.cardShadow,
-            blurRadius: _expanded ? 18 : 10,
-            offset: Offset(0, _expanded ? 6 : 3),
-          ),
-        ],
+        boxShadow: isDark
+            ? []
+            : [
+                BoxShadow(
+                  color: _C.cardShadow,
+                  blurRadius: _expanded ? 18 : 10,
+                  offset: Offset(0, _expanded ? 6 : 3),
+                ),
+              ],
       ),
       child: Column(children: [
         // ── En-tête cliquable — carte compacte, badge pastel, chevron ──
@@ -920,7 +1046,7 @@ class _CarteCategorieState extends State<_CarteCategorie> {
                 Container(
                   width: 40, height: 40,
                   decoration: BoxDecoration(
-                    color: c.withOpacity(0.10),
+                    color: c.withOpacity(isDark ? 0.18 : 0.10),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(_icone, color: c, size: 18),
@@ -933,10 +1059,10 @@ class _CarteCategorieState extends State<_CarteCategorie> {
                     children: [
                       Text(
                         widget.pathologies.first.labelCategorie,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w700,
-                          color: _C.textePrim,
+                          color: isDark ? _C.darkText : _C.textePrim,
                           letterSpacing: -0.2,
                         ),
                       ),
@@ -948,7 +1074,7 @@ class _CarteCategorieState extends State<_CarteCategorie> {
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: nbSel > 0 ? FontWeight.w700 : FontWeight.w500,
-                          color: nbSel > 0 ? c : _C.texteMuted,
+                          color: nbSel > 0 ? c : (isDark ? _C.darkSub : _C.texteMuted),
                         ),
                       ),
                     ],
@@ -961,7 +1087,7 @@ class _CarteCategorieState extends State<_CarteCategorie> {
                   curve: Curves.easeOut,
                   child: Icon(
                     Icons.keyboard_arrow_down_rounded,
-                    color: _expanded ? c : _C.texteMuted,
+                    color: _expanded ? c : (isDark ? _C.darkSub : _C.texteMuted),
                     size: 20,
                   ),
                 ),
@@ -976,13 +1102,14 @@ class _CarteCategorieState extends State<_CarteCategorie> {
           crossFadeState:
               _expanded ? CrossFadeState.showFirst : CrossFadeState.showSecond,
           firstChild: Column(children: [
-            Divider(height: 1, color: _C.bordure, indent: 20, endIndent: 20),
+            Divider(height: 1, color: isDark ? _C.darkBorder : _C.bordure, indent: 20, endIndent: 20),
             const SizedBox(height: 4),
             ...widget.pathologies.map(
               (p) => _LignePathologie(
                 pathologie: p,
                 onToggle: widget.onToggle,
                 couleur: c,
+                isDark: isDark,
               ),
             ),
             const SizedBox(height: 10),
@@ -998,10 +1125,12 @@ class _LignePathologie extends StatelessWidget {
   final Pathologie pathologie;
   final void Function(String) onToggle;
   final Color couleur;
+  final bool isDark;
   const _LignePathologie({
     required this.pathologie,
     required this.onToggle,
     required this.couleur,
+    required this.isDark,
   });
 
   @override
@@ -1014,10 +1143,14 @@ class _LignePathologie extends StatelessWidget {
         margin: const EdgeInsets.fromLTRB(12, 6, 12, 0),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         decoration: BoxDecoration(
-          color: sel ? couleur.withOpacity(0.07) : const Color(0xFFF8F8FC),
+          color: sel
+              ? couleur.withOpacity(isDark ? 0.20 : 0.07)
+              : (isDark ? _C.darkInput : const Color(0xFFF8F8FC)),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: sel ? couleur.withOpacity(0.45) : Colors.transparent,
+            color: sel
+                ? couleur.withOpacity(isDark ? 0.65 : 0.45)
+                : (isDark ? _C.darkBorder.withOpacity(0.5) : Colors.transparent),
             width: 1.5,
           ),
         ),
@@ -1029,7 +1162,7 @@ class _LignePathologie extends StatelessWidget {
               color: sel ? couleur : Colors.transparent,
               borderRadius: BorderRadius.circular(7),
               border: Border.all(
-                color: sel ? couleur : _C.bordClaire,
+                color: sel ? couleur : (isDark ? _C.darkBorder : _C.bordClaire),
                 width: 1.8,
               ),
             ),
@@ -1045,14 +1178,20 @@ class _LignePathologie extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: sel ? FontWeight.w700 : FontWeight.w500,
-                  color: sel ? _C.textePrim : _C.texteSec,
+                  color: sel
+                      ? (isDark ? _C.darkText : _C.textePrim)
+                      : (isDark ? const Color(0xFFCBD5E1) : _C.texteSec),
                 ),
               ),
               if (pathologie.description.isNotEmpty) ...[
                 const SizedBox(height: 2),
                 Text(
                   pathologie.description,
-                  style: const TextStyle(fontSize: 11, color: _C.texteMuted, height: 1.3),
+                  style: TextStyle(
+                    fontSize: 11,
+                    color: isDark ? _C.darkSub : _C.texteMuted,
+                    height: 1.3,
+                  ),
                 ),
               ],
             ]),
@@ -1077,7 +1216,7 @@ class _LignePathologie extends StatelessWidget {
               visualDensity: VisualDensity.compact,
               padding: EdgeInsets.zero,
               constraints: const BoxConstraints(minWidth: 30, minHeight: 30),
-              icon: const Icon(Icons.info_outline_rounded, size: 18, color: _C.texteMuted),
+              icon: Icon(Icons.info_outline_rounded, size: 18, color: isDark ? _C.darkSub : _C.texteMuted),
               onPressed: () => ouvrirFicheInfo(context, pathologie, couleur),
             ),
           ),
@@ -1094,6 +1233,7 @@ class _PhaseResultats extends StatelessWidget {
   final List<Pathologie> selectionnees;
   final Set<String> preferes;
   final Set<String> contreIndiques;
+  final bool isDark;
   final VoidCallback onRetour;
 
   const _PhaseResultats({
@@ -1101,30 +1241,31 @@ class _PhaseResultats extends StatelessWidget {
     required this.selectionnees,
     required this.preferes,
     required this.contreIndiques,
+    required this.isDark,
     required this.onRetour,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: _C.fondPage,
+      color: isDark ? _C.darkBg : _C.fondPage,
       child: Column(children: [
         // Fil d'ariane avec icône home
-        _FilAriane(selectionnees: selectionnees, showHome: true),
+        _FilAriane(selectionnees: selectionnees, showHome: true, isDark: isDark),
         // Contenu scrollable
         Expanded(
           child: ListView(
             padding: const EdgeInsets.fromLTRB(14, 12, 14, 100),
             children: [
-              _PanneauAlertes(selectionnees: selectionnees),
+              _PanneauAlertes(selectionnees: selectionnees, isDark: isDark),
               const SizedBox(height: 10),
-              _PanneauRecommandations(selectionnees: selectionnees),
+              _PanneauRecommandations(selectionnees: selectionnees, isDark: isDark),
               const SizedBox(height: 10),
-              _PanneauConsignes(selectionnees: selectionnees),
+              _PanneauConsignes(selectionnees: selectionnees, isDark: isDark),
               const SizedBox(height: 10),
-              _PanneauImpactDrugs(preferes: preferes, contreIndiques: contreIndiques),
+              _PanneauImpactDrugs(preferes: preferes, contreIndiques: contreIndiques, isDark: isDark),
               const SizedBox(height: 10),
-              _CarteEssentiel(selectionnees: selectionnees),
+              _CarteEssentiel(selectionnees: selectionnees, isDark: isDark),
             ],
           ),
         ),
@@ -1144,6 +1285,7 @@ class _PanneauAccordeon extends StatefulWidget {
   final Color couleurFondIcone;
   final String labelBadge;
   final List<Widget> items;
+  final bool isDark;
 
   const _PanneauAccordeon({
     required this.titre,
@@ -1155,6 +1297,7 @@ class _PanneauAccordeon extends StatefulWidget {
     required this.couleurFondIcone,
     required this.labelBadge,
     required this.items,
+    required this.isDark,
   });
 
   @override
@@ -1167,11 +1310,15 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = widget.isDark;
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: isDark ? _C.darkCard : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: widget.couleurBord, width: 1.5),
+        border: Border.all(
+          color: isDark ? widget.couleurBord.withOpacity(0.5) : widget.couleurBord,
+          width: 1.5,
+        ),
       ),
       child: Column(children: [
         // ── Header ──
@@ -1180,7 +1327,9 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
           child: Container(
             padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
             decoration: BoxDecoration(
-              color: widget.couleurFond,
+              color: isDark
+                  ? widget.couleurIcone.withOpacity(0.12)
+                  : widget.couleurFond,
               borderRadius: _expanded
                   ? const BorderRadius.vertical(top: Radius.circular(15))
                   : BorderRadius.circular(15),
@@ -1189,7 +1338,9 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
               Container(
                 width: 38, height: 38,
                 decoration: BoxDecoration(
-                  color: widget.couleurFondIcone,
+                  color: isDark
+                      ? widget.couleurIcone.withOpacity(0.20)
+                      : widget.couleurFondIcone,
                   borderRadius: BorderRadius.circular(11),
                 ),
                 child: Icon(widget.icone, color: widget.couleurIcone, size: 20),
@@ -1201,7 +1352,7 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w800,
-                    color: widget.couleurTitre,
+                    color: isDark ? widget.couleurIcone : widget.couleurTitre,
                     letterSpacing: 0.3,
                   ),
                 ),
@@ -1209,7 +1360,9 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
-                  color: widget.couleurFondIcone,
+                  color: isDark
+                      ? widget.couleurIcone.withOpacity(0.20)
+                      : widget.couleurFondIcone,
                   borderRadius: BorderRadius.circular(14),
                 ),
                 child: Text(
@@ -1217,7 +1370,7 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w700,
-                    color: widget.couleurTitre,
+                    color: isDark ? widget.couleurIcone : widget.couleurTitre,
                   ),
                 ),
               ),
@@ -1250,14 +1403,15 @@ class _PanneauAccordeonState extends State<_PanneauAccordeon> {
 // ─── Panneau Alertes ──────────────────────────────────────────────────────────
 class _PanneauAlertes extends StatelessWidget {
   final List<Pathologie> selectionnees;
-  const _PanneauAlertes({required this.selectionnees});
+  final bool isDark;
+  const _PanneauAlertes({required this.selectionnees, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
     final items = <_RowAlerte>[];
     for (final p in selectionnees) {
       for (final a in p.alertes) {
-        items.add(_RowAlerte(pathologie: p.nom, texte: a));
+        items.add(_RowAlerte(pathologie: p.nom, texte: a, isDark: isDark));
       }
     }
     if (items.isEmpty) return const SizedBox.shrink();
@@ -1271,6 +1425,7 @@ class _PanneauAlertes extends StatelessWidget {
       couleurTitre: const Color(0xFFC62828),
       couleurFondIcone: const Color(0xFFFFE4E6),
       labelBadge: '${items.length} alerte${items.length > 1 ? "s" : ""}',
+      isDark: isDark,
       items: items,
     );
   }
@@ -1279,7 +1434,8 @@ class _PanneauAlertes extends StatelessWidget {
 class _RowAlerte extends StatelessWidget {
   final String pathologie;
   final String texte;
-  const _RowAlerte({required this.pathologie, required this.texte});
+  final bool isDark;
+  const _RowAlerte({required this.pathologie, required this.texte, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
@@ -1287,8 +1443,12 @@ class _RowAlerte extends StatelessWidget {
       onTap: () {},
       child: Container(
         padding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
-        decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: Color(0xFFF5F5FA))),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: isDark ? _C.darkBorder : const Color(0xFFF5F5FA),
+            ),
+          ),
         ),
         child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
           const Icon(Icons.warning_amber_rounded, color: Color(0xFFEF5350), size: 18),
@@ -1296,11 +1456,18 @@ class _RowAlerte extends StatelessWidget {
           Expanded(
             child: RichText(
               text: TextSpan(
-                style: const TextStyle(fontSize: 12.5, color: _C.texteSec, height: 1.4),
+                style: TextStyle(
+                  fontSize: 12.5,
+                  color: isDark ? _C.darkSub : _C.texteSec,
+                  height: 1.4,
+                ),
                 children: [
                   TextSpan(
                     text: '[$pathologie] ',
-                    style: const TextStyle(fontWeight: FontWeight.w700, color: _C.textePrim),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: isDark ? _C.darkText : _C.textePrim,
+                    ),
                   ),
                   TextSpan(text: texte),
                 ],
@@ -1308,7 +1475,7 @@ class _RowAlerte extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          const Icon(Icons.chevron_right_rounded, size: 18, color: _C.bordClaire),
+          Icon(Icons.chevron_right_rounded, size: 18, color: isDark ? _C.darkBorder : _C.bordClaire),
         ]),
       ),
     );
@@ -1318,14 +1485,15 @@ class _RowAlerte extends StatelessWidget {
 // ─── Panneau Recommandations ──────────────────────────────────────────────────
 class _PanneauRecommandations extends StatelessWidget {
   final List<Pathologie> selectionnees;
-  const _PanneauRecommandations({required this.selectionnees});
+  final bool isDark;
+  const _PanneauRecommandations({required this.selectionnees, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
     final items = <_RowReco>[];
     for (final p in selectionnees) {
       for (final r in p.recommandations) {
-        items.add(_RowReco(pathologie: p.nom, texte: r));
+        items.add(_RowReco(pathologie: p.nom, texte: r, isDark: isDark));
       }
     }
     if (items.isEmpty) return const SizedBox.shrink();
@@ -1339,6 +1507,7 @@ class _PanneauRecommandations extends StatelessWidget {
       couleurTitre: const Color(0xFF15803D),
       couleurFondIcone: const Color(0xFFDCFCE7),
       labelBadge: '${items.length} recommandation${items.length > 1 ? "s" : ""}',
+      isDark: isDark,
       items: items,
     );
   }
@@ -1347,7 +1516,8 @@ class _PanneauRecommandations extends StatelessWidget {
 class _RowReco extends StatelessWidget {
   final String pathologie;
   final String texte;
-  const _RowReco({required this.pathologie, required this.texte});
+  final bool isDark;
+  const _RowReco({required this.pathologie, required this.texte, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
@@ -1355,8 +1525,12 @@ class _RowReco extends StatelessWidget {
       onTap: () {},
       child: Container(
         padding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
-        decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: Color(0xFFF5F5FA))),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: isDark ? _C.darkBorder : const Color(0xFFF5F5FA),
+            ),
+          ),
         ),
         child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
           const Icon(Icons.check_circle_rounded, color: Color(0xFF22C55E), size: 18),
@@ -1364,11 +1538,18 @@ class _RowReco extends StatelessWidget {
           Expanded(
             child: RichText(
               text: TextSpan(
-                style: const TextStyle(fontSize: 12.5, color: _C.texteSec, height: 1.4),
+                style: TextStyle(
+                  fontSize: 12.5,
+                  color: isDark ? _C.darkSub : _C.texteSec,
+                  height: 1.4,
+                ),
                 children: [
                   TextSpan(
                     text: '[$pathologie] ',
-                    style: const TextStyle(fontWeight: FontWeight.w700, color: _C.textePrim),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: isDark ? _C.darkText : _C.textePrim,
+                    ),
                   ),
                   TextSpan(text: texte),
                 ],
@@ -1376,7 +1557,7 @@ class _RowReco extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          const Icon(Icons.chevron_right_rounded, size: 18, color: _C.bordClaire),
+          Icon(Icons.chevron_right_rounded, size: 18, color: isDark ? _C.darkBorder : _C.bordClaire),
         ]),
       ),
     );
@@ -1386,7 +1567,8 @@ class _RowReco extends StatelessWidget {
 // ─── Panneau Consignes — grille 3×2 : icône gauche + texte + flèche droite ───
 class _PanneauConsignes extends StatelessWidget {
   final List<Pathologie> selectionnees;
-  const _PanneauConsignes({required this.selectionnees});
+  final bool isDark;
+  const _PanneauConsignes({required this.selectionnees, required this.isDark});
 
   static IconData _iconeConsigne(String texte) {
     final t = texte.toLowerCase();
@@ -1421,6 +1603,7 @@ class _PanneauConsignes extends StatelessWidget {
       couleurTitre: _C.indigoDark,
       couleurFondIcone: const Color(0xFFE0E7FF),
       labelBadge: '${consignes.length} consigne${consignes.length > 1 ? "s" : ""}',
+      isDark: isDark,
       items: [
         Padding(
           padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
@@ -1439,16 +1622,17 @@ class _PanneauConsignes extends StatelessWidget {
                             child: _CelluleConsigne(
                               texte: e.value,
                               icone: _iconeConsigne(e.value),
+                              isDark: isDark,
                             ),
                           ),
                           if (!isLastInRow)
-                            Container(width: 1, color: const Color(0xFFE0E7FF)),
+                            Container(width: 1, color: isDark ? _C.darkBorder : const Color(0xFFE0E7FF)),
                         ]),
                       );
                     }).toList(),
                   ),
                 ),
-                if (!isLast) Container(height: 1, color: const Color(0xFFE0E7FF)),
+                if (!isLast) Container(height: 1, color: isDark ? _C.darkBorder : const Color(0xFFE0E7FF)),
               ]);
             }).toList(),
           ),
@@ -1461,7 +1645,8 @@ class _PanneauConsignes extends StatelessWidget {
 class _CelluleConsigne extends StatelessWidget {
   final String texte;
   final IconData icone;
-  const _CelluleConsigne({required this.texte, required this.icone});
+  final bool isDark;
+  const _CelluleConsigne({required this.texte, required this.icone, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
@@ -1477,21 +1662,21 @@ class _CelluleConsigne extends StatelessWidget {
             Container(
               width: 36, height: 36,
               decoration: BoxDecoration(
-                color: const Color(0xFFEEF2FF),
+                color: isDark ? _C.darkInput : const Color(0xFFEEF2FF),
                 shape: BoxShape.circle,
-                border: Border.all(color: _C.indigoBord),
+                border: Border.all(color: isDark ? _C.darkBorder : _C.indigoBord),
               ),
-              child: Icon(icone, color: _C.indigo, size: 18),
+              child: Icon(icone, color: isDark ? const Color(0xFF38BDF8) : _C.indigo, size: 18),
             ),
             const SizedBox(width: 8),
             // Texte
             Expanded(
               child: Text(
                 texte,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w600,
-                  color: _C.indigoDark,
+                  color: isDark ? _C.darkText : _C.indigoDark,
                   height: 1.35,
                 ),
                 maxLines: 3,
@@ -1499,7 +1684,7 @@ class _CelluleConsigne extends StatelessWidget {
               ),
             ),
             // Flèche
-            const Icon(Icons.chevron_right_rounded, size: 16, color: _C.indigoBord),
+            Icon(Icons.chevron_right_rounded, size: 16, color: isDark ? _C.darkBorder : _C.indigoBord),
           ],
         ),
       ),
@@ -1511,7 +1696,12 @@ class _CelluleConsigne extends StatelessWidget {
 class _PanneauImpactDrugs extends StatelessWidget {
   final Set<String> preferes;
   final Set<String> contreIndiques;
-  const _PanneauImpactDrugs({required this.preferes, required this.contreIndiques});
+  final bool isDark;
+  const _PanneauImpactDrugs({
+    required this.preferes,
+    required this.contreIndiques,
+    required this.isDark,
+  });
 
   static const Map<String, String> _noms = {
     'propofol': 'Propofol', 'ketamine': 'Kétamine', 'midazolam': 'Midazolam',
@@ -1527,9 +1717,15 @@ class _PanneauImpactDrugs extends StatelessWidget {
   };
 
   Widget _chip(String id, bool pref) {
-    final bg    = pref ? _C.vertFond    : _C.rougeFond;
-    final bord  = pref ? _C.vertBord    : _C.rougeBord;
-    final color = pref ? _C.vertDark    : _C.rougeDark;
+    final bg = pref
+        ? (isDark ? const Color(0xFF0F2618) : _C.vertFond)
+        : (isDark ? const Color(0xFF2A1416) : _C.rougeFond);
+    final bord = pref
+        ? (isDark ? const Color(0xFF1E5230) : _C.vertBord)
+        : (isDark ? const Color(0xFF5C1D24) : _C.rougeBord);
+    final color = pref
+        ? (isDark ? const Color(0xFF86EFAC) : _C.vertDark)
+        : (isDark ? const Color(0xFFFCA5A5) : _C.rougeDark);
     return Container(
       margin: const EdgeInsets.only(right: 7, bottom: 7),
       padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 6),
@@ -1557,9 +1753,9 @@ class _PanneauImpactDrugs extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: isDark ? _C.darkCard : Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: _C.bordure),
+        border: Border.all(color: isDark ? _C.darkBorder : _C.bordure),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         // Header
@@ -1569,33 +1765,33 @@ class _PanneauImpactDrugs extends StatelessWidget {
             Container(
               width: 38, height: 38,
               decoration: BoxDecoration(
-                color: _C.bleuFond,
+                color: isDark ? _C.darkInput : _C.bleuFond,
                 borderRadius: BorderRadius.circular(11),
               ),
               child: const Icon(Icons.medical_services_outlined, color: _C.bleu, size: 20),
             ),
             const SizedBox(width: 10),
-            const Text(
+            Text(
               'IMPACT SUR LES MÉDICAMENTS',
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w800,
-                color: _C.bleu,
+                color: isDark ? const Color(0xFF38BDF8) : _C.bleu,
                 letterSpacing: 0.3,
               ),
             ),
           ]),
         ),
-        Divider(height: 1, color: _C.bordure),
+        Divider(height: 1, color: isDark ? _C.darkBorder : _C.bordure),
         if (conflits.isNotEmpty)
           Padding(
             padding: const EdgeInsets.fromLTRB(14, 12, 14, 0),
             child: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: _C.rougeFond,
+                color: isDark ? const Color(0xFF2A1416) : _C.rougeFond,
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: _C.rougeBord),
+                border: Border.all(color: isDark ? const Color(0xFF5C1D24) : _C.rougeBord),
               ),
               child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 const Icon(Icons.report_gmailerrorred_rounded, color: _C.rouge, size: 18),
@@ -1605,9 +1801,9 @@ class _PanneauImpactDrugs extends StatelessWidget {
                     'Conflit détecté pour ${conflits.map((id) => _noms[id] ?? id).join(", ")} : '
                     'privilégié par une pathologie mais contre-indiqué par une autre. '
                     'La contre-indication est prioritaire.',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 11.5,
-                      color: _C.rougeDark,
+                      color: isDark ? const Color(0xFFFCA5A5) : _C.rougeDark,
                       fontWeight: FontWeight.w600,
                       height: 1.35,
                     ),
@@ -1664,7 +1860,8 @@ class _PanneauImpactDrugs extends StatelessWidget {
 // ─── Carte Pensez à l'essentiel ───────────────────────────────────────────────
 class _CarteEssentiel extends StatelessWidget {
   final List<Pathologie> selectionnees;
-  const _CarteEssentiel({required this.selectionnees});
+  final bool isDark;
+  const _CarteEssentiel({required this.selectionnees, required this.isDark});
 
   String get _texte {
     final noms = selectionnees.map((p) => p.nom).join(' et ');
@@ -1676,12 +1873,17 @@ class _CarteEssentiel extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [_C.bleuFond, const Color(0xFFEDE9FE)],
+          colors: isDark
+              ? [const Color(0xFF16233A), const Color(0xFF1E1B4B)]
+              : [_C.bleuFond, const Color(0xFFEDE9FE)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: _C.bleuBord, width: 1.5),
+        border: Border.all(
+          color: isDark ? _C.darkBorder : _C.bleuBord,
+          width: 1.5,
+        ),
       ),
       padding: const EdgeInsets.all(16),
       child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -1696,19 +1898,23 @@ class _CarteEssentiel extends StatelessWidget {
         const SizedBox(width: 14),
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text(
+            Text(
               "PENSEZ À L'ESSENTIEL",
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
-                color: _C.bleuDark,
+                color: isDark ? const Color(0xFF93C5FD) : _C.bleuDark,
                 letterSpacing: 0.5,
               ),
             ),
             const SizedBox(height: 5),
             Text(
               _texte,
-              style: const TextStyle(fontSize: 12, color: Color(0xFF7C72D8), height: 1.5),
+              style: TextStyle(
+                fontSize: 12,
+                color: isDark ? const Color(0xFFC7D2FE) : const Color(0xFF7C72D8),
+                height: 1.5,
+              ),
             ),
           ]),
         ),
@@ -1728,6 +1934,7 @@ class _FicheDetailSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final p = pathologie;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return DraggableScrollableSheet(
       initialChildSize: 0.75,
       minChildSize: 0.4,
@@ -1735,16 +1942,16 @@ class _FicheDetailSheet extends StatelessWidget {
       expand: false,
       builder: (context, scrollController) {
         return Container(
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          decoration: BoxDecoration(
+            color: isDark ? _C.darkCard : Colors.white,
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
           ),
           child: Column(children: [
             const SizedBox(height: 10),
             Container(
               width: 40, height: 4,
               decoration: BoxDecoration(
-                color: _C.bordClaire,
+                color: isDark ? _C.darkBorder : _C.bordClaire,
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
@@ -1755,7 +1962,7 @@ class _FicheDetailSheet extends StatelessWidget {
                 Container(
                   width: 44, height: 44,
                   decoration: BoxDecoration(
-                    color: couleur.withOpacity(0.10),
+                    color: couleur.withOpacity(isDark ? 0.20 : 0.10),
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: Icon(iconeCategorie(p.categorie), color: couleur, size: 22),
@@ -1765,7 +1972,11 @@ class _FicheDetailSheet extends StatelessWidget {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(
                       p.nom,
-                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: _C.textePrim),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w800,
+                        color: isDark ? _C.darkText : _C.textePrim,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Row(children: [
@@ -1778,18 +1989,21 @@ class _FicheDetailSheet extends StatelessWidget {
                       const SizedBox(width: 8),
                       Text(
                         '· Sévérité ${p.labelSeverite.toLowerCase()}',
-                        style: const TextStyle(fontSize: 11, color: _C.texteMuted),
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: isDark ? _C.darkSub : _C.texteMuted,
+                        ),
                       ),
                     ]),
                   ]),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.close_rounded, color: _C.texteMuted),
+                  icon: Icon(Icons.close_rounded, color: isDark ? _C.darkSub : _C.texteMuted),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ]),
             ),
-            Divider(height: 1, color: _C.bordure),
+            Divider(height: 1, color: isDark ? _C.darkBorder : _C.bordure),
             // ── Corps scrollable ──
             Expanded(
               child: ListView(
@@ -1802,6 +2016,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.description_outlined,
                       couleur: couleur,
                       texte: p.description,
+                      isDark: isDark,
                     ),
                   if (p.physiopathologie.isNotEmpty)
                     _SectionFiche(
@@ -1809,6 +2024,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.biotech_rounded,
                       couleur: couleur,
                       texte: p.physiopathologie,
+                      isDark: isDark,
                     ),
                   if (p.consequencesAnesthesiques.isNotEmpty)
                     _SectionFiche(
@@ -1816,6 +2032,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.medical_information_rounded,
                       couleur: couleur,
                       items: p.consequencesAnesthesiques,
+                      isDark: isDark,
                     ),
                   if (p.alertes.isNotEmpty)
                     _SectionFiche(
@@ -1823,6 +2040,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.warning_amber_rounded,
                       couleur: _C.rouge,
                       items: p.alertes,
+                      isDark: isDark,
                     ),
                   if (p.surveillance.isNotEmpty)
                     _SectionFiche(
@@ -1830,6 +2048,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.monitor_heart_outlined,
                       couleur: couleur,
                       items: p.surveillance,
+                      isDark: isDark,
                     ),
                   if (p.examensRecommandes.isNotEmpty)
                     _SectionFiche(
@@ -1837,6 +2056,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.science_outlined,
                       couleur: couleur,
                       items: p.examensRecommandes,
+                      isDark: isDark,
                     ),
                   if (p.contreIndications.isNotEmpty)
                     _SectionFiche(
@@ -1844,6 +2064,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.cancel_rounded,
                       couleur: _C.rouge,
                       items: p.contreIndications,
+                      isDark: isDark,
                     ),
                   if (p.medicamentsAEviter.isNotEmpty)
                     _SectionFiche(
@@ -1851,6 +2072,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.error_outline_rounded,
                       couleur: const Color(0xFFF57C00),
                       items: p.medicamentsAEviter,
+                      isDark: isDark,
                     ),
                   if (p.droguesFavorisees.isNotEmpty)
                     _SectionFiche(
@@ -1858,6 +2080,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.check_circle_outline_rounded,
                       couleur: _C.vert,
                       items: p.droguesFavorisees,
+                      isDark: isDark,
                     ),
                   if (p.interactions.isNotEmpty)
                     _SectionFiche(
@@ -1865,6 +2088,7 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.compare_arrows_rounded,
                       couleur: couleur,
                       items: p.interactions,
+                      isDark: isDark,
                     ),
                   if (p.consignes.isNotEmpty)
                     _SectionFiche(
@@ -1872,21 +2096,26 @@ class _FicheDetailSheet extends StatelessWidget {
                       icone: Icons.assignment_outlined,
                       couleur: couleur,
                       items: p.consignes,
+                      isDark: isDark,
                     ),
                   if (p.references.isNotEmpty)
                     _SectionFiche(
                       titre: 'Bibliographie',
                       icone: Icons.menu_book_outlined,
-                      couleur: _C.texteSec,
+                      couleur: isDark ? _C.darkSub : _C.texteSec,
                       items: p.references,
                       petit: true,
+                      isDark: isDark,
                     ),
                   if (!p.aUneFicheDetaillee && p.description.isEmpty)
-                    const Padding(
-                      padding: EdgeInsets.only(top: 20),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
                       child: Text(
                         'Aucune fiche détaillée n\'est encore renseignée pour cette pathologie.',
-                        style: TextStyle(fontSize: 12, color: _C.texteMuted),
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: isDark ? _C.darkSub : _C.texteMuted,
+                        ),
                       ),
                     ),
                 ],
@@ -1908,6 +2137,7 @@ class _SectionFiche extends StatelessWidget {
   final String? texte;
   final List<String>? items;
   final bool petit;
+  final bool isDark;
 
   const _SectionFiche({
     required this.titre,
@@ -1916,6 +2146,7 @@ class _SectionFiche extends StatelessWidget {
     this.texte,
     this.items,
     this.petit = false,
+    required this.isDark,
   });
 
   @override
@@ -1938,7 +2169,14 @@ class _SectionFiche extends StatelessWidget {
         ]),
         const SizedBox(height: 7),
         if (texte != null)
-          Text(texte!, style: const TextStyle(fontSize: 13, color: _C.texteSec, height: 1.45)),
+          Text(
+            texte!,
+            style: TextStyle(
+              fontSize: 13,
+              color: isDark ? const Color(0xFFCBD5E1) : _C.texteSec,
+              height: 1.45,
+            ),
+          ),
         if (items != null)
           ...items!.map((t) => Padding(
                 padding: const EdgeInsets.only(bottom: 5),
@@ -1956,7 +2194,7 @@ class _SectionFiche extends StatelessWidget {
                       t,
                       style: TextStyle(
                         fontSize: petit ? 11 : 12.5,
-                        color: _C.texteSec,
+                        color: isDark ? const Color(0xFFCBD5E1) : _C.texteSec,
                         height: 1.4,
                         fontStyle: petit ? FontStyle.italic : FontStyle.normal,
                       ),

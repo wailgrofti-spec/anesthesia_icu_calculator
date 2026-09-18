@@ -189,7 +189,7 @@ class _EnTetePhases extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const Text(
-                        'Pathologies',
+                        'TechAnes',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
@@ -692,11 +692,33 @@ class _PhaseSelection extends StatelessWidget {
               : ListView(
                   padding: EdgeInsets.fromLTRB(20, 4, 20, bottomPad),
                   children: [
-                    ...(parCategorie.entries.toList()
-                          // ── Tri alphabétique A→Z des catégories (par leur libellé) ──
-                          ..sort((a, b) => a.value.first.labelCategorie
-                              .toLowerCase()
-                              .compareTo(b.value.first.labelCategorie.toLowerCase())))
+                    ...((){
+                          // ── Ordre clinique personnalisé ──
+                          const ordreCliniqueCustom = [
+                            CategoriePathologie.cardiovasculaire,
+                            CategoriePathologie.hepatique,
+                            CategoriePathologie.metabolique,
+                            CategoriePathologie.respiratoire,
+                            CategoriePathologie.neurologique,
+                            CategoriePathologie.renal,
+                            CategoriePathologie.traumatologieUrgences,
+                            CategoriePathologie.urologie,
+                          ];
+                          int priorite(CategoriePathologie c) {
+                            final idx = ordreCliniqueCustom.indexOf(c);
+                            return idx == -1 ? 9999 : idx;
+                          }
+                          final entries = parCategorie.entries.toList()
+                            ..sort((a, b) {
+                              final pa = priorite(a.key);
+                              final pb = priorite(b.key);
+                              if (pa != pb) return pa.compareTo(pb);
+                              return a.value.first.labelCategorie
+                                  .toLowerCase()
+                                  .compareTo(b.value.first.labelCategorie.toLowerCase());
+                            });
+                          return entries;
+                        }())
                         .map((e) => _CarteCategorie(
                               categorie: e.key,
                               // ── Tri alphabétique A→Z des pathologies dans la catégorie ──
